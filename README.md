@@ -43,3 +43,28 @@ Entity Linking evaluation results of *SpEL* compared to that of the literature o
 | **SpEL** (KB+Yago candidate set)                          |          90.1          |            84.7             |                 128.9M                  |       0.161        |
 | **SpEL** (PPRforNED candidate set)<br/>(context-agnostic)     |          91.5          |            86.1             |                 128.9M                  |       0.158        |
 | **SpEL** (PPRforNED candidate set)<br/>(context-aware)        |          92.4          |            87.5             |                 128.9M                  |       0.157        |
+
+----
+
+Downloads and Preparations:
+===========================
+
+AIDA dataset:
+-------------
+Initially you need to prepare the AIDA dataset. For this:
+
+1. Download and extract [aida-yago2-dataset.zip](http://resources.mpi-inf.mpg.de/yago-naga/aida/download/aida-yago2-dataset.zip).
+2. Download the CoNLL-2003 data files from [conll2003/ner](https://www.cnts.ua.ac.be/conll2003/ner/) and copy/paste the generated `eng.testa`, `eng.testb`, `eng.train` files into the extracted `aida-yago2-dataset` directory, and run `java -jar aida-yago2-dataset.jar`; this will create a file named `AIDA-YAGO2-dataset.tsv`.
+4. Place `AIDA-YAGO2-dataset.tsv` under `resources/data/` directory (you can find `resources` directory besides `src` directory in the main project folder).
+5. A preprocessed version of this dataset will be automatically downloaded for finetuning step 3.
+
+Note: As the `README.txt` file inside `aida-yago2-dataset` states:
+```
+The original CoNLL 2003 data is split into 3 parts: TRAIN, TESTA, TESTB.
+We keep the ordering among the documents as in the original CoNLL data,
+where the parts contain the following docids:
+
+TRAIN: '1 EU' to '946 SOCCER'
+TESTA: '947testa CRICKET' to '1162testa Dhaka'
+TESTB: '1163testb SOCCER' to '1393testb SOCCER'
+```
