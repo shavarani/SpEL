@@ -1,5 +1,5 @@
 """
-The implementation for general knowledge fine-tuning, step one, which uses DistributedDataParallel for multi-GPU training.
+The implementation for general knowledge fine-tuning, step one, which uses DistributedDataParallel for multi-GPU processing.
  The source code in here has been developed on the basis of explanations and the code provided in:
   https://pytorch.org/tutorials/beginner/ddp_series_multigpu.html#diff-for-single-gpu-py-v-s-multigpu-py
 
@@ -53,16 +53,16 @@ def get_mode_checkpoint_name():
     return os.path.join(get_checkpoints_dir(), "spel-step-1-ddp")
 
 
-def train(rank: int, world_size: int, n_epochs, batch_size, eval_batch_size=32, encoder_lr=5e-5, decoder_lr=0.01,
-          accumulate_batch_gradients=4, label_size=8196, evaluate_every=15000, n_epochs_freeze_bert=3,
-          early_stopping_n_epoch_wait=2, continue_from_previous_training_checkpoint=False,
-          optimizer_warmup_steps=0):
+def finetune_step_1(rank: int, world_size: int, n_epochs, batch_size, eval_batch_size=32, encoder_lr=5e-5,
+                    decoder_lr=0.01, accumulate_batch_gradients=4, label_size=8196, evaluate_every=15000,
+                    n_epochs_freeze_bert=3, early_stopping_n_epoch_wait=2,
+                    continue_from_previous_checkpoint=False, optimizer_warmup_steps=0):
     device = torch.device('cuda', rank)
     ddp_setup(rank, world_size)
     model = SpELAnnotator()
     model.get_mode_checkpoint_name = get_mode_checkpoint_name
     model.init_model_from_scratch(device=device)
-    if continue_from_previous_training_checkpoint:
+    if continue_from_previous_checkpoint:
         model.load_checkpoint('spel-step-1-ddp.pt', device=device, rank=rank)
     if TRACK_WITH_WANDB and rank == 0:
         wandb.init(
@@ -78,7 +78,7 @@ def train(rank: int, world_size: int, n_epochs, batch_size, eval_batch_size=32, 
                 "evaluate_every": evaluate_every,
                 "n_epochs_freeze_bert": n_epochs_freeze_bert,
                 "early_stopping_n_epoch_wait": early_stopping_n_epoch_wait,
-                "continue_from_previous_training_checkpoint": continue_from_previous_training_checkpoint
+                "continue_from_previous_checkpoint": continue_from_previous_checkpoint
             }
         )
     original_optimizers = model.create_optimizers(encoder_lr, decoder_lr)
@@ -103,8 +103,8 @@ def train(rank: int, world_size: int, n_epochs, batch_size, eval_batch_size=32, 
             model.bert_lm = DDP(model.bert_lm.to(device), device_ids=[rank], output_device=rank)
             model.out = DDP(model.out.to(device), device_ids=[rank], output_device=rank)
         if rank == 0:
-            print(f"Beginning train epoch {epoch} ...")
-        # ######### freezing the RoBERTa parameters in the first `n_epochs_freeze_bert` epochs in training ########
+            print(f"Beginning finetune (step 1) epoch {epoch} ...")
+        # ######### freezing the RoBERTa parameters in the first `n_epochs_freeze_bert` epochs in fine-tuning ######
         if epoch < n_epochs_freeze_bert:
             optimizers = [original_optimizers[-1]]
             warmup_schedulers = [original_warmup_schedulers[-1]] if original_warmup_schedulers else None
@@ -113,8 +113,8 @@ def train(rank: int, world_size: int, n_epochs, batch_size, eval_batch_size=32, 
             warmup_schedulers = original_warmup_schedulers if original_warmup_schedulers else None
         for optimizer in optimizers:
             optimizer.zero_grad()
-        # #########################################################################################################
-        # ###### Early Stopping code which will break the training loop after `early_stopping_n_epoch_wait` epochs
+        # ##########################################################################################################
+        # ###### Early Stopping code which will break the fine-tuning loop after `early_stopping_n_epoch_wait` epochs
         # ###### with no improvement
         if 0 < early_stopping_n_epoch_wait < epoch:
             should_early_stop = True
@@ -124,7 +124,7 @@ def train(rank: int, world_size: int, n_epochs, batch_size, eval_batch_size=32, 
                     should_early_stop = False
                     break
             if should_early_stop:
-                print(f"Early stopping triggered, ending training after {epoch} epochs, "
+                print(f"Early stopping triggered, ending fine-tuning after {epoch} epochs, "
                       f"the sequence of best F-1 scores per epoch: {best_f1_per_epoch[:epoch]}")
                 break
         # #########################################################################################################
@@ -133,10 +133,10 @@ def train(rank: int, world_size: int, n_epochs, batch_size, eval_batch_size=32, 
             split='train', batch_size=batch_size, label_size=label_size, load_distributed=True, world_size=world_size,
             rank=rank)
         created_dataset.sampler.set_epoch(epoch)
-        train_iter = tqdm(enumerate(created_dataset), disable=rank != 0)
+        _iter_ = tqdm(enumerate(created_dataset), disable=rank != 0)
         total_loss = 0
         cnt_loss = 0
-        for iter_, (inputs, subword_mentions) in train_iter:
+        for iter_, (inputs, subword_mentions) in _iter_:
             subword_mentions_probs = subword_mentions.probs.to(device)
             if ENABLE_AMP:
                 with torch.cuda.amp.autocast():
@@ -197,7 +197,7 @@ def train(rank: int, world_size: int, n_epochs, batch_size, eval_batch_size=32, 
                         "instance_number": iter_,
                         "allocated_memory": mm_alloc
                     })
-            train_iter.set_description(f"Avg Loss: {total_loss/cnt_loss:.7f}")
+            _iter_.set_description(f"Avg Loss: {total_loss/cnt_loss:.7f}")
             if TRACK_WITH_WANDB and rank == 0 and iter_ % 250 == 0 and iter_ > 0:
                 wandb.log({"avg_loss": total_loss/cnt_loss})
         if rank == 0:
@@ -229,7 +229,7 @@ def train(rank: int, world_size: int, n_epochs, batch_size, eval_batch_size=32, 
 if __name__ == "__main__":
     try:
         w_size = torch.cuda.device_count()
-        training_arguments = {
+        _arguments_ = {
             "world_size": w_size,
             "n_epochs": 14,
             "batch_size": 10,
@@ -241,23 +241,23 @@ if __name__ == "__main__":
             "evaluate_every": int(4000/w_size) if w_size > 1 else 15000,
             "n_epochs_freeze_bert": 3,
             "early_stopping_n_epoch_wait": 2,
-            "continue_from_previous_training_checkpoint": False,
+            "continue_from_previous_checkpoint": False,
             "optimizer_warmup_steps": 0
         }
-        args = (training_arguments["world_size"], training_arguments["n_epochs"], training_arguments["batch_size"],
-                training_arguments["eval_batch_size"], training_arguments["encoder_lr"],
-                training_arguments["decoder_lr"], training_arguments["accumulate_batch_gradients"],
-                training_arguments["label_size"], training_arguments["evaluate_every"],
-                training_arguments["n_epochs_freeze_bert"], training_arguments["early_stopping_n_epoch_wait"],
-                training_arguments["continue_from_previous_training_checkpoint"],
-                training_arguments["optimizer_warmup_steps"])
+        args = (_arguments_["world_size"], _arguments_["n_epochs"], _arguments_["batch_size"],
+                _arguments_["eval_batch_size"], _arguments_["encoder_lr"],
+                _arguments_["decoder_lr"], _arguments_["accumulate_batch_gradients"],
+                _arguments_["label_size"], _arguments_["evaluate_every"],
+                _arguments_["n_epochs_freeze_bert"], _arguments_["early_stopping_n_epoch_wait"],
+                _arguments_["continue_from_previous_checkpoint"],
+                _arguments_["optimizer_warmup_steps"])
         # We need the following two lines to make sure the validation dataloader is not opened up while the train
         # dataloder is in use which will lead to the code slow-down (or sometimes freezing).
         print("Assuring validation data is cached before starting the training processes ...")
         store_validation_data_wiki(
-            get_checkpoints_dir(), training_arguments["eval_batch_size"], training_arguments["label_size"],
+            get_checkpoints_dir(), _arguments_["eval_batch_size"], _arguments_["label_size"],
             is_training=True, use_retokenized_wikipedia_data=False)
-        mp.spawn(train, args=args, nprocs=w_size)
+        mp.spawn(finetune_step_1, args=args, nprocs=w_size)
     finally:
         if TRACK_WITH_WANDB:
             wandb.finish()
