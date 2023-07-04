@@ -1,4 +1,4 @@
-<div style="text-align:center"><img src="resources/logo.png" width="200" alt="SpEL"></div>
+<p align="center" width="100%"><img src="resources/logo.png" width="30%" alt="SpEL"></p>
 
 ---
 
@@ -13,7 +13,7 @@ of number of parameters and speed of inference.
 
 The following figure schematically depicts SpEL:
 
-<div style="text-align:center"><img src="resources/SpEL.png" width="600" alt="SpEL"></div>
+<p align="center" width="100%"><img src="resources/SpEL.png" width="60%" alt="SpEL"></p>
 
 This repository contains the source code to finetune RoBERTa models and evaluate them using [GERBIL](https://github.com/dice-group/gerbil).
 
