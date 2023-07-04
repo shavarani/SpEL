@@ -11,7 +11,7 @@ OOD_CANONICAL_REDIRECTS = None
 
 
 def get_project_top_dir():
-    return pathlib.Path(os.path.abspath(__file__)).parent.parent
+    return pathlib.Path(os.path.abspath(__file__)).parent.parent.parent
 
 
 def get_resources_dir():
