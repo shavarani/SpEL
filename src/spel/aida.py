@@ -191,7 +191,7 @@ class AIDADataset:
         super(AIDADataset, self).__init__()
         self.dataset = None
         self.data_path = str(get_aida_yago_tsv_file_path().absolute())
-        assert os.path.exists(self.data_path), "The passed dataset address does not exist"
+        assert os.path.exists(self.data_path), f"The passed dataset address: {self.data_path} does not exist"
         self.load_dataset()
 
     def load_dataset(self):
