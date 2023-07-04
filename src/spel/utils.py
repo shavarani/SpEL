@@ -277,8 +277,7 @@ def normalize_sentence_for_moses_alignment(sentence, normalize_for_chinese_chara
     return sentence
 
 
-def chunk_annotate_and_merge_to_phrase(model, sentence, k_for_top_k_to_keep=5, ignore_non_aida_vocab=False,
-                                       normalize_for_chinese_characters=False):
+def chunk_annotate_and_merge_to_phrase(model, sentence, k_for_top_k_to_keep=5, normalize_for_chinese_characters=False):
     sentence = sentence.rstrip()
     sentence = normalize_sentence_for_moses_alignment(sentence, normalize_for_chinese_characters)
     simple_split_words = moses_tokenize(sentence)
@@ -297,7 +296,7 @@ def chunk_annotate_and_merge_to_phrase(model, sentence, k_for_top_k_to_keep=5, i
     for chunk in chunks:
         subword_ids = [tokenizer.convert_tokens_to_ids([x[0] for x in chunk])]
         logits = model.annotate_subword_ids(
-            subword_ids, k_for_top_k_to_keep, chunk, ignore_non_aida_vocab=ignore_non_aida_vocab)
+            subword_ids, k_for_top_k_to_keep, chunk)
         if last_overlap:
             result.extend(_process_last_overlap(model.text_chunk_overlap, last_overlap, logits))
         else:
@@ -544,125 +543,3 @@ def compare_gold_and_predicted_annotation_documents(gold_document, predicted_doc
             c_results.append((g, p, r))
         comparison_results = c_results
     return comparison_results
-
-
-def get_ood_set_phrase_splitted_documents(dataset_name, kb_prefix, normailze_for_chinese_characters=False):
-    def _remove_kb_prefix(item):
-        if type(kb_prefix) == str:
-            return item.replace(kb_prefix, '')
-        elif type(kb_prefix) == list:
-            for kb_prefix_item in kb_prefix:
-                item = item.replace(kb_prefix_item, '')
-            return item
-        else:
-            raise ValueError
-    phrase_documents = []
-    # augment mentions_vocab with OOD mentions:
-    extended_mentions_vocab = dl_sa.mentions_vocab.copy()
-    dictionary_file = get_resources_dir() / "vocab" / f"out_of_domain.txt"
-    dfile = dictionary_file.open("r")
-    for _ad_element in dfile.read().split("\n"):
-        if _ad_element not in extended_mentions_vocab:
-            extended_mentions_vocab[_ad_element] = len(extended_mentions_vocab)
-    extended_mentions_itos = [w[0] for w in sorted(extended_mentions_vocab.items(), key=lambda x: x[1])]
-    # creation of the annotated documents
-    if dataset_name == 'msnbc':
-        dataset_json_file_adr = "MSNBC_gold.json"
-    elif dataset_name == 'reddit_posts_g':
-        dataset_json_file_adr = "reddit_el_posts_g_gold.json"
-    elif dataset_name == 'reddit_comments_g':
-        dataset_json_file_adr = "reddit_el_comments_g_gold.json"
-    elif dataset_name == "derczynski":
-        dataset_json_file_adr = "Derczynski_IPM_gold.json"
-    elif dataset_name == "kore":
-        dataset_json_file_adr = "KORE50_gold.json"
-    elif dataset_name == "n3_reuters":
-        dataset_json_file_adr = "Reuters_128_gold.json"
-    elif dataset_name == "n3_rss":
-        dataset_json_file_adr = "RSS_500_gold.json"
-    elif dataset_name == "oke15":
-        dataset_json_file_adr = "OKE_2015_gold.json"
-    elif dataset_name == "oke16":
-        dataset_json_file_adr = "OKE_2016_gold.json"
-    else:
-        raise NotImplementedError
-    for document_id, document in enumerate(json.load(
-            (get_resources_dir() / "data" / "test_data" / dataset_json_file_adr).open("r"))["annotations"]):
-        text = normalize_sentence_for_moses_alignment(document["text"], normailze_for_chinese_characters).replace("\u010a", "\n")
-        annotations = sorted(document["value"], key=lambda x: x['start'])
-        document_words = text.split()
-        document_labels = []
-        last_word_start_index = 0
-        annotation_to_process_index = 0
-        count_new_lines = 0
-        # For the cases that the text starts with leading new lines or spaces
-        while last_word_start_index + count_new_lines < len(text) and (
-                text[last_word_start_index + count_new_lines] == '\n' or text[last_word_start_index + count_new_lines] == ' '):
-            if text[last_word_start_index + count_new_lines] == '\n':
-                count_new_lines += 1
-            else:
-                last_word_start_index += 1
-        for word in document_words:
-            start_idx = last_word_start_index
-            end_idx = start_idx + len(word)
-            annotation_to_process = annotations[annotation_to_process_index] \
-                if annotation_to_process_index < len(annotations) else None
-            assert text[start_idx + count_new_lines: end_idx + count_new_lines] == word
-            if annotation_to_process is None or annotation_to_process['start'] > end_idx + count_new_lines:
-                document_labels.append('|||O|||')
-            elif annotation_to_process['start'] <= start_idx + count_new_lines:
-                document_labels.append(_remove_kb_prefix(annotation_to_process["tag"]))
-                if end_idx + count_new_lines >= annotation_to_process['end']:
-                    annotation_to_process_index += 1
-            elif start_idx + count_new_lines <= annotation_to_process['start'] and \
-                    end_idx + count_new_lines >= annotation_to_process['end']:
-                document_labels.append(_remove_kb_prefix(annotation_to_process["tag"]))
-                annotation_to_process_index += 1
-            elif start_idx + count_new_lines <= annotation_to_process['start'] and \
-                    end_idx + count_new_lines < annotation_to_process['end']: # the mention
-                document_labels.append(_remove_kb_prefix(annotation_to_process["tag"]))
-            else:
-                raise ValueError
-            while end_idx + count_new_lines < len(text) and text[end_idx + count_new_lines] == ' ':
-                end_idx += 1
-            last_word_start_index = end_idx
-            while end_idx + count_new_lines < len(text) and (
-                    text[end_idx + count_new_lines] == '\n' or text[end_idx + count_new_lines] == ' '):
-                if text[end_idx + count_new_lines] == '\n':
-                    count_new_lines += 1
-                else:
-                    end_idx += 1
-                    last_word_start_index = end_idx
-        original_string = text
-        tokenized_mention = tokenizer(original_string)
-        tokenized_mention_tokens = tokenized_mention.tokens()
-        tokens_offsets = list(zip([tokenized_mention_tokens[0]] + [tokenizer.decode(
-            tokenizer.convert_tokens_to_ids(x)).replace(" ", "") for x in tokenized_mention_tokens[1:-1]] + \
-                                  [tokenized_mention_tokens[-1]], tokenized_mention.encodings[0].offsets))[1:-1]
-        mapping = get_subword_to_word_mapping(tokenized_mention_tokens, original_string)
-        subword_tokens = tokenized_mention_tokens[1:-1]
-        w_ind = 0
-        subword_annotations = []
-        word_annotations = []
-        detok = lambda x: tokenizer.decode(tokenizer.convert_tokens_to_ids(x)).replace(" ", "").replace('\n', '')
-        for w, l in zip(document_words, document_labels):
-            if l == '*null*': l = '|||O|||'
-            elif '\u200e' in l: l = l.replace('\u200e', '')
-            for rng in [0, 1, 2]:
-                if len(mapping) > w_ind + rng and w == detok(subword_tokens[mapping[w_ind][0]:mapping[w_ind+rng][1]]):
-                    for sub_w in subword_tokens[mapping[w_ind][0]:mapping[w_ind+rng][1]]:
-                        subword_annotations.append(SubwordAnnotation([1.0], [extended_mentions_vocab[l]], sub_w))
-                    word_annotations.append(WordAnnotation(subword_annotations[mapping[w_ind][0]:mapping[w_ind+rng][1]],
-                                                           tokens_offsets[mapping[w_ind][0]:mapping[w_ind+rng][1]], None))
-                    w_ind += 1 + rng
-                    break
-            else:
-                raise ValueError("This should not happen")
-        phrase_annotations = []
-        for w in word_annotations:
-            if phrase_annotations and phrase_annotations[-1].resolved_annotation == w.resolved_annotation:
-                phrase_annotations[-1].add(w)
-            else:
-                phrase_annotations.append(PhraseAnnotation(w))
-        phrase_documents.append(phrase_annotations)
-    return phrase_documents, extended_mentions_itos
