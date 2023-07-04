@@ -33,13 +33,13 @@ Entity Linking evaluation results of *SpEL* compared to that of the literature o
 | Poerner et al. (2020)                                     |          90.8          |            85.0             |                 131.1M                  |         -          |
 | Kannan Ravi et al. (2021)                                 |           -            |            83.1             |                    -                    |         -          |
 | De Cao et al. (2021b)                                     |           -            |            83.7             |                 406.3M                  |       40.969       |
-| De Cao et al. (2021a) (no mention-specific candidate set) |          61.9          |            49.4             |                 124.8M                  |       0.268        |
-| De Cao et al. (2021a) (using PPRforNED candidate set)     |          90.1          |            85.5             |                 124.8M                  |       0.194        |
-| Mrini et al. (2022)                                       |           -            |            85.7             |     (train) 811.5M / (test) 406.2M      |         -          |
+| De Cao et al. (2021a)<br/>(no mention-specific candidate set) |          61.9          |            49.4             |                 124.8M                  |       0.268        |
+| De Cao et al. (2021a)<br/>(using PPRforNED candidate set)     |          90.1          |            85.5             |                 124.8M                  |       0.194        |
+| Mrini et al. (2022)                                       |           -            |            85.7             |     (train) 811.5M<br/>(test) 406.2M      |         -          |
 | Zhang et al. (2022)                                       |           -            |            85.8             |                 1004.3M                 |         -          |
 | Feng et al. (2022)                                        |           -            |            86.3             |                 157.3M                  |         -          |
 | <hr/>                                                     |         <hr/>          |            <hr/>            |                  <hr/>                  |       <hr/>        |
 | **SpEL** (no mention-specific candidate set)              |          90.9          |            84.2             |                 128.9M                  |       0.094        |
 | **SpEL** (KB+Yago candidate set)                          |          90.1          |            84.7             |                 128.9M                  |       0.161        |
-| **SpEL** (PPRforNED candidate set) (context-agnostic)     |          91.5          |            86.1             |                 128.9M                  |       0.158        |
-| **SpEL** (PPRforNED candidate set) (context-aware)        |          92.4          |            87.5             |                 128.9M                  |       0.157        |
+| **SpEL** (PPRforNED candidate set)<br/>(context-agnostic)     |          91.5          |            86.1             |                 128.9M                  |       0.158        |
+| **SpEL** (PPRforNED candidate set)<br/>(context-aware)        |          92.4          |            87.5             |                 128.9M                  |       0.157        |
