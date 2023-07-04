@@ -4,7 +4,7 @@ This file contains the implementation of the candidate manager in charge of load
 """
 import json
 from spel.span_annotation import PhraseAnnotation
-from configuration import get_resources_dir
+from spel.configuration import get_resources_dir
 
 
 class CandidateManager:

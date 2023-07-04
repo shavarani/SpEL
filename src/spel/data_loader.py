@@ -46,7 +46,7 @@ from torchtext.utils import download_from_url
 
 from transformers import AutoTokenizer, BatchEncoding
 
-from configuration import get_aida_plus_wikipedia_vocab, get_aida_train_canonical_redirects, get_aida_vocab
+from spel.configuration import get_aida_plus_wikipedia_vocab, get_aida_train_canonical_redirects, get_aida_vocab
 
 # You need to change the following variable to "roberta-large" to use the Large model as the initial model.
 BERT_MODEL_NAME = "roberta-base"
