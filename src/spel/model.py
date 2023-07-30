@@ -365,8 +365,38 @@ class SpELAnnotator:
         print(f" * Loaded pretrained model checkpoint: {file_name}")
         return checkpoint
 
+    @staticmethod
+    def download_large_from_torch_hub(finetuned_after_step=1):
+        assert 3 >= finetuned_after_step >= 1
+        if finetuned_after_step == 3:
+            file_name = "spel-step-3.pt"
+            # Downloads and returns the finetuned model checkpoint created on June-8-2023 with P=91.66|R=91.55|F1=91.78
+            #checkpoint = torch.hub.load_state_dict_from_url('https://vault.sfu.ca/index.php/s/JuIuYCtgYiwXhAa/download',
+            #                                                model_dir=str(get_checkpoints_dir()), map_location="cpu",
+            #                                                file_name=file_name)
+            raise NotImplementedError
+        elif finetuned_after_step == 2:
+            file_name = 'spel-step-2.pt'
+            # Downloads and returns the pretrained model checkpoint created on June-6-2023 with P=74.95|R=78.53|F1=76.70
+            #checkpoint = torch.hub.load_state_dict_from_url('https://vault.sfu.ca/index.php/s/xWgkiyWWEeBvsmu/download',
+            #                                                model_dir=str(get_checkpoints_dir()), map_location="cpu",
+            #                                                file_name=file_name)
+            raise NotImplementedError
+        else:
+            file_name = 'spel-large-step-1.pt'
+            # Downloads and returns the pretrained model checkpoint created on Jul-30-2023 with P=81.93|R=80.28|F1=81.09
+            checkpoint = torch.hub.load_state_dict_from_url('https://vault.sfu.ca/index.php/s/nDuGlZap51CbcrJ/download',
+                                                            model_dir=str(get_checkpoints_dir()), map_location="cpu",
+                                                            file_name=file_name)
+        print(f" * Loaded pretrained model checkpoint: {file_name}")
+        return checkpoint
+
+
     def load_checkpoint(self, checkpoint_name, device="cpu", rank=0, load_from_torch_hub=False, finetuned_after_step=1):
-        if load_from_torch_hub:
+        if load_from_torch_hub and BERT_MODEL_NAME == "roberta-large":
+            checkpoint = self.download_large_from_torch_hub(finetuned_after_step)
+            self._load_from_checkpoint_object(checkpoint, device)
+        elif load_from_torch_hub and BERT_MODEL_NAME == "roberta-base":
             checkpoint = self.download_from_torch_hub(finetuned_after_step)
             self._load_from_checkpoint_object(checkpoint, device)
         else: # load from the local .checkpoints directory
