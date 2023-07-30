@@ -46,7 +46,7 @@ from torchtext.utils import download_from_url
 
 from transformers import AutoTokenizer, BatchEncoding
 
-from spel.configuration import get_aida_plus_wikipedia_vocab, get_aida_train_canonical_redirects, get_aida_vocab
+from spel.configuration import get_aida_plus_wikipedia_vocab, get_aida_train_canonical_redirects, get_aida_vocab, get_checkpoints_dir
 
 # You need to change the following variable to "roberta-large" to use the Large model as the initial model.
 BERT_MODEL_NAME = "roberta-base"
@@ -100,7 +100,7 @@ class AIDA20230520Config:
     NUM_LINES = {'train': 1585, 'valid': 391, 'test': 372}
 
 
-tokenizer = AutoTokenizer.from_pretrained(BERT_MODEL_NAME)
+tokenizer = AutoTokenizer.from_pretrained(BERT_MODEL_NAME, cache_dir=get_checkpoints_dir())
 
 WIKI_EXTRACTED_FILES = {"train": "train.json", "valid": "valid.json", "test": " test.json"}
 
