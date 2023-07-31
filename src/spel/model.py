@@ -44,7 +44,8 @@ class SpELAnnotator:
         This is required to be called to load up the base model architecture before loading the fine-tuned checkpoint.
         """
         if base_model:
-            self.bert_lm = AutoModelForMaskedLM.from_pretrained(base_model, output_hidden_states=True, cache_dir=get_checkpoints_dir()).to(device)
+            self.bert_lm = AutoModelForMaskedLM.from_pretrained(base_model, output_hidden_states=True,
+                                                                cache_dir=get_checkpoints_dir() / "hf").to(device)
             self.disable_roberta_lm_head()
             self.number_of_bert_layers = self.bert_lm.config.num_hidden_layers + 1
             self.bert_lm_h = self.bert_lm.config.hidden_size

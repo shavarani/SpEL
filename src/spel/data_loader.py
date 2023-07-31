@@ -100,7 +100,7 @@ class AIDA20230520Config:
     NUM_LINES = {'train': 1585, 'valid': 391, 'test': 372}
 
 
-tokenizer = AutoTokenizer.from_pretrained(BERT_MODEL_NAME, cache_dir=get_checkpoints_dir())
+tokenizer = AutoTokenizer.from_pretrained(BERT_MODEL_NAME, cache_dir=get_checkpoints_dir() / "hf")
 
 WIKI_EXTRACTED_FILES = {"train": "train.json", "valid": "valid.json", "test": " test.json"}
 
@@ -293,11 +293,12 @@ def get_dataset(dataset_name: str, split: str, batch_size: int, get_labels_with_
     d_size = (retokenized_wikipedia_dataset_config.NUM_LINES[split] if use_retokenized_wikipedia_data else
               wikipedia_dataset_config.NUM_LINES[split]) \
         if dataset_name == "enwiki" else aida_dataset_config.NUM_LINES[split]
-    dataset_ = DistributableDataset(dset_class(split=split), d_size, world_size, rank) \
-        if load_distributed else dset_class(split=split)
+    dataset_ = DistributableDataset(dset_class(split=split, root=get_checkpoints_dir()), d_size, world_size, rank) \
+        if load_distributed else dset_class(split=split, root=get_checkpoints_dir())
     return DataLoader(dataset_, batch_size=batch_size, collate_fn=collate_batch,
                       sampler=DistributedSampler(dataset_, num_replicas=world_size, rank=rank)) \
-        if load_distributed and split == "train" else DataLoader(dset_class(split=split), batch_size=batch_size,
+        if load_distributed and split == "train" else DataLoader(dset_class(split=split, root=get_checkpoints_dir()),
+                                                                 batch_size=batch_size,
                                                                  collate_fn=collate_batch)
 
 
