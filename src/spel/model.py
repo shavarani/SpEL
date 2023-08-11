@@ -385,7 +385,7 @@ class SpELAnnotator:
             raise NotImplementedError
         else:
             file_name = 'spel-large-step-1.pt'
-            # Downloads and returns the pretrained model checkpoint created on Jul-30-2023 with P=81.93|R=80.28|F1=81.09
+            # Downloads and returns the pretrained model checkpoint created on Aug-11-2023 with P=82.49|R=81.45|F1=81.96
             checkpoint = torch.hub.load_state_dict_from_url('https://vault.sfu.ca/index.php/s/nDuGlZap51CbcrJ/download',
                                                             model_dir=str(get_checkpoints_dir()), map_location="cpu",
                                                             file_name=file_name)
