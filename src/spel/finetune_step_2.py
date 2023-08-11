@@ -44,8 +44,7 @@ class FinetuneS2(SpELAnnotator):
 
     def finetune(self, checkpoint_name, n_epochs, batch_size, eval_batch_size=32, encoder_lr=5e-5, decoder_lr=0.01,
                  accumulate_batch_gradients=4, label_size=8196, evaluate_every=15000, n_epochs_freeze_bert=3,
-                 early_stopping_n_epoch_wait=2, continue_from_previous_checkpoint=False,
-                 optimizer_warmup_steps=0, enable_r_drop=False, bert_dropout=0):
+                 early_stopping_n_epoch_wait=2, optimizer_warmup_steps=0, enable_r_drop=False, bert_dropout=0):
         self.init_model_from_scratch(device=device)
         if checkpoint_name is None:
             self.load_checkpoint(None, device=device, load_from_torch_hub=True, finetuned_after_step=1)
@@ -67,7 +66,6 @@ class FinetuneS2(SpELAnnotator):
                     "evaluate_every": evaluate_every,
                     "n_epochs_freeze_bert": n_epochs_freeze_bert,
                     "early_stopping_n_epoch_wait": early_stopping_n_epoch_wait,
-                    "continue_from_previous_checkpoint": continue_from_previous_checkpoint,
                     "optimizer_warmup_steps": optimizer_warmup_steps,
                     "enable_r_drop": enable_r_drop,
                     "bert_dropout": bert_dropout
@@ -210,9 +208,8 @@ if __name__ == '__main__':
     try:
         b_annotator = FinetuneS2()
         b_annotator.finetune(checkpoint_name=None, n_epochs=14, batch_size=10, eval_batch_size=4, label_size=10240,
-                             n_epochs_freeze_bert=3, continue_from_previous_checkpoint=False,
-                             optimizer_warmup_steps=0, early_stopping_n_epoch_wait=2, enable_r_drop=False,
-                             bert_dropout=0)
+                             n_epochs_freeze_bert=3, optimizer_warmup_steps=0, early_stopping_n_epoch_wait=2,
+                             enable_r_drop=False, bert_dropout=0)
     finally:
         if TRACK_WITH_WANDB:
             wandb.finish()
