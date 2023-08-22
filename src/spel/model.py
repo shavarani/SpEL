@@ -378,7 +378,7 @@ class SpELAnnotator:
             raise NotImplementedError
         elif finetuned_after_step == 2:
             file_name = 'spel-large-step-2.pt'
-            # Downloads and returns the pretrained model checkpoint created on Aug-22-2023 with P=74.95|R=78.53|F1=76.70
+            # Downloads and returns the pretrained model checkpoint created on Aug-22-2023 with P=72.95|R=78.51|F1=75.63
             checkpoint = torch.hub.load_state_dict_from_url('https://vault.sfu.ca/index.php/s/DZGsxrVEGwBBSDn/download',
                                                             model_dir=str(get_checkpoints_dir()), map_location="cpu",
                                                             file_name=file_name)
