@@ -278,8 +278,7 @@ class SpELAnnotator:
         gold_documents = get_aida_set_phrase_splitted_documents(dataset_name)
         for gold_document in tqdm(gold_documents):
             t_sentence = " ".join([x.word_string for x in gold_document])
-            predicted_document = chunk_annotate_and_merge_to_phrase(
-                self, t_sentence, k_for_top_k_to_keep=1, ignore_non_aida_vocab=False)
+            predicted_document = chunk_annotate_and_merge_to_phrase(self, t_sentence, k_for_top_k_to_keep=1)
             comparison_results = compare_gold_and_predicted_annotation_documents(gold_document, predicted_document)
             g_md = set((e[1].begin_character, e[1].end_character)
                        for e in comparison_results if e[0].resolved_annotation)

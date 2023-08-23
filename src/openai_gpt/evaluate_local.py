@@ -83,3 +83,6 @@ class GPT3Annotator:
 
     def load_pretrained_model_checkpoint(self, device, load_finetuned, load_retokenized_wikipedia_finetuned):
         return
+
+    def load_checkpoint(self, checkpoint_name, device="cpu", rank=0, load_from_torch_hub=False, finetuned_after_step=1):
+        return
