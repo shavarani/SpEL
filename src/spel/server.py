@@ -3,9 +3,9 @@ This file contains a completed implementation of gerbil_connect.server_template 
 You can run this file with the following arguments:
     -----------------------------------------------------------------------------
     To evaluate SpEL with no mention-specific candidates, run:
-        python server.py bert False False
+        python server.py bert False False False
     To evaluate SpEL with KB+Yago candidate sets, run:
-        python server.py bert True True
+        python server.py bert True True False
     To evaluate SpEL with context-agnostic PPRforNED candidate sets, run:
         python server.py bert True False True
     To evaluate SpEL with context-aware PPRforNED candidate sets, run:
@@ -86,7 +86,7 @@ def generic_annotate(nif_bytes, load_aida_finetuned, kb_prefix):
             annotator.annotate(parsed_collection, ignore_non_aida_vocab=load_aida_finetuned, kb_prefix=kb_prefix,
                                candidates_manager=candidates_manager_to_use)
     else:
-        print(" * Handshake to Gerbil was successful!\You may perform entity linking through: http://localhost:3002/annotate_[aida,wiki,dbpedia,n3]")
+        print(" * Handshake to Gerbil was successful!\nYou may perform entity linking through: http://localhost:3002/annotate_[aida,wiki,dbpedia,n3]")
         annotator = annotator_class()
         annotator.init_model_from_scratch(device=device)
         if load_aida_finetuned:
