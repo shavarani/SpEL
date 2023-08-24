@@ -7,6 +7,9 @@ import tiktoken
 import spacy
 import logging
 
+# GPT_MODEL_NAME = "gpt-3.5-turbo-16k"
+GPT_MODEL_NAME = "gpt-4-0613"
+
 openai.api_key = os.getenv("OPENAI_API_KEY")
 if openai.api_key is None:
     print(f"WARNING! you need to set environment variable OPENAI_API_KEY to your personal key before running this code,"
@@ -20,8 +23,8 @@ PROMPT = "Annotate the wikipedia entities in the following paragraph, and " \
          "produce the output in html markup using the <mark> element and the data-entity attribute:\n\n"
 
 
-def num_tokens_from_messages(messages, model_name="gpt-3.5-turbo-16k"):
-    assert model_name == "gpt-3.5-turbo-16k", f"requested model name:{model_name} is not supported!"
+def num_tokens_from_messages(messages, model_name=GPT_MODEL_NAME):
+    assert model_name in ["gpt-3.5-turbo-16k", "gpt-4-0613"], f"requested model name:{model_name} is not supported!"
     encoding = tiktoken.encoding_for_model(model_name)
     tokens_per_message = 4  # every message follows <|start|>{role/name}\n{content}<|end|>\n
     tokens_per_name = -1  # if there's a name, the role is omitted
@@ -48,7 +51,7 @@ def create_messages(text, prompt=PROMPT):
     openai.error.RateLimitError,
     max_time=240
 )
-def chat_completion(text, prompt=PROMPT, model_name="gpt-3.5-turbo-16k"):
+def chat_completion(text, prompt=PROMPT, model_name=GPT_MODEL_NAME):
     return openai.ChatCompletion.create(
         model=model_name,
         temperature=0,
@@ -60,7 +63,7 @@ def chat_completion(text, prompt=PROMPT, model_name="gpt-3.5-turbo-16k"):
     )
 
 
-def make_chat_completion_query(text, prompt=PROMPT, model_name="gpt-3.5-turbo-16k"):
+def make_chat_completion_query(text, prompt=PROMPT, model_name=GPT_MODEL_NAME):
     r = chat_completion(text, prompt, model_name)
     annotated = r.choices[0].message['content'].strip()
     if r.choices[0].finish_reason == "length":

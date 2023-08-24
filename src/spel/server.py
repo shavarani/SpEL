@@ -46,9 +46,9 @@ if annotator_name == 'bert':
     from spel.data_loader import dl_sa
     annotator_class = SpELEvaluator
 elif annotator_name == 'openai':
-    from openai_gpt.evaluate_local import GPT3Annotator
+    from openai_gpt.evaluate_local import GPTAnnotator
     from spel.data_loader import dl_sa
-    annotator_class = GPT3Annotator
+    annotator_class = GPTAnnotator
 else:
     raise ValueError(f"Undefined annotator: {annotator_name}")
 use_candidates = sys.argv[2][0].lower() == 't'
@@ -86,7 +86,7 @@ def generic_annotate(nif_bytes, load_aida_finetuned, kb_prefix):
             annotator.annotate(parsed_collection, ignore_non_aida_vocab=load_aida_finetuned, kb_prefix=kb_prefix,
                                candidates_manager=candidates_manager_to_use)
     else:
-        print(" * Handshake to Gerbil was successful!")
+        print(" * Handshake to Gerbil was successful!\You may perform entity linking through: http://localhost:3002/annotate_[aida,wiki,dbpedia,n3]")
         annotator = annotator_class()
         annotator.init_model_from_scratch(device=device)
         if load_aida_finetuned:

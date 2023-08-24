@@ -34,9 +34,9 @@ def convert_mention(m):
     return r
 
 
-class GPT3Annotator:
+class GPTAnnotator:
     def __init__(self):
-        super(GPT3Annotator, self).__init__()
+        super(GPTAnnotator, self).__init__()
         self.checkpoints_root = get_checkpoints_dir()
         self.logdir = get_logdir_dir()
         self.exec_run_file = get_exec_run_file()
