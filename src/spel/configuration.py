@@ -68,7 +68,7 @@ def get_aida_vocab():
 
 def get_aida_plus_wikipedia_vocab():
     mentions_vocab = get_aida_vocab()
-    dictionary_file = get_resources_dir() / "vocab" / f"enwiki_20230520.txt"
+    dictionary_file = get_resources_dir() / "vocab" / f"enwiki_20230827.txt"
     dfile = dictionary_file.open("r")
     for _ad_element in dfile.read().split("\n"):
         if _ad_element not in mentions_vocab:

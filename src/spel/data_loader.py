@@ -46,7 +46,7 @@ from torchtext.utils import download_from_url
 
 from transformers import AutoTokenizer, BatchEncoding
 
-from spel.configuration import get_aida_plus_wikipedia_vocab, get_aida_train_canonical_redirects, get_aida_vocab, get_checkpoints_dir
+from spel.configuration import get_aida_plus_wikipedia_plus_out_of_domain_vocab, get_aida_train_canonical_redirects, get_aida_vocab, get_checkpoints_dir
 
 # You need to change the following variable to "roberta-large" to use the Large model as the initial model.
 BERT_MODEL_NAME = "roberta-base"
@@ -60,7 +60,7 @@ class StaticAccess:
         self.aida_canonical_redirects = get_aida_train_canonical_redirects()
 
     def set_vocab_and_itos_to_all(self):
-        self.mentions_vocab = get_aida_plus_wikipedia_vocab()
+        self.mentions_vocab = get_aida_plus_wikipedia_plus_out_of_domain_vocab()
         self.mentions_itos = [w[0] for w in sorted(self.mentions_vocab.items(), key=lambda x: x[1])]
 
     @staticmethod
