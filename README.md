@@ -180,3 +180,15 @@ Here is the simple modifications you need to do:
    org.aksw.gerbil.datasets.definition.AIDATestC.constructorArgs=${org.aksw.gerbil.datasets.AIDATestC.file},${org.aksw.gerbil.datasets.definition.AIDATestC.name}
    ```
 5. Run GERBIL, the new dataset should show up.
+
+## Citation
+If you use SpEL finetuned models or data, gerbil_connect, or AIDA/testc dataset, please cite our paper:
+
+```
+@article{shavarani2023spel,
+  title={SpEL: Structured Prediction for Entity Linking},
+  author={Shavarani, Hassan S.  and  Sarkar, Anoop},
+  journal={arXiv preprint arXiv:2306.00000},
+  year={2023}
+}
+```
