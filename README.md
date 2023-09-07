@@ -72,3 +72,87 @@ TRAIN: '1 EU' to '946 SOCCER'
 TESTA: '947testa CRICKET' to '1162testa Dhaka'
 TESTB: '1163testb SOCCER' to '1393testb SOCCER'
 ```
+
+How to use SpEL
+---------------
+All the required datasets for all three finetuning steps of SpEL as well as the finetuned models for evaluation will be 
+automatically downloaded when you start the process (finetune or evaluation), and you **do not need to** download 
+anything to initiate the finetuning/evaluation.
+
+Here is how you can run each of the possible tasks in SpEL:
+
+### Global knowledge finetuning step 1: 
+
+```shell
+export PYTHONPATH=/path/to/SpEL/src
+cd /path/to/SpEL/src/spel
+python finetune_step_1.py
+```
+The `finetune_step_1.py` script will automatically expand the process across as many GPUs as you have and will perform 
+finetuning using all of those. The provided default settings are suitable for Titan RTX 2080 GPUs with 24GB GPUs.
+
+### Global knowledge finetuning step 2:
+
+
+```shell
+export PYTHONPATH=/path/to/SpEL/src
+cd /path/to/SpEL/src/spel
+python finetune_step_2.py
+```
+
+You may also tweak the default parameters of `finetune_step_2.py` script to adapt the script to your available hardware.
+
+### Domain specific fine-tuning (step 3):
+
+
+```shell
+export PYTHONPATH=/path/to/SpEL/src
+cd /path/to/SpEL/src/spel
+python finetune_step_3.py
+```
+
+The `finetune_step_3.py` script will be able to run on an Nvidia 1060 GPU with 6GBs of GPU and will finish within one hour.
+
+### Local evaluation:
+
+```shell
+export PYTHONPATH=/path/to/SpEL/src
+cd /path/to/SpEL/src/spel
+python evaluate_local.py
+```
+
+The `evaluate_local.py` script will download the evaluation data and test both the Global knowledge finetuned model 
+(by default finetuned after step 2) and the domain specific finetuned model. 
+Please note that the numbers this script returns are subword-level F-scores and are not comparable to the GERBIL numbers.
+This script is solely intended for internal evaluation and sanity testing the finetuned models, and not for entity 
+linking performance evaluation.
+
+### Entity linking evaluation using GERBIL:
+```shell
+export PYTHONPATH=/path/to/SpEL/src
+cd /path/to/SpEL/src/spel
+python server.py [spel,openai] [n, k, pg, pw]
+```
+
+You can use `server.py` to serve SpEL to GERBIL for evaluation. For the first argument you can choose to either serve
+`spel` or to redirect the GERBIL queries to chatgpt interface using `openai` argument. Please note that for the `openai`
+setting you need to have set your `OPENAI_API_KEY` as another environment variable.
+
+For the `spel` setting, you can choose either of the four candidate set selection settings.
+`n` will mean no candidate set will be used in evaluation, `k` signals using KB+Yago candidate sets, `pg` will point the
+model to use the context agnostic version of PPRforNED candidate set and `pw` will point the model to use the context 
+aware version of PPRforNED candidate set.
+
+The provided `server.py` is an example implementation of `gerbil_connect` interface which is explained in more detail in
+its [README](src/gerbil_connect/README.md) file.
+
+#### how can I use GERBIL for evaluation?
+
+1. Checkout [GERBIL repository](https://github.com/dice-group/gerbil) and run `cd gerbil/ && ./start.sh`
+    - It will require Java 8 to run.
+2. Once gerbil is running, run `python server.py` with your desired configuration parameters. It will start listening on `http://localhost:3002/`.
+3. Open a browser and type in `http://localhost:1234/gerbil/config`, this will open up the visual experiment configuration page of GERBIL.
+4. Leave `Experiment Type` as `A2KB`, for `Matching` choose `Ma - strong annotation match`, and for `Annotator` set a preferred name (e.g. `Experiment 1`) and in `URI` set `http://localhost:3002/annotate_aida`.
+5. Choose your evaluation `Dataset`s, for example choose `AIDA/CoNLL-Test A` and `AIDA/CoNLL-Test B` for evaluation on AIDA-CoNLL.
+6. Check the disclaimer checkbox and hit `Run Experiment`.
+7. Let GERBIL send in the evaluation documents (from the datasets you selected) one by one to the running server. Once it is done you can click on the URL printed at the bottom of the page (normally of the format `http://localhost:1234/gerbil/experiment?id=YYYYMMDDHHMM`) to see your evaluation results.
