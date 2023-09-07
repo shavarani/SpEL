@@ -156,3 +156,27 @@ its [README](src/gerbil_connect/README.md) file.
 5. Choose your evaluation `Dataset`s, for example choose `AIDA/CoNLL-Test A` and `AIDA/CoNLL-Test B` for evaluation on AIDA-CoNLL.
 6. Check the disclaimer checkbox and hit `Run Experiment`.
 7. Let GERBIL send in the evaluation documents (from the datasets you selected) one by one to the running server. Once it is done you can click on the URL printed at the bottom of the page (normally of the format `http://localhost:1234/gerbil/experiment?id=YYYYMMDDHHMM`) to see your evaluation results.
+
+AIDA/testc dataset:
+-------------------
+We have annotated a new dataset comprising 131 Reuters news articles basing on the NER dataset of (Liu and Ritter 2023;
+https://aclanthology.org/2023.acl-long.459). This dataset contains 1,145 unique new entity identifiers and spans over 
+4,028 mentions, encompassing a total of 46,456 words. You can find this dataset under [`resources/data/aida_testc.ttl`](resources/data/aida_testc.ttl).
+This dataset is in NIF format and can be easily integrated into GERBIL.
+
+### How can I integrate AIDA/testc into GERBIL?
+Here is the simple modifications you need to do:
+
+1. If you are running GERBIL, stop the process.
+2. Open `gerbil/src/main/properties/datasets.properties` (this properties file contains the dataset configurations for GERBIL).
+3. Put [`resources/data/aida_testc.ttl`](resources/data/aida_testc.ttl) in `gerbil/gerbil_data/datasets/aida`
+4. Copy the following lines underneath the last line defining AIDA/CoNLL-Test B:
+   ```
+   org.aksw.gerbil.datasets.AIDATestC.file=${org.aksw.gerbil.DataPath}/datasets/aida/aida_testc.ttl
+   org.aksw.gerbil.datasets.definition.AIDATestC.name=AIDA/CoNLL-Test C
+   org.aksw.gerbil.datasets.definition.AIDATestC.class=org.aksw.gerbil.dataset.impl.nif.FileBasedNIFDataset
+   org.aksw.gerbil.datasets.definition.AIDATestC.cacheable=true
+   org.aksw.gerbil.datasets.definition.AIDATestC.experimentType=A2KB
+   org.aksw.gerbil.datasets.definition.AIDATestC.constructorArgs=${org.aksw.gerbil.datasets.AIDATestC.file},${org.aksw.gerbil.datasets.definition.AIDATestC.name}
+   ```
+5. Run GERBIL, the new dataset should show up.
