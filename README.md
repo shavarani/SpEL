@@ -168,8 +168,8 @@ This dataset is in NIF format and can be easily integrated into GERBIL.
 Here is the simple modifications you need to do:
 
 1. If you are running GERBIL, stop the process.
-2. Open `gerbil/src/main/properties/datasets.properties` (this properties file contains the dataset configurations for GERBIL).
-3. Put [`resources/data/aida_testc.ttl`](resources/data/aida_testc.ttl) in `gerbil/gerbil_data/datasets/aida`
+2. Put [`resources/data/aida_testc.ttl`](resources/data/aida_testc.ttl) in `gerbil/gerbil_data/datasets/aida`
+3. Open `gerbil/src/main/properties/datasets.properties` (this properties file contains the dataset configurations for GERBIL).
 4. Copy the following lines underneath the last line defining AIDA/CoNLL-Test B:
    ```
    org.aksw.gerbil.datasets.AIDATestC.file=${org.aksw.gerbil.DataPath}/datasets/aida/aida_testc.ttl
