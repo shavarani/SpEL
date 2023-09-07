@@ -3,13 +3,13 @@ This file contains a completed implementation of gerbil_connect.server_template 
 You can run this file with the following arguments:
     -----------------------------------------------------------------------------
     To evaluate SpEL with no mention-specific candidates, run:
-        python server.py bert n
+        python server.py spel n
     To evaluate SpEL with KB+Yago candidate sets, run:
-        python server.py bert k
+        python server.py spel k
     To evaluate SpEL with context-agnostic PPRforNED candidate sets, run:
-        python server.py bert pg
+        python server.py spel pg
     To evaluate SpEL with context-aware PPRforNED candidate sets, run:
-        python server.py bert pw
+        python server.py spel pw
     -----------------------------------------------------------------------------
     To replicate our OpenAI-GPT-3.5 experiments, run:
         python server.py openai n
@@ -50,7 +50,7 @@ The second argument after the annotator name can be any of the following:
 """
 candidate_setting = sys.argv[2].lower()
 
-if annotator_name == 'bert':
+if annotator_name == 'spel':
     from spel.evaluate_local import SpELEvaluator
     from spel.data_loader import dl_sa
     annotator_class = SpELEvaluator
