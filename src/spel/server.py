@@ -3,16 +3,16 @@ This file contains a completed implementation of gerbil_connect.server_template 
 You can run this file with the following arguments:
     -----------------------------------------------------------------------------
     To evaluate SpEL with no mention-specific candidates, run:
-        python server.py bert False False False
+        python server.py bert n
     To evaluate SpEL with KB+Yago candidate sets, run:
-        python server.py bert True True False
+        python server.py bert k
     To evaluate SpEL with context-agnostic PPRforNED candidate sets, run:
-        python server.py bert True False True
+        python server.py bert pg
     To evaluate SpEL with context-aware PPRforNED candidate sets, run:
-        python server.py bert True False False
+        python server.py bert pw
     -----------------------------------------------------------------------------
     To replicate our OpenAI-GPT-3.5 experiments, run:
-        python server.py openai False False False
+        python server.py openai n
     -----------------------------------------------------------------------------
 """
 import sys
@@ -39,8 +39,17 @@ candidates_manager_to_use = None
 n3_entity_to_kb_mappings = None
 
 lock = Lock()
-assert len(sys.argv) >= 3, "Run the script with the expected annotator_name and use_candidates!"
+assert len(sys.argv) == 3, "Run the script with the expected annotator_name and candidate_setting!"
 annotator_name = sys.argv[1]
+"""
+The second argument after the annotator name can be any of the following:
+    - n: none
+    - k: kb+yago
+    - pg: pprforned (context agnostic setting)
+    - pw: pprforned (context aware setting)
+"""
+candidate_setting = sys.argv[2].lower()
+
 if annotator_name == 'bert':
     from spel.evaluate_local import SpELEvaluator
     from spel.data_loader import dl_sa
@@ -51,21 +60,17 @@ elif annotator_name == 'openai':
     annotator_class = GPTAnnotator
 else:
     raise ValueError(f"Undefined annotator: {annotator_name}")
-use_candidates = sys.argv[2][0].lower() == 't'
-load_kb_plus_yago = sys.argv[3][0].lower() == 't' if use_candidates else False
-is_context_agnostic = sys.argv[4][0].lower() == 't' if not load_kb_plus_yago else False
 print(f" * Loading the annotator of type: {annotator_class.__name__}")
-if use_candidates and load_kb_plus_yago:
-    print(f" * Loading the KB+YAGO candidates!")
-    candidates_manager_to_use = CandidateManager(dl_sa.mentions_vocab, is_kb_yago=True, is_ppr_for_ned=False,
-                                                 is_context_agnostic=is_context_agnostic, is_indexed_for_spans=False)
+
+assert candidate_setting in ["n", "k", "pg", "pw"]
+if candidate_setting != "n":
+    candidates_manager_to_use = CandidateManager(dl_sa.mentions_vocab,
+                                                 is_kb_yago=candidate_setting == "k",
+                                                 is_ppr_for_ned=candidate_setting.startswith("p"),
+                                                 is_context_agnostic=candidate_setting == "pg",
+                                                 is_indexed_for_spans=True)
     print(" * WARNING! make sure you do not load candidates for OOD datasets!")
-elif use_candidates and not load_kb_plus_yago:
-    c_agnostic_str = "context agnostic" if is_context_agnostic else "context aware"
-    print(f" * Loading the {c_agnostic_str} PPRforNED candidates!")
-    candidates_manager_to_use = CandidateManager(dl_sa.mentions_vocab, is_kb_yago=False, is_ppr_for_ned=True,
-                                                 is_context_agnostic=is_context_agnostic, is_indexed_for_spans=True)
-elif not use_candidates:
+else:
     print(f" * (not) loading the candidates!")
 
 
