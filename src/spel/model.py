@@ -357,9 +357,9 @@ class SpELAnnotator:
                                                             model_dir=str(get_checkpoints_dir()), map_location="cpu",
                                                             file_name=file_name)
         else:
-            file_name = 'spel-step-1.pt'
-            # Downloads and returns the pretrained model checkpoint created on June-6-2023 with P=83.51|R=84.08|F1=83.79
-            checkpoint = torch.hub.load_state_dict_from_url('https://vault.sfu.ca/index.php/s/aKPzRv4jMKmDh1X/download',
+            file_name = 'spel-base-step-1.pt'
+            # Downloads and returns the pretrained model checkpoint created on June-6-2023 with P=82.36|R=81.04|F1=81.70
+            checkpoint = torch.hub.load_state_dict_from_url('https://vault.sfu.ca/index.php/s/9OAoAG5eYeREE9V/download',
                                                             model_dir=str(get_checkpoints_dir()), map_location="cpu",
                                                             file_name=file_name)
         print(f" * Loaded pretrained model checkpoint: {file_name}")
