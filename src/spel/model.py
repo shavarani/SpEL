@@ -351,9 +351,9 @@ class SpELAnnotator:
                                                             model_dir=str(get_checkpoints_dir()), map_location="cpu",
                                                             file_name=file_name)
         elif finetuned_after_step == 2:
-            file_name = 'spel-step-2.pt'
-            # Downloads and returns the pretrained model checkpoint created on June-6-2023 with P=74.95|R=78.53|F1=76.70
-            checkpoint = torch.hub.load_state_dict_from_url('https://vault.sfu.ca/index.php/s/xWgkiyWWEeBvsmu/download',
+            file_name = 'spel-base-step-2.pt'
+            # Downloads and returns the pretrained model checkpoint created on Sep-18-2023 with P=74.50|R=78.20|F1=76.30
+            checkpoint = torch.hub.load_state_dict_from_url('https://vault.sfu.ca/index.php/s/Hf37vc1foluHPBh/download',
                                                             model_dir=str(get_checkpoints_dir()), map_location="cpu",
                                                             file_name=file_name)
         else:
