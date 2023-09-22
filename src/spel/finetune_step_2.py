@@ -150,7 +150,7 @@ class FinetuneS2(SpELAnnotator):
                     print("Evaluating the model ...")
                     precision, recall, f1, f05, num_proposed, num_correct, num_gold, subword_eval = self.evaluate(
                         epoch, eval_batch_size, label_size, best_f1, is_training=True,
-                        use_retokenized_wikipedia_data=True)
+                        use_retokenized_wikipedia_data=True, potent_score_threshold=0.76)
                     if best_f1 < f1:
                         best_f1 = f1
                         best_f1_per_epoch[epoch] = f1
@@ -179,7 +179,8 @@ class FinetuneS2(SpELAnnotator):
 
             print(f"\nEvaluating at the end of epoch {epoch}")
             precision, recall, f1, f05, num_proposed, num_correct, num_gold, subword_eval = self.evaluate(
-                epoch, eval_batch_size, label_size, best_f1, is_training=True, use_retokenized_wikipedia_data=True)
+                epoch, eval_batch_size, label_size, best_f1, is_training=True, use_retokenized_wikipedia_data=True,
+                potent_score_threshold=0.76)
             if best_f1 < f1:
                 best_f1 = f1
             print(f"Evaluation results: precision={precision:.5f}, recall={recall:.5f}, f1={f1:.5f}, f05={f05:.5f}, "

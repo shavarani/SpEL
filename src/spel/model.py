@@ -191,7 +191,8 @@ class SpELAnnotator:
         logits = encs[-1].matmul(out.transpose(0, 1))
         return (logits, encs) if return_hidden_states else logits
 
-    def evaluate(self, epoch, batch_size, label_size, best_f1, is_training=True, use_retokenized_wikipedia_data=False):
+    def evaluate(self, epoch, batch_size, label_size, best_f1, is_training=True, use_retokenized_wikipedia_data=False,
+                 potent_score_threshold=0.82):
         self.bert_lm.eval()
         self.out.eval()
         vocab_pad_id = dl_sa.mentions_vocab['<pad>']
@@ -255,7 +256,7 @@ class SpELAnnotator:
             fname = self.get_mode_checkpoint_name()
             torch.save(config, f"{fname}.pt")
             print(f"weights were saved to {fname}.pt")
-        if precision > 0.82 and recall > 0.82 and is_training:
+        if precision > potent_score_threshold and recall > potent_score_threshold and is_training:
             print("Saving the potent checkpoint with both precision and recall above 0.81 ...")
             config = self.prepare_model_checkpoint(epoch)
             try:
@@ -345,7 +346,7 @@ class SpELAnnotator:
     def download_from_torch_hub(finetuned_after_step=1):
         assert 3 >= finetuned_after_step >= 1
         if finetuned_after_step == 3:
-            file_name = "spel-step-3.pt"
+            file_name = "spel-base-step-3.pt"
             # Downloads and returns the finetuned model checkpoint created on June-8-2023 with P=91.66|R=91.55|F1=91.78
             checkpoint = torch.hub.load_state_dict_from_url('https://vault.sfu.ca/index.php/s/JuIuYCtgYiwXhAa/download',
                                                             model_dir=str(get_checkpoints_dir()), map_location="cpu",
