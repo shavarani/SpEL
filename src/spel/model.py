@@ -257,7 +257,7 @@ class SpELAnnotator:
             torch.save(config, f"{fname}.pt")
             print(f"weights were saved to {fname}.pt")
         if precision > potent_score_threshold and recall > potent_score_threshold and is_training:
-            print("Saving the potent checkpoint with both precision and recall above 0.81 ...")
+            print(f"Saving the potent checkpoint with both precision and recall above {potent_score_threshold} ...")
             config = self.prepare_model_checkpoint(epoch)
             try:
                 fname = self.get_mode_checkpoint_name()
@@ -353,7 +353,7 @@ class SpELAnnotator:
                                                             file_name=file_name)
         elif finetuned_after_step == 2:
             file_name = 'spel-base-step-2.pt'
-            # Downloads and returns the pretrained model checkpoint created on Sep-20-2023 with P=74.19|R=79.44|F1=76.73
+            # Downloads and returns the pretrained model checkpoint created on Sep-23-2023 with P=77.01|R=77.79|F1=77.40
             checkpoint = torch.hub.load_state_dict_from_url('https://vault.sfu.ca/index.php/s/Hf37vc1foluHPBh/download',
                                                             model_dir=str(get_checkpoints_dir()), map_location="cpu",
                                                             file_name=file_name)
