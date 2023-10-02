@@ -371,8 +371,8 @@ class SpELAnnotator:
         assert 3 >= finetuned_after_step >= 1
         if finetuned_after_step == 3:
             file_name = "spel-large-step-3.pt"
-            # Downloads and returns the finetuned model checkpoint created on Aug-23-2023 with P=92.23|R=93.91|F1=93.07
-            checkpoint = torch.hub.load_state_dict_from_url('https://vault.sfu.ca/index.php/s/Ya7uJCfeByMhLSG/download',
+            # Downloads and returns the finetuned model checkpoint created on Oct-01-2023 with P=92.23|R=93.91|F1=93.07
+            checkpoint = torch.hub.load_state_dict_from_url('https://vault.sfu.ca/index.php/s/kBBlYVM4Tr59P0q/download',
                                                             model_dir=str(get_checkpoints_dir()), map_location="cpu",
                                                             file_name=file_name)
         elif finetuned_after_step == 2:
