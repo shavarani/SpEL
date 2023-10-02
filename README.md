@@ -21,32 +21,32 @@ This repository contains the source code to finetune RoBERTa models and evaluate
 
 Entity Linking evaluation results of *SpEL* compared to that of the literature over AIDA test sets:
 
-| Approach                                                        | EL Micro-F1<br/>test-a |   EL Micro-F1<br/>test-b    |            #params<br/>on GPU            | speed<br/>sec/doc  |
-|-----------------------------------------------------------------|:----------------------:|:---------------------------:|:----------------------------------------:|:------------------:|
-| Hoffart et al. (2011)                                           |          72.4          |            72.8             |                    -                     |         -          |
-| Kolitsas et al. (2018)                                          |          89.4          |            82.4             |                  330.7M                  |       0.097        |
-| Broscheit (2019)                                                |          86.0          |            79.3             |                  495.1M                  |       0.613        |
-| Peters et al. (2019)                                            |          82.1          |            73.1             |                    -                     |         -          |
-| Martins et al. (2019)                                           |          85.2          |            81.9             |                    -                     |         -          |
-| van Hulst et al. (2020)                                         |          83.3          |            82.4             |                  19.0M                   |       0.337        |
-| Févry et al. (2020)                                             |          79.7          |            76.7             |                    -                     |         -          |
-| Poerner et al. (2020)                                           |          90.8          |            85.0             |                  131.1M                  |         -          |
-| Kannan Ravi et al. (2021)                                       |           -            |            83.1             |                    -                     |         -          |
-| De Cao et al. (2021b)                                           |           -            |            83.7             |                  406.3M                  |       40.969       |
-| De Cao et al. (2021a)<br/>(no mention-specific candidate set)   |          61.9          |            49.4             |                  124.8M                  |       0.268        |
-| De Cao et al. (2021a)<br/>(using PPRforNED candidate set)       |          90.1          |            85.5             |                  124.8M                  |       0.194        |
-| Mrini et al. (2022)                                             |           -            |            85.7             |  (train) 811.5M<br/>(test) 406.2M        |         -          |
-| Zhang et al. (2022)                                             |           -            |            85.8             |                 1004.3M                  |         -          |
-| Feng et al. (2022)                                              |           -            |            86.3             |                  157.3M                  |         -          |
-| <hr/>                                                           |         <hr/>          |            <hr/>            |                  <hr/>                   |       <hr/>        |
-| **SpEL-base** (no mention-specific candidate set)               |          90.9          |            84.2             |                  128.9M                  |       0.094        |
-| **SpEL-base** (KB+Yago candidate set)                           |          90.1          |            84.7             |                  128.9M                  |       0.161        |
-| **SpEL-base** (PPRforNED candidate set)<br/>(context-agnostic)  |          91.5          |            86.1             |                  128.9M                  |       0.158        |
-| **SpEL-base** (PPRforNED candidate set)<br/>(context-aware)     |          92.4          |            87.5             |                  128.9M                  |       0.157        |
-| **SpEL-large** (no mention-specific candidate set)              |          91.4          |            85.8             |                  361.1M                  |       0.112        |
-| **SpEL-large** (KB+Yago candidate set)                          |          90.6          |            85.8             |                  361.1M                  |       0.157        |
-| **SpEL-large** (PPRforNED candidate set)<br/>(context-agnostic) |          92.5          |            87.4             |                  361.1M                  |       0.156        |
-| **SpEL-large** (PPRforNED candidate set)<br/>(context-aware)    |          93.2          |            88.4             |                  361.1M                  |       0.156        |
+| Approach                                                        | EL Micro-F1<br/>test-a | EL Micro-F1<br/>test-b |            #params<br/>on GPU            | speed<br/>sec/doc |
+|-----------------------------------------------------------------|:----------------------:|:----------------------:|:----------------------------------------:|:-----------------:|
+| Hoffart et al. (2011)                                           |          72.4          |          72.8          |                    -                     |         -         |
+| Kolitsas et al. (2018)                                          |          89.4          |          82.4          |                  330.7M                  |       0.097       |
+| Broscheit (2019)                                                |          86.0          |          79.3          |                  495.1M                  |       0.613       |
+| Peters et al. (2019)                                            |          82.1          |          73.1          |                    -                     |         -         |
+| Martins et al. (2019)                                           |          85.2          |          81.9          |                    -                     |         -         |
+| van Hulst et al. (2020)                                         |          83.3          |          82.4          |                  19.0M                   |       0.337       |
+| Févry et al. (2020)                                             |          79.7          |          76.7          |                    -                     |         -         |
+| Poerner et al. (2020)                                           |          90.8          |          85.0          |                  131.1M                  |         -         |
+| Kannan Ravi et al. (2021)                                       |           -            |          83.1          |                    -                     |         -         |
+| De Cao et al. (2021b)                                           |           -            |          83.7          |                  406.3M                  |      40.969       |
+| De Cao et al. (2021a)<br/>(no mention-specific candidate set)   |          61.9          |          49.4          |                  124.8M                  |       0.268       |
+| De Cao et al. (2021a)<br/>(using PPRforNED candidate set)       |          90.1          |          85.5          |                  124.8M                  |       0.194       |
+| Mrini et al. (2022)                                             |           -            |          85.7          |  (train) 811.5M<br/>(test) 406.2M        |         -         |
+| Zhang et al. (2022)                                             |           -            |          85.8          |                 1004.3M                  |         -         |
+| Feng et al. (2022)                                              |           -            |          86.3          |                  157.3M                  |         -         |
+| <hr/>                                                           |         <hr/>          |         <hr/>          |                  <hr/>                   |       <hr/>       |
+| **SpEL-base** (no mention-specific candidate set)               |          91.3          |          85.5          |                  128.9M                  |       0.084       |
+| **SpEL-base** (KB+Yago candidate set)                           |          90.6          |          85.7          |                  128.9M                  |       0.158       |
+| **SpEL-base** (PPRforNED candidate set)<br/>(context-agnostic)  |          91.7          |          86.8          |                  128.9M                  |       0.153       |
+| **SpEL-base** (PPRforNED candidate set)<br/>(context-aware)     |          92.7          |          88.1          |                  128.9M                  |       0.156       |
+| **SpEL-large** (no mention-specific candidate set)              |          91.6          |          85.8          |                  361.1M                  |       0.273       |
+| **SpEL-large** (KB+Yago candidate set)                          |          90.8          |          85.7          |                  361.1M                  |       0.267       |
+| **SpEL-large** (PPRforNED candidate set)<br/>(context-agnostic) |          92.0          |          87.3          |                  361.1M                  |       0.268       |
+| **SpEL-large** (PPRforNED candidate set)<br/>(context-aware)    |          92.9          |          88.6          |                  361.1M                  |       0.267       |
 
 ----
 
@@ -127,6 +127,23 @@ Please note that the numbers this script returns are subword-level F-scores and 
 This script is solely intended for internal evaluation and sanity testing the finetuned models, and not for entity 
 linking performance evaluation.
 
+### SpEL Finetuned Models and Data:
+As formerly stated, you **do not need to** download anything to initiate the finetuning/evaluation; however, if you 
+would prefer to download the models and use them outside the SpEL framework, you may download the models through the 
+following links:
+   
+   - [SpEL-base-step-1.pt](https://vault.sfu.ca/index.php/s/9OAoAG5eYeREE9V/download)
+   - [SpEL-base-step-2.pt](https://vault.sfu.ca/index.php/s/Hf37vc1foluHPBh/download)
+   - [SpEL-base-step-3.pt](https://vault.sfu.ca/index.php/s/HpQ3PMm6A3y1NBl/download)
+   - [SpEL-large-step-1.pt](https://vault.sfu.ca/index.php/s/kBBlYVM4Tr59P0q/download)
+   - [SpEL-large-step-2.pt](https://vault.sfu.ca/index.php/s/rnDiuKns7gzADyb/download)
+   - [SpEL-large-step-3.pt](https://vault.sfu.ca/index.php/s/bTp6UN2xL7Yh52w/download)
+
+As well, you may access the created finetuning data through the following:
+   
+   - [FT-Step1-Data (20230827)](https://1sfu-my.sharepoint.com/:u:/g/personal/sshavara_sfu_ca/Ea3IVbOpkTJKpASNyL9aFGMBQpH0ABU2hQa-wYyakkZ9TQ?e=DJFF3v)
+   - [FT-Step2-Data (20230827)](https://1sfu-my.sharepoint.com/:u:/g/personal/sshavara_sfu_ca/EeS_Tgl_CFJNiTh6YH5IDrsBocEZUsZV3lxPB6pleTxyxw?e=caH1cf)
+   - [FT-Step3-Data (AIDA)](https://1sfu-my.sharepoint.com/:u:/g/personal/sshavara_sfu_ca/EajEGYyf8LBOoxqDaiPBvbgBwFuEC08nssvZwGJWsG_HXg?e=wAwV6H)
 ### Entity linking evaluation using GERBIL:
 ```shell
 export PYTHONPATH=/path/to/SpEL/src

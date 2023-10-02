@@ -10,21 +10,21 @@ Please note that the pre-processed fine-tuning data will be automatically downlo
 
 The expected sizes of the auto-downloaded datasets:
     - Step 1 (general knowledge fine-tuning):
-            enwiki-2023-el.broscheit-roberta-tokenized-may-26-2023.tar.gz: 18.9 GBs
+            enwiki-2023-spel-roberta-tokenized-aug-27-2023.tar.gz: 19.1 GBs
             * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
             * You can delete the file above once fine-tuning step 1 is done, and you are moving on to step 2.         *
             * in the cleaning up process, make sure you remove the cached validation set files under .checkpoints     *
             * directory as well                                                                                       *
             * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
     - Step 2 (general knowledge fine-tuning):
-            enwiki-2023-el.broscheit-roberta-tokenized-may-26-2023-retokenized.tar.gz: 17.3 GBs
+            enwiki-2023-spel-roberta-tokenized-aug-27-2023-retokenized.tar.gz: 17.5 GBs
             * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
             * You can delete the file above once fine-tuning step 2 is done, and you are moving on to step 3.         *
             * in the cleaning up process, make sure you remove the cached validation set files under .checkpoints     *
             * directory as well                                                                                       *
             * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
     - Step 3 (domain specific fine-tuning):
-            aida-conll-el.broscheit-roberta-tokenized-may-26-2023.tar.gz: 5.1 MBs
+            aida-conll-spel-roberta-tokenized-aug-23-2023.tar.gz: 5.1 MBs
 
 No extra preprocessing step will be required, as soon as you start the fine-tuning script for each step,
  the proper fine-tuning dataset will be downloaded and will be served **without** the need for unzipping.
