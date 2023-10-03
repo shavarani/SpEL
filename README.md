@@ -127,6 +127,21 @@ Please note that the numbers this script returns are subword-level F-scores and 
 This script is solely intended for internal evaluation and sanity testing the finetuned models, and not for entity 
 linking performance evaluation.
 
+### Annotation Visualization:
+
+```shell
+# pip install streamlit
+export PYTHONPATH=/path/to/SpEL/src
+cd /path/to/SpEL/src/spel
+python -m streamlit run visualize.py
+```
+
+The `visualize.py` script provides a visualization tool using `streamlit` library. The tool will show a textbox and 
+loads up the SpEL finetuned model. When the `Annotate` button is pressed it passes the text from the textbox to SpEL and
+visualizes the annotated text below the textbox. The script by default will load up the step-3 finetuned model and does 
+not consider any candidate sets. The fixed candidate set on this dataset is limited to the 5600 wikipedia ids from the
+original AIDA dataset.
+
 ### SpEL Finetuned Models and Data:
 As formerly stated, you **do not need to** download anything to initiate the finetuning/evaluation; however, if you 
 would prefer to download the models and use them outside the SpEL framework, you may download the models through the 
