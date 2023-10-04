@@ -248,7 +248,7 @@ def get_dataset(dataset_name: str, split: str, batch_size: int, get_labels_with_
             data["mentions"].append([
                 [(dl_sa.mentions_vocab[x] if x not in dl_sa.aida_canonical_redirects else
                   dl_sa.mentions_vocab[dl_sa.aida_canonical_redirects[x]])
-                 if x is not None else dl_sa.mentions_vocab["|||O|||"] for x in el]
+                 if x is not None and x not in ['Gmina_Żabno'] else dl_sa.mentions_vocab["|||O|||"] for x in el]
                 for el in annotated_line_in_file["mentions"]
             ])
             data["mention_entity_probs"].append(annotated_line_in_file["mention_entity_probs"])
