@@ -131,7 +131,7 @@ def annotate_wiki():
 @cross_origin(origins='*')
 def annotate_dbpedia():
     """Use this API for OKE, KORE, and Derczynski datasets."""
-    return generic_annotate(request.data, False, "http://dbpedia.org/resource/")
+    return generic_annotate(request.data, True, "http://dbpedia.org/resource/", True)
 
 @app.route('/annotate_n3', methods=['GET', 'POST', 'OPTIONS'])
 @cross_origin(origins='*')
@@ -140,7 +140,7 @@ def annotate_n3():
     global n3_entity_to_kb_mappings
     if n3_entity_to_kb_mappings is None:
         n3_entity_to_kb_mappings = get_n3_entity_to_kb_mappings()
-    return generic_annotate(request.data, False, n3_entity_to_kb_mappings)
+    return generic_annotate(request.data, True, n3_entity_to_kb_mappings, True)
 
 if __name__ == '__main__':
     try:
