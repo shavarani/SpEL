@@ -18,6 +18,7 @@ You can run this file with the following arguments:
 import sys
 import os
 import json
+import click
 from threading import Lock
 from flask import Flask, request
 from flask_cors import CORS, cross_origin
@@ -25,6 +26,9 @@ from gerbil_connect.nif_parser import NIFParser
 from spel.configuration import device, get_n3_entity_to_kb_mappings
 from spel.candidate_manager import CandidateManager
 
+cli = sys.modules['flask.cli']
+cli.show_server_banner = lambda *x: click.echo(
+    " * You may perform entity linking through: http://localhost:3002/annotate_[aida,wiki,dbpedia,n3]")
 app = Flask(__name__, static_url_path='', static_folder='../../../frontend/build')
 cors = CORS(app, resources={r"/suggest": {"origins": "*"}})
 app.config['CORS_HEADERS'] = 'Content-Type'
@@ -81,7 +85,7 @@ def extract_dump_res_json(parsed_collection):
                   for phrase in parsed_collection.contexts[0]._context.phrases]
     }
 
-def generic_annotate(nif_bytes, load_aida_finetuned, kb_prefix):
+def generic_annotate(nif_bytes, load_aida_finetuned, kb_prefix, load_full_vocabulary=False):
     global gerbil_communication_done, gerbil_query_count, annotator, candidates_manager_to_use
     parsed_collection = NIFParser(nif_bytes.decode('utf-8').replace('\\@', '@'), format='turtle')
     if gerbil_communication_done:
@@ -91,12 +95,14 @@ def generic_annotate(nif_bytes, load_aida_finetuned, kb_prefix):
             annotator.annotate(parsed_collection, ignore_non_aida_vocab=load_aida_finetuned, kb_prefix=kb_prefix,
                                candidates_manager=candidates_manager_to_use)
     else:
-        print(" * Handshake to Gerbil was successful!\nYou may perform entity linking through: http://localhost:3002/annotate_[aida,wiki,dbpedia,n3]")
+        print(" * Handshake to Gerbil was successful!")
         annotator = annotator_class()
         annotator.init_model_from_scratch(device=device)
-        if load_aida_finetuned:
+        if load_aida_finetuned and not load_full_vocabulary:
             annotator.shrink_classification_head_to_aida(device=device)
             annotator.load_checkpoint(None, device=device, load_from_torch_hub=True, finetuned_after_step=3)
+        elif load_aida_finetuned:
+            annotator.load_checkpoint(None, device=device, load_from_torch_hub=True, finetuned_after_step=4)
         else:
             annotator.load_checkpoint(None, device=device, load_from_torch_hub=True, finetuned_after_step=2)
         gerbil_communication_done = True
@@ -119,7 +125,7 @@ def annotate_aida():
 @cross_origin(origins='*')
 def annotate_wiki():
     """Use this API for MSNBC dataset."""
-    return generic_annotate(request.data, False, "http://en.wikipedia.org/wiki/")
+    return generic_annotate(request.data, True, "http://en.wikipedia.org/wiki/", True)
 
 @app.route('/annotate_dbpedia', methods=['GET', 'POST', 'OPTIONS'])
 @cross_origin(origins='*')
