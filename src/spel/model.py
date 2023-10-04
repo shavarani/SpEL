@@ -344,7 +344,7 @@ class SpELAnnotator:
 
     @staticmethod
     def download_from_torch_hub(finetuned_after_step=1):
-        assert 3 >= finetuned_after_step >= 1
+        assert 4 >= finetuned_after_step >= 1
         if finetuned_after_step == 4:
             # This model is the same SpEL finetuned model after step 3 except that its classification layer projects to
             # the entirety of the step-2 model rather than shrinking it in size
@@ -376,7 +376,7 @@ class SpELAnnotator:
 
     @staticmethod
     def download_large_from_torch_hub(finetuned_after_step=1):
-        assert 3 >= finetuned_after_step >= 1
+        assert 4 >= finetuned_after_step >= 1
         if finetuned_after_step == 4:
             # This model is the same SpEL finetuned model after step 3 except that its classification layer projects to
             # the entirety of the step-2 model rather than shrinking it in size
