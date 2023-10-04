@@ -345,7 +345,15 @@ class SpELAnnotator:
     @staticmethod
     def download_from_torch_hub(finetuned_after_step=1):
         assert 3 >= finetuned_after_step >= 1
-        if finetuned_after_step == 3:
+        if finetuned_after_step == 4:
+            # This model is the same SpEL finetuned model after step 3 except that its classification layer projects to
+            # the entirety of the step-2 model rather than shrinking it in size
+            file_name = "spel-base-step-3-500K.pt"
+            # Downloads and returns the finetuned model checkpoint created on Oct-03-2023
+            checkpoint = torch.hub.load_state_dict_from_url('https://vault.sfu.ca/index.php/s/8nw5fFXdz2yBP5z/download',
+                                                            model_dir=str(get_checkpoints_dir()), map_location="cpu",
+                                                            file_name=file_name)
+        elif finetuned_after_step == 3:
             file_name = "spel-base-step-3.pt"
             # Downloads and returns the finetuned model checkpoint created on Sep-26-2023 with P=92.06|R=91.93|F1=91.99
             checkpoint = torch.hub.load_state_dict_from_url('https://vault.sfu.ca/index.php/s/HpQ3PMm6A3y1NBl/download',
@@ -369,7 +377,15 @@ class SpELAnnotator:
     @staticmethod
     def download_large_from_torch_hub(finetuned_after_step=1):
         assert 3 >= finetuned_after_step >= 1
-        if finetuned_after_step == 3:
+        if finetuned_after_step == 4:
+            # This model is the same SpEL finetuned model after step 3 except that its classification layer projects to
+            # the entirety of the step-2 model rather than shrinking it in size
+            file_name = "spel-large-step-3-500K.pt"
+            # Downloads and returns the finetuned model checkpoint created on Oct-03-2023
+            checkpoint = torch.hub.load_state_dict_from_url('https://vault.sfu.ca/index.php/s/BCvputD1ByAvILC/download',
+                                                            model_dir=str(get_checkpoints_dir()), map_location="cpu",
+                                                            file_name=file_name)
+        elif finetuned_after_step == 3:
             file_name = "spel-large-step-3.pt"
             # Downloads and returns the finetuned model checkpoint created on Oct-02-2023 with P=92.53|R=92.99|F1=93.76
             checkpoint = torch.hub.load_state_dict_from_url('https://vault.sfu.ca/index.php/s/kBBlYVM4Tr59P0q/download',
