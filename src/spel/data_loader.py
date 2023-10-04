@@ -46,10 +46,10 @@ from torchtext.utils import download_from_url
 
 from transformers import AutoTokenizer, BatchEncoding
 
-from spel.configuration import get_aida_plus_wikipedia_plus_out_of_domain_vocab, get_aida_train_canonical_redirects, get_aida_vocab, get_checkpoints_dir
+from spel.configuration import (get_aida_plus_wikipedia_plus_out_of_domain_vocab, get_aida_train_canonical_redirects,
+                                get_aida_vocab, get_checkpoints_dir, get_base_model_name)
 
-# You need to change the following variable to "roberta-large" to use the Large model as the initial model.
-BERT_MODEL_NAME = "roberta-base"
+BERT_MODEL_NAME = get_base_model_name()
 MAX_SPAN_ANNOTATION_SIZE = 4
 
 

@@ -10,6 +10,10 @@ AIDA_CANONICAL_REDIRECTS = None
 OOD_CANONICAL_REDIRECTS = None
 
 
+def get_base_model_name():
+    return open("base_model.cfg", "r").read().strip()
+
+
 def get_project_top_dir():
     return pathlib.Path(os.path.abspath(__file__)).parent.parent.parent
 
