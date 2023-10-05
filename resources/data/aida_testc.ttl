@@ -1118,6 +1118,15 @@
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
     itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Muneeb_Ali> .
 
+<https://sfu.ca/spel/aida/testc/100#offset_1711_1718> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "bitcoin" ;
+    nif:beginIndex "1711"^^xsd:nonNegativeInteger ;
+    nif:endIndex "1718"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <https://sfu.ca/spel/aida/testc/100> ;
+    itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Bitcoin> .
+
 <https://sfu.ca/spel/aida/testc/100#offset_176_186> a nif:OffsetBasedString,
         nif:Phrase ;
     nif:anchorOf "Muneeb Ali" ;
@@ -1900,6 +1909,15 @@
     nif:referenceContext <https://sfu.ca/spel/aida/testc/104> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
     itsrdf:taIdentRef <http://en.wikipedia.org/wiki/European_Union> .
+
+<https://sfu.ca/spel/aida/testc/104#offset_273_278> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Pound" ;
+    nif:beginIndex "273"^^xsd:nonNegativeInteger ;
+    nif:endIndex "278"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <https://sfu.ca/spel/aida/testc/104> ;
+    itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Pound_sterling> .
 
 <https://sfu.ca/spel/aida/testc/104#offset_283_294> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -4428,7 +4446,7 @@
     nif:endIndex "677"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/111> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
-    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Ireland> .
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Republic_of_Ireland> .
 
 <https://sfu.ca/spel/aida/testc/111#offset_697_704> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -4952,6 +4970,15 @@
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
     itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Jake_Sullivan> .
 
+<https://sfu.ca/spel/aida/testc/112#offset_3436_3454> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Secretary of State" ;
+    nif:beginIndex "3436"^^xsd:nonNegativeInteger ;
+    nif:endIndex "3454"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <https://sfu.ca/spel/aida/testc/112> ;
+    itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/United_States_Secretary_of_State> .
+
 <https://sfu.ca/spel/aida/testc/112#offset_344_354> a nif:OffsetBasedString,
         nif:Phrase ;
     nif:anchorOf "Wilmington" ;
@@ -5004,7 +5031,7 @@
     nif:endIndex "3555"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/112> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
-    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Latin_Americans> .
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Hispanic_and_Latino_Americans> .
 
 <https://sfu.ca/spel/aida/testc/112#offset_357_365> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -5310,7 +5337,7 @@
     nif:endIndex "4551"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/112> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
-    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Black_people> .
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/African_Americans> .
 
 <https://sfu.ca/spel/aida/testc/112#offset_4572_4577> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -6102,7 +6129,7 @@
     nif:endIndex "7866"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/112> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
-    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Washington,_D.C.> .
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Washington_(state)> .
 
 <https://sfu.ca/spel/aida/testc/112#offset_7885_7891> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -6572,6 +6599,15 @@
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
     itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Ron_Klain> .
 
+<https://sfu.ca/spel/aida/testc/113#offset_155_159> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "LGBT" ;
+    nif:beginIndex "155"^^xsd:nonNegativeInteger ;
+    nif:endIndex "159"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <https://sfu.ca/spel/aida/testc/113> ;
+    itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/LGBT> .
+
 <https://sfu.ca/spel/aida/testc/113#offset_257_260> a nif:OffsetBasedString,
         nif:Phrase ;
     nif:anchorOf "DOL" ;
@@ -6705,7 +6741,7 @@
     nif:endIndex "1884"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/114> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
-    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Punjab> .
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Punjab,_India> .
 
 <https://sfu.ca/spel/aida/testc/114#offset_1887_1892> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -7803,7 +7839,7 @@
     nif:endIndex "1184"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/119> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
-    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Santiago> .
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Santiago_Metropolitan_Region> .
 
 <https://sfu.ca/spel/aida/testc/119#offset_11_18> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -8424,7 +8460,7 @@
     nif:endIndex "824"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/12> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
-    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Red_Bull_GmbH> .
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Red_Bull_Racing> .
 
 <https://sfu.ca/spel/aida/testc/12#offset_828_841> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -8462,6 +8498,24 @@
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
     itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Mick_Schumacher> .
 
+<https://sfu.ca/spel/aida/testc/120#offset_1104_1113> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Christmas" ;
+    nif:beginIndex "1104"^^xsd:nonNegativeInteger ;
+    nif:endIndex "1113"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <https://sfu.ca/spel/aida/testc/120> ;
+    itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Christmas> .
+
+<https://sfu.ca/spel/aida/testc/120#offset_115_124> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Christmas" ;
+    nif:beginIndex "115"^^xsd:nonNegativeInteger ;
+    nif:endIndex "124"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <https://sfu.ca/spel/aida/testc/120> ;
+    itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Christmas> .
+
 <https://sfu.ca/spel/aida/testc/120#offset_1207_1214> a nif:OffsetBasedString,
         nif:Phrase ;
     nif:anchorOf "Bavaria" ;
@@ -8470,6 +8524,15 @@
     nif:referenceContext <https://sfu.ca/spel/aida/testc/120> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
     itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Bavaria> .
+
+<https://sfu.ca/spel/aida/testc/120#offset_1322_1331> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Christmas" ;
+    nif:beginIndex "1322"^^xsd:nonNegativeInteger ;
+    nif:endIndex "1331"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <https://sfu.ca/spel/aida/testc/120> ;
+    itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Christmas> .
 
 <https://sfu.ca/spel/aida/testc/120#offset_1355_1369> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -8498,6 +8561,15 @@
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
     itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Spain> .
 
+<https://sfu.ca/spel/aida/testc/120#offset_1556_1565> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Christmas" ;
+    nif:beginIndex "1556"^^xsd:nonNegativeInteger ;
+    nif:endIndex "1565"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <https://sfu.ca/spel/aida/testc/120> ;
+    itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Christmas> .
+
 <https://sfu.ca/spel/aida/testc/120#offset_1849_1858> a nif:OffsetBasedString,
         nif:Phrase ;
     nif:anchorOf "Catalonia" ;
@@ -8506,6 +8578,15 @@
     nif:referenceContext <https://sfu.ca/spel/aida/testc/120> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
     itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Catalonia> .
+
+<https://sfu.ca/spel/aida/testc/120#offset_1962_1971> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Christmas" ;
+    nif:beginIndex "1962"^^xsd:nonNegativeInteger ;
+    nif:endIndex "1971"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <https://sfu.ca/spel/aida/testc/120> ;
+    itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Christmas> .
 
 <https://sfu.ca/spel/aida/testc/120#offset_1987_2001> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -8525,6 +8606,15 @@
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
     itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Norway> .
 
+<https://sfu.ca/spel/aida/testc/120#offset_2391_2400> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Christmas" ;
+    nif:beginIndex "2391"^^xsd:nonNegativeInteger ;
+    nif:endIndex "2400"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <https://sfu.ca/spel/aida/testc/120> ;
+    itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Christmas> .
+
 <https://sfu.ca/spel/aida/testc/120#offset_2496_2503> a nif:OffsetBasedString,
         nif:Phrase ;
     nif:anchorOf "AUSTRIA" ;
@@ -8533,6 +8623,15 @@
     nif:referenceContext <https://sfu.ca/spel/aida/testc/120> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
     itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Austria> .
+
+<https://sfu.ca/spel/aida/testc/120#offset_2563_2572> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Christmas" ;
+    nif:beginIndex "2563"^^xsd:nonNegativeInteger ;
+    nif:endIndex "2572"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <https://sfu.ca/spel/aida/testc/120> ;
+    itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Christmas> .
 
 <https://sfu.ca/spel/aida/testc/120#offset_2603_2609> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -8579,6 +8678,15 @@
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
     itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Minister_of_Health_(Italy)> .
 
+<https://sfu.ca/spel/aida/testc/120#offset_3065_3074> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Christmas" ;
+    nif:beginIndex "3065"^^xsd:nonNegativeInteger ;
+    nif:endIndex "3074"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <https://sfu.ca/spel/aida/testc/120> ;
+    itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Christmas> .
+
 <https://sfu.ca/spel/aida/testc/120#offset_3247_3254> a nif:OffsetBasedString,
         nif:Phrase ;
     nif:anchorOf "IRELAND" ;
@@ -8586,7 +8694,7 @@
     nif:endIndex "3254"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/120> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
-    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Ireland> .
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Republic_of_Ireland> .
 
 <https://sfu.ca/spel/aida/testc/120#offset_326_342> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -8615,6 +8723,15 @@
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
     itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Europe> .
 
+<https://sfu.ca/spel/aida/testc/120#offset_3666_3675> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Christmas" ;
+    nif:beginIndex "3666"^^xsd:nonNegativeInteger ;
+    nif:endIndex "3675"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <https://sfu.ca/spel/aida/testc/120> ;
+    itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Christmas> .
+
 <https://sfu.ca/spel/aida/testc/120#offset_3693_3699> a nif:OffsetBasedString,
         nif:Phrase ;
     nif:anchorOf "POLAND" ;
@@ -8632,6 +8749,15 @@
     nif:referenceContext <https://sfu.ca/spel/aida/testc/120> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
     itsrdf:taIdentRef <http://en.wikipedia.org/wiki/COVID-19> .
+
+<https://sfu.ca/spel/aida/testc/120#offset_470_479> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Christmas" ;
+    nif:beginIndex "470"^^xsd:nonNegativeInteger ;
+    nif:endIndex "479"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <https://sfu.ca/spel/aida/testc/120> ;
+    itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Christmas> .
 
 <https://sfu.ca/spel/aida/testc/120#offset_492_496> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -8677,6 +8803,15 @@
     nif:referenceContext <https://sfu.ca/spel/aida/testc/120> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
     itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Portugal> .
+
+<https://sfu.ca/spel/aida/testc/120#offset_736_745> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Christmas" ;
+    nif:beginIndex "736"^^xsd:nonNegativeInteger ;
+    nif:endIndex "745"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <https://sfu.ca/spel/aida/testc/120> ;
+    itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Christmas> .
 
 <https://sfu.ca/spel/aida/testc/120#offset_989_996> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -9792,7 +9927,7 @@
     nif:endIndex "2397"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/125> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
-    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Liberty_Flames_football> .
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Liberty_University> .
 
 <https://sfu.ca/spel/aida/testc/125#offset_2408_2421> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -10512,7 +10647,7 @@
     nif:endIndex "3178"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/127> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
-    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Latin_Americans> .
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Hispanic_and_Latino_Americans> .
 
 <https://sfu.ca/spel/aida/testc/127#offset_3342_3347> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -10548,7 +10683,7 @@
     nif:endIndex "3500"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/127> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
-    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Latin_Americans> .
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Hispanic_and_Latino_Americans> .
 
 <https://sfu.ca/spel/aida/testc/127#offset_34_41> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -10566,7 +10701,7 @@
     nif:endIndex "3553"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/127> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
-    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Black_people> .
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/African_Americans> .
 
 <https://sfu.ca/spel/aida/testc/127#offset_3565_3570> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -10584,7 +10719,7 @@
     nif:endIndex "3610"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/127> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
-    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Black_people> .
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/African_Americans> .
 
 <https://sfu.ca/spel/aida/testc/127#offset_362_378> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -10620,7 +10755,7 @@
     nif:endIndex "3850"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/127> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
-    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Black_people> .
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/African_Americans> .
 
 <https://sfu.ca/spel/aida/testc/127#offset_3910_3916> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -11223,7 +11358,7 @@
     nif:endIndex "2917"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/128> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
-    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/United_States> .
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Northeastern_United_States> .
 
 <https://sfu.ca/spel/aida/testc/128#offset_2932_2938> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -11277,7 +11412,7 @@
     nif:endIndex "3869"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/128> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
-    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/United_States> .
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Southern_United_States> .
 
 <https://sfu.ca/spel/aida/testc/128#offset_412_442> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -12357,7 +12492,7 @@
     nif:endIndex "877"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/15> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
-    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Australia> .
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Australians> .
 
 <https://sfu.ca/spel/aida/testc/15#offset_904_913> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -12834,22 +12969,22 @@
     nif:endIndex "1075"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/19> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
-    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/São_Paulo> .
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/São_Paulo_(state)> .
 
-<https://sfu.ca/spel/aida/testc/19#offset_1079_1115> a nif:OffsetBasedString,
+<https://sfu.ca/spel/aida/testc/19#offset_1079_1097> a nif:OffsetBasedString,
         nif:Phrase ;
-    nif:anchorOf "Butantan Institute biomedical center" ;
+    nif:anchorOf "Butantan Institute" ;
     nif:beginIndex "1079"^^xsd:nonNegativeInteger ;
-    nif:endIndex "1115"^^xsd:nonNegativeInteger ;
+    nif:endIndex "1097"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/19> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
     itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Instituto_Butantan> .
 
-<https://sfu.ca/spel/aida/testc/19#offset_1164_1181> a nif:OffsetBasedString,
+<https://sfu.ca/spel/aida/testc/19#offset_1164_1173> a nif:OffsetBasedString,
         nif:Phrase ;
-    nif:anchorOf "CoronaVac vaccine" ;
+    nif:anchorOf "CoronaVac" ;
     nif:beginIndex "1164"^^xsd:nonNegativeInteger ;
-    nif:endIndex "1181"^^xsd:nonNegativeInteger ;
+    nif:endIndex "1173"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/19> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
     itsrdf:taIdentRef <http://en.wikipedia.org/wiki/CoronaVac> .
@@ -12971,11 +13106,11 @@
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
     itsrdf:taIdentRef <http://en.wikipedia.org/wiki/João_Doria> .
 
-<https://sfu.ca/spel/aida/testc/19#offset_1837_1852> a nif:OffsetBasedString,
+<https://sfu.ca/spel/aida/testc/19#offset_1837_1844> a nif:OffsetBasedString,
         nif:Phrase ;
-    nif:anchorOf "Sinovac vaccine" ;
+    nif:anchorOf "Sinovac" ;
     nif:beginIndex "1837"^^xsd:nonNegativeInteger ;
-    nif:endIndex "1852"^^xsd:nonNegativeInteger ;
+    nif:endIndex "1844"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/19> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
     itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Sinovac_Biotech> .
@@ -13365,7 +13500,7 @@
     nif:endIndex "1755"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/20> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
-    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Britain> .
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/United_Kingdom> .
 
 <https://sfu.ca/spel/aida/testc/20#offset_1809_1843> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -13754,6 +13889,15 @@
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
     itsrdf:taIdentRef <http://en.wikipedia.org/wiki/COVID-19> .
 
+<https://sfu.ca/spel/aida/testc/22#offset_876_885> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Christmas" ;
+    nif:beginIndex "876"^^xsd:nonNegativeInteger ;
+    nif:endIndex "885"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <https://sfu.ca/spel/aida/testc/22> ;
+    itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Christmas> .
+
 <https://sfu.ca/spel/aida/testc/22#offset_888_895> a nif:OffsetBasedString,
         nif:Phrase ;
     nif:anchorOf "Lebanon" ;
@@ -13906,6 +14050,15 @@
     nif:referenceContext <https://sfu.ca/spel/aida/testc/24> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
     itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Airbnb> .
+
+<https://sfu.ca/spel/aida/testc/24#offset_1257_1268> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "remote work" ;
+    nif:beginIndex "1257"^^xsd:nonNegativeInteger ;
+    nif:endIndex "1268"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <https://sfu.ca/spel/aida/testc/24> ;
+    itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Remote_work> .
 
 <https://sfu.ca/spel/aida/testc/24#offset_1271_1277> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -14940,7 +15093,7 @@
     nif:endIndex "1211"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/28> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
-    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/United_Kingdom> .
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/England> .
 
 <https://sfu.ca/spel/aida/testc/28#offset_1214_1220> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -15138,7 +15291,7 @@
     nif:endIndex "1188"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/29> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
-    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Ireland> .
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Republic_of_Ireland> .
 
 <https://sfu.ca/spel/aida/testc/29#offset_1197_1206> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -15543,7 +15696,7 @@
     nif:endIndex "96"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/3> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
-    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/International_Chamber_of_Commerce> .
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/United_States_Chamber_of_Commerce> .
 
 <https://sfu.ca/spel/aida/testc/3#offset_624_636> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -15606,7 +15759,7 @@
     nif:endIndex "103"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/3> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
-    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/International_Chamber_of_Commerce> .
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/United_States_Chamber_of_Commerce> .
 
 <https://sfu.ca/spel/aida/testc/30#offset_0_11> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -15804,7 +15957,7 @@
     nif:endIndex "2409"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/30> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
-    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Riverside_County_Sheriff%27s_Department> .
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Riverside_County,_California> .
 
 <https://sfu.ca/spel/aida/testc/30#offset_2547_2560> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -15813,7 +15966,7 @@
     nif:endIndex "2560"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/30> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
-    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Orange_County_Sheriff%27s_Department_(California)> .
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Orange_County,_California> .
 
 <https://sfu.ca/spel/aida/testc/30#offset_2569_2579> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -15923,6 +16076,15 @@
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
     itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Joe_Biden> .
 
+<https://sfu.ca/spel/aida/testc/30#offset_3362_3374> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Thanksgiving" ;
+    nif:beginIndex "3362"^^xsd:nonNegativeInteger ;
+    nif:endIndex "3374"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <https://sfu.ca/spel/aida/testc/30> ;
+    itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Thanksgiving_(United_States)> .
+
 <https://sfu.ca/spel/aida/testc/30#offset_3397_3402> a nif:OffsetBasedString,
         nif:Phrase ;
     nif:anchorOf "Fauci" ;
@@ -15940,6 +16102,15 @@
     nif:referenceContext <https://sfu.ca/spel/aida/testc/30> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
     itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Americans> .
+
+<https://sfu.ca/spel/aida/testc/30#offset_3467_3476> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Christmas" ;
+    nif:beginIndex "3467"^^xsd:nonNegativeInteger ;
+    nif:endIndex "3476"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <https://sfu.ca/spel/aida/testc/30> ;
+    itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Christmas> .
 
 <https://sfu.ca/spel/aida/testc/30#offset_3679_3684> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -16641,7 +16812,7 @@
     nif:endIndex "114"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/34> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
-    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Ireland> .
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Republic_of_Ireland> .
 
 <https://sfu.ca/spel/aida/testc/34#offset_143_161> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -16677,7 +16848,7 @@
     nif:endIndex "36"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/34> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
-    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Ireland> .
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Republic_of_Ireland> .
 
 <https://sfu.ca/spel/aida/testc/34#offset_40_50> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -16920,7 +17091,7 @@
     nif:endIndex "702"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/36> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
-    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Royal_Bank_of_Canada> .
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/RBC_Capital_Markets> .
 
 <https://sfu.ca/spel/aida/testc/36#offset_729_737> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -17856,7 +18027,7 @@
     nif:endIndex "2918"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/4> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
-    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Ireland> .
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Republic_of_Ireland> .
 
 <https://sfu.ca/spel/aida/testc/4#offset_2925_2927> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -18317,11 +18488,11 @@
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
     itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Summer_Olympic_Games> .
 
-<https://sfu.ca/spel/aida/testc/41#offset_1111_1127> a nif:OffsetBasedString,
+<https://sfu.ca/spel/aida/testc/41#offset_1111_1121> a nif:OffsetBasedString,
         nif:Phrase ;
-    nif:anchorOf "Paris 2024 Games" ;
+    nif:anchorOf "Paris 2024" ;
     nif:beginIndex "1111"^^xsd:nonNegativeInteger ;
-    nif:endIndex "1127"^^xsd:nonNegativeInteger ;
+    nif:endIndex "1121"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/41> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
     itsrdf:taIdentRef <http://en.wikipedia.org/wiki/2024_Summer_Olympics> .
@@ -18407,10 +18578,10 @@
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
     itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Breaking_at_the_Summer_Olympics> .
 
-<https://sfu.ca/spel/aida/testc/41#offset_2550_2555> a nif:OffsetBasedString,
+<https://sfu.ca/spel/aida/testc/41#offset_2546_2555> a nif:OffsetBasedString,
         nif:Phrase ;
-    nif:anchorOf "Bronx" ;
-    nif:beginIndex "2550"^^xsd:nonNegativeInteger ;
+    nif:anchorOf "the Bronx" ;
+    nif:beginIndex "2546"^^xsd:nonNegativeInteger ;
     nif:endIndex "2555"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/41> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
@@ -18605,11 +18776,11 @@
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
     itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Facebook> .
 
-<https://sfu.ca/spel/aida/testc/41#offset_70_86> a nif:OffsetBasedString,
+<https://sfu.ca/spel/aida/testc/41#offset_70_80> a nif:OffsetBasedString,
         nif:Phrase ;
-    nif:anchorOf "Paris 2024 Games" ;
+    nif:anchorOf "Paris 2024" ;
     nif:beginIndex "70"^^xsd:nonNegativeInteger ;
-    nif:endIndex "86"^^xsd:nonNegativeInteger ;
+    nif:endIndex "80"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/41> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
     itsrdf:taIdentRef <http://en.wikipedia.org/wiki/2024_Summer_Olympics> .
@@ -19811,6 +19982,15 @@
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
     itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Moon_Jae-in> .
 
+<https://sfu.ca/spel/aida/testc/47#offset_2690_2696> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "hagwon" ;
+    nif:beginIndex "2690"^^xsd:nonNegativeInteger ;
+    nif:endIndex "2696"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <https://sfu.ca/spel/aida/testc/47> ;
+    itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Hagwon> .
+
 <https://sfu.ca/spel/aida/testc/47#offset_273_290> a nif:OffsetBasedString,
         nif:Phrase ;
     nif:anchorOf "National Assembly" ;
@@ -20342,6 +20522,15 @@
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
     itsrdf:taIdentRef <http://en.wikipedia.org/wiki/ARD_(broadcaster)> .
 
+<https://sfu.ca/spel/aida/testc/49#offset_819_828> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Christmas" ;
+    nif:beginIndex "819"^^xsd:nonNegativeInteger ;
+    nif:endIndex "828"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <https://sfu.ca/spel/aida/testc/49> ;
+    itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Christmas> .
+
 <https://sfu.ca/spel/aida/testc/49#offset_909_915> a nif:OffsetBasedString,
         nif:Phrase ;
     nif:anchorOf "Soeder" ;
@@ -20350,6 +20539,15 @@
     nif:referenceContext <https://sfu.ca/spel/aida/testc/49> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
     itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Markus_Söder> .
+
+<https://sfu.ca/spel/aida/testc/49#offset_90_99> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Christmas" ;
+    nif:beginIndex "90"^^xsd:nonNegativeInteger ;
+    nif:endIndex "99"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <https://sfu.ca/spel/aida/testc/49> ;
+    itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Christmas> .
 
 <https://sfu.ca/spel/aida/testc/49#offset_9_16> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -24419,6 +24617,15 @@
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
     itsrdf:taIdentRef <http://en.wikipedia.org/wiki/United_States> .
 
+<https://sfu.ca/spel/aida/testc/65#offset_1809_1821> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Thanksgiving" ;
+    nif:beginIndex "1809"^^xsd:nonNegativeInteger ;
+    nif:endIndex "1821"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <https://sfu.ca/spel/aida/testc/65> ;
+    itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Thanksgiving_(United_States)> .
+
 <https://sfu.ca/spel/aida/testc/65#offset_1873_1877> a nif:OffsetBasedString,
         nif:Phrase ;
     nif:anchorOf "OPIS" ;
@@ -24535,6 +24742,15 @@
     nif:referenceContext <https://sfu.ca/spel/aida/testc/65> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
     itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Brent_Crude> .
+
+<https://sfu.ca/spel/aida/testc/65#offset_483_486> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "EST" ;
+    nif:beginIndex "483"^^xsd:nonNegativeInteger ;
+    nif:endIndex "486"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <https://sfu.ca/spel/aida/testc/65> ;
+    itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Eastern_Time_Zone> .
 
 <https://sfu.ca/spel/aida/testc/65#offset_494_497> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -25299,7 +25515,7 @@
     nif:endIndex "1244"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/7> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
-    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Royal_train> .
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/British_Royal_Train> .
 
 <https://sfu.ca/spel/aida/testc/7#offset_1270_1276> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -25417,6 +25633,15 @@
     nif:referenceContext <https://sfu.ca/spel/aida/testc/7> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
     itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Wales> .
+
+<https://sfu.ca/spel/aida/testc/7#offset_433_444> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Royal Train" ;
+    nif:beginIndex "433"^^xsd:nonNegativeInteger ;
+    nif:endIndex "444"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <https://sfu.ca/spel/aida/testc/7> ;
+    itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/British_Royal_Train> .
 
 <https://sfu.ca/spel/aida/testc/7#offset_44_58> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -27756,7 +27981,7 @@
     nif:endIndex "3767"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/77> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
-    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/United_States> .
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Americans> .
 
 <https://sfu.ca/spel/aida/testc/77#offset_444_452> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -28116,7 +28341,7 @@
     nif:endIndex "379"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/8> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
-    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Ireland> .
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Republic_of_Ireland> .
 
 <https://sfu.ca/spel/aida/testc/8#offset_458_477> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -29711,6 +29936,15 @@
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
     itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Joe_Biden> .
 
+<https://sfu.ca/spel/aida/testc/85#offset_3090_3102> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Thanksgiving" ;
+    nif:beginIndex "3090"^^xsd:nonNegativeInteger ;
+    nif:endIndex "3102"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <https://sfu.ca/spel/aida/testc/85> ;
+    itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Thanksgiving_(United_States)> .
+
 <https://sfu.ca/spel/aida/testc/85#offset_3125_3130> a nif:OffsetBasedString,
         nif:Phrase ;
     nif:anchorOf "Fauci" ;
@@ -29728,6 +29962,15 @@
     nif:referenceContext <https://sfu.ca/spel/aida/testc/85> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
     itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Americans> .
+
+<https://sfu.ca/spel/aida/testc/85#offset_3195_3204> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Christmas" ;
+    nif:beginIndex "3195"^^xsd:nonNegativeInteger ;
+    nif:endIndex "3204"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <https://sfu.ca/spel/aida/testc/85> ;
+    itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Christmas> .
 
 <https://sfu.ca/spel/aida/testc/85#offset_3386_3391> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -30188,6 +30431,15 @@
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
     itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Japan> .
 
+<https://sfu.ca/spel/aida/testc/86#offset_2897_2913> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "peregrine falcon" ;
+    nif:beginIndex "2897"^^xsd:nonNegativeInteger ;
+    nif:endIndex "2913"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <https://sfu.ca/spel/aida/testc/86> ;
+    itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Peregrine_falcon> .
+
 <https://sfu.ca/spel/aida/testc/86#offset_296_300> a nif:OffsetBasedString,
         nif:Phrase ;
     nif:anchorOf "JAXA" ;
@@ -30222,7 +30474,7 @@
     nif:endIndex "3274"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/86> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
-    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Woomera,_South_Australia> .
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/RAAF_Woomera_Range_Complex> .
 
 <https://sfu.ca/spel/aida/testc/86#offset_32_37> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -30672,7 +30924,7 @@
     nif:endIndex "1113"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/88> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
-    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Arab_states_of_the_Persian_Gulf> .
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Arab_World> .
 
 <https://sfu.ca/spel/aida/testc/88#offset_1155_1161> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -30969,7 +31221,7 @@
     nif:endIndex "771"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/88> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
-    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/List_of_European_Council_meetings> .
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Europe> .
 
 <https://sfu.ca/spel/aida/testc/88#offset_804_818> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -32904,7 +33156,7 @@
     nif:endIndex "314"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/94> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
-    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Baran> .
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Baran_district> .
 
 <https://sfu.ca/spel/aida/testc/94#offset_317_322> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -32958,7 +33210,7 @@
     nif:endIndex "709"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/94> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
-    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Baran> .
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Baran_district> .
 
 <https://sfu.ca/spel/aida/testc/94#offset_734_743> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -33878,12 +34130,6 @@
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
     itsrdf:taIdentRef <http://en.wikipedia.org/wiki/United_States> .
 
-<https://sfu.ca/spel/aida/testc/113> a nif:Context,
-        nif:OffsetBasedString ;
-    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
-    nif:endIndex "544"^^xsd:nonNegativeInteger ;
-    nif:isString "The U.S. Department of Labor on Monday released a final rule expanding a religious exemption from anti-discrimination laws for federal contractors , which LGBT groups and other critics say will give businesses a license to discriminate . The rule issued by DOL ’s Office of Federal Contract Compliance Programs , which takes effect Jan. 8 , will make the exemption applicable to any employers who “ hold themselves out to the public as carrying out a religious purpose . ” To read the full story on Westlaw Today , click here : bit.ly / 3mVvAOP" .
-
 <https://sfu.ca/spel/aida/testc/74> a nif:Context,
         nif:OffsetBasedString ;
     nif:beginIndex "0"^^xsd:nonNegativeInteger ;
@@ -33895,6 +34141,12 @@
     nif:beginIndex "0"^^xsd:nonNegativeInteger ;
     nif:endIndex "650"^^xsd:nonNegativeInteger ;
     nif:isString "A demonstrator holds an umbrella and a sign reading \" For your safety you will have no more freedoms \" during a protest against the \" Global Security Bill ' ' , that rights groups say would make it a crime to circulate an image of a police officer 's face ... more A demonstrator holds an umbrella and a sign reading \" For your safety you will have no more freedoms \" during a protest against the \" Global Security Bill ' ' , that rights groups say would make it a crime to circulate an image of a police officer 's face and would infringe journalists ' freedom in the country , in Paris , France , December 5 , 2020 . REUTERS / Gonzalo Fuentes Close" .
+
+<https://sfu.ca/spel/aida/testc/113> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "544"^^xsd:nonNegativeInteger ;
+    nif:isString "The U.S. Department of Labor on Monday released a final rule expanding a religious exemption from anti-discrimination laws for federal contractors , which LGBT groups and other critics say will give businesses a license to discriminate . The rule issued by DOL ’s Office of Federal Contract Compliance Programs , which takes effect Jan. 8 , will make the exemption applicable to any employers who “ hold themselves out to the public as carrying out a religious purpose . ” To read the full story on Westlaw Today , click here : bit.ly / 3mVvAOP" .
 
 <https://sfu.ca/spel/aida/testc/43> a nif:Context,
         nif:OffsetBasedString ;
@@ -34100,12 +34352,6 @@
     nif:endIndex "667"^^xsd:nonNegativeInteger ;
     nif:isString "FILE PHOTO : Britain 's Prime Minister Boris Johnson meets European Commission President Ursula von der Leyen in London , Britain January 8 , 2020 . REUTERS / Toby Melville BRUSSELS ( Reuters ) - British Prime Minister Boris Johnson and European Commission President Ursula von der Leyen on Monday took a break from a discussion on striking a post-Brexit deal , an EU official said . The call between the two leaders , which follows an inconclusive one on Saturday , was scheduled to start at around 1600 GMT and about 90 minutes after that time the official said they were taking a break . The official said it was not clear when they would resume their discussion ." .
 
-<https://sfu.ca/spel/aida/testc/22> a nif:Context,
-        nif:OffsetBasedString ;
-    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
-    nif:endIndex "1291"^^xsd:nonNegativeInteger ;
-    nif:isString "Slideshow ( 5 images ) BEIRUT ( Reuters ) - Renowned jazz trumpeter Ibrahim Maalouf delighted crowds on Friday with a concert in Beirut , bringing life to an area battered by Lebanon ’s economic meltdown and the catastrophic Aug. 4 port explosion . “ Because of what is happening now in the region and in Lebanon , it makes it even more important to be here , to play music in the streets , in the venues , ” Maalouf , a French-Lebanese citizen born in Beirut , told Reuters . Maalouf , 40 , helped raise some 2 million euros for Lebanon with a charity concert in France after the August explosion which killed some 200 people and hit swathes of the capital , including the Beirut Souks area where he performed on Friday . The audience wore masks to guard against COVID-19 at the concert , part of the annual Beirut Chants Festival , a series of free performances held before Christmas . Lebanon is in the throes of an economic collapse that has paralysed its banks and crashed the currency , fuelling poverty , unemployment and a brain drain . “ We need something like this now in order to eventually get back up from what we ’ ve fallen into , and hopefully soon we ’ll see more of these events with artists , to be able to revive Lebanon once again , ” said Rony Challita , who attended ." .
-
 <https://sfu.ca/spel/aida/testc/6> a nif:Context,
         nif:OffsetBasedString ;
     nif:beginIndex "0"^^xsd:nonNegativeInteger ;
@@ -34135,6 +34381,12 @@
     nif:beginIndex "0"^^xsd:nonNegativeInteger ;
     nif:endIndex "2305"^^xsd:nonNegativeInteger ;
     nif:isString "( Adds comment , updates prices ) * Bipartisan stimulus deal suggests more compromise ahead- analyst * Britain to begin Pfizer / BioNTech vaccine rollout this week * Gold has resistance at $ 1,850 an ounce - analyst * Interactive graphic tracking global spread of coronavirus : open * tmsnrt.rs / 3aIRuz7 in an external browser By Nakul Iyer Dec 7 ( Reuters ) - Gold ticked higher on Monday , as the metal drew support from grim U.S. jobs data that fuelled optimism over a U.S. stimulus deal , although gains were capped by coronavirus vaccine rollouts . Spot gold prices rose 0.2 % to $ 1,840.65 per ounce by 0725 GMT , while U.S. gold futures were up 0.2 % at $ 1,843.90 . \" Softer jobs growth and tighter social mobility restrictions ostensibly lower the hurdle for a policy response from ( U.S. ) Congress , \" said Stephen Innes , chief global market strategist at financial services firm Axi . Data on Friday showed the U.S. economy added the fewest jobs in six months in November . Talks over a fresh pandemic relief package gathered momentum on Friday , as bipartisan U.S. lawmakers worked to put the finishing touches on a new $ 908 billion bill . While the gold market might be disappointed with the size of the package , markets will likely take support from the bipartisan nature of the deal that suggests further compromise in the U.S Congress ahead , Innes said . Gold is seen as a hedge against inflation that could result from large stimulus . Given increased inflation expectations , rising coronavirus cases , continued dollar weakness and a stalling U.S. labour market , gold could test $ 1,900 in December , said Kunal Shah , head of research at Nirmal Bang Commodities in Mumbai , India . However , gold 's gains were capped as Britain prepared to become the first country to roll out the Pfizer / BioNTech COVID-19 vaccine this week . Gold has resistance at $ 1,850 an ounce , with a close above that pivot level setting the scene for a test of the resistance line at $ 1,920 an ounce , Jeffrey Halley , a senior market analyst at OANDA , said in note . Silver fell 0.4 % to $ 24.06 per ounce and platinum dropped 1.5 % to $ 1,039.00 , while palladium gained 0.8 % to $ 2,363.00 . ( Reporting by Nakul Iyer in Bengaluru ; Editing by Ramakrishnan M. , Rashmi Aich and Subhranshu Sahu )" .
+
+<https://sfu.ca/spel/aida/testc/22> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "1291"^^xsd:nonNegativeInteger ;
+    nif:isString "Slideshow ( 5 images ) BEIRUT ( Reuters ) - Renowned jazz trumpeter Ibrahim Maalouf delighted crowds on Friday with a concert in Beirut , bringing life to an area battered by Lebanon ’s economic meltdown and the catastrophic Aug. 4 port explosion . “ Because of what is happening now in the region and in Lebanon , it makes it even more important to be here , to play music in the streets , in the venues , ” Maalouf , a French-Lebanese citizen born in Beirut , told Reuters . Maalouf , 40 , helped raise some 2 million euros for Lebanon with a charity concert in France after the August explosion which killed some 200 people and hit swathes of the capital , including the Beirut Souks area where he performed on Friday . The audience wore masks to guard against COVID-19 at the concert , part of the annual Beirut Chants Festival , a series of free performances held before Christmas . Lebanon is in the throes of an economic collapse that has paralysed its banks and crashed the currency , fuelling poverty , unemployment and a brain drain . “ We need something like this now in order to eventually get back up from what we ’ ve fallen into , and hopefully soon we ’ll see more of these events with artists , to be able to revive Lebanon once again , ” said Rony Challita , who attended ." .
 
 <https://sfu.ca/spel/aida/testc/95> a nif:Context,
         nif:OffsetBasedString ;
@@ -34316,23 +34568,11 @@
     nif:endIndex "1820"^^xsd:nonNegativeInteger ;
     nif:isString "TOKYO , Dec 7 ( Reuters ) - Japan ’s benchmark Nikkei share average pulled back from a more than 29-1 / 2-year high on Monday , as investors chose to pocket profits amid some concerns of overheating after five consecutive weeks of gains . The Nikkei index fell 0.4 % to 26,645.23 by the midday break , after hitting its highest level since April 1991 of at the open . The broader Topix lost 0.47 % to 1,767.55 . Nearly two-thirds of the 33 sector sub-indexes on the Tokyo exchange traded lower , with metal products , precision instruments and airlines leading the decline . Tokyo stocks opened higher , tracking positive cues from Wall Street ’s Friday session , before reversing course on profit-taking . Major U.S. stock indexes rose to all-time highs last week as downbeat U.S. jobs data raised expectations for a new fiscal relief bill . Back home , Prime Minister Yoshihide Suga said on Friday he would decide on an economic stimulus package early this week , adding that green and digital initiatives would be core to the recovery from the coronavirus pandemic . Local stocks have been prone to profit-booking due to persistent concerns of an overheating market , some market participants said . Among the Topix 30 underperformers , Shin-Etsu Chemical Co Ltd fell 3.43 % and Hoya Corp slipped 1.58%. The top percentage losers in the index were Rakuten Inc , Olympus Corp and Sumco Corp , dropping between 4.65 % and 5.19%. Among individual gainers , semiconductor stocks tracked their U.S. peers higher , with Advantest climbing 1.47 % and Tokyo Electron adding more than 1.3%. Dentsu Group Inc inched up 0.85 % , after the Japanese advertising giant said it was expecting a smaller net loss for the year ending in December compared to the prior year . ( Reporting by Eimi Yamamitsu ; Editing by Subhranshu Sahu )" .
 
-<https://sfu.ca/spel/aida/testc/120> a nif:Context,
-        nif:OffsetBasedString ;
-    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
-    nif:endIndex "3839"^^xsd:nonNegativeInteger ;
-    nif:isString "( Reuters ) - Governments across Europe are trying to navigate between avoiding spreading the coronavirus over the Christmas holiday season and allowing people to celebrate with family and friends . FILE PHOTO : A woman wearing a protective mask is seen through a glass at a shopping centre on the day Italian Health Minister Roberto Speranza lays out in parliament the government 's plan for mass coronavirus disease ( COVID-19 ) vaccinations and restrictions over the Christmas period , in Rome , Italy December 2 , 2020 . REUTERS / Yara Nardi Here are some measures that will be adopted for year-end festivities by some European countries : PORTUGAL There will be no limit on how many people will be able to gather per household for Christmas , the government said on Dec 5 . The night-time curfew will be pushed back from 11 p.m. to 2 a.m. on Dec. 24 and Dec. 25 . For New Year ’s Eve , street parties will be banned and outdoor gatherings will be limited to a maximum of six people . GERMANY The federal government extended its lockdown measures until Jan. 10 in November , but eased rules over the Christmas holidays . Up to 10 people will be allowed to gather , not counting children . The region of Bavaria said on Dec. 6 that it would impose a tougher lockdown from Dec. 9 until Jan. 5 , with some relaxation for Christmas but not for New Year . CZECH REPUBLIC The Czech government allowed shops and restaurants shut since October to reopen on Dec. 3 ahead of the holiday season . SPAIN Up to 10 people per household will be allowed to gather for Christmas and New Year , relaxing the current rule that permits gatherings of up to six people . Curfews will be pushed back to 1:30 a.m. from 11 p.m. on Dec. 24 and Dec. 31 . Movement between regions will be banned between Dec. 23 and Jan. 6 , except for visits to family . The government of Catalonia said it would not relax its restrictions on Dec. 7 as planned but would allow free movement during the Christmas celebrations . ITALY Italians will not be able to attend a midnight mass on Christmas Eve and will be only allowed to move between regions in emergencies over the holiday period starting on Dec. 20 . The government also decided last month that ski resorts would be closed over the Christmas and New Year period . NORWAY Norwegians will be able to invite up to 10 guests in their homes on two separate occasions between Christmas and New Year . Outside those days the current limit of up to five guests in one home remains . AUSTRIA Skiing will be allowed from Dec. 24 , but there will be no Christmas markets this holiday season . FRANCE People will be allowed to travel from Dec. 15 , including over the end-of-year holidays , if coronavirus cases drop to around 5,000 new cases per day . France , which has decided to keep its ski slopes off limits until January , said it would make random border checks to stop people getting infected by crossing into countries where ski resorts remain open . BELGIUM Belgian households will only be able to be in close contact with one extra person over Christmas . People living on their own will be able to meet two others . Fireworks will be banned on New Year ’s Eve to limit gatherings and foreign travel is strongly discouraged . IRELAND Three households will be allowed to meet between Dec. 18 and Jan. 6 , and the countrywide travel ban will be lifted for that period . BRITAIN Up to three households will be allowed to meet at home from Dec. 23 until Dec. 27 . People will be able to meet in places of worship and in outdoor public places but not at indoor hospitality or entertainment venues . Shops will be allowed to stay open for longer over Christmas and in January . POLAND No more than five people will be allowed to be invited to one household according to the new set of rules which are to last until Dec. 27 ." .
-
 <https://sfu.ca/spel/aida/testc/32> a nif:Context,
         nif:OffsetBasedString ;
     nif:beginIndex "0"^^xsd:nonNegativeInteger ;
     nif:endIndex "1825"^^xsd:nonNegativeInteger ;
     nif:isString "SYDNEY , Dec 7 ( Reuters ) - Australian nickel-gold miner IGO Ltd is in negotiations to buy a minority stake worth close to $ 1.5 billion in a vehicle holding Tianqi Lithium Corp ’s stake in the Greenbushes lithium mine , sources told Reuters . China ’s Tianqi , one of the world ’s top producers of lithium chemicals used in electric-vehicle batteries , urgently needs the proceeds from the sale to repay loans that were due for repayment at the end of November . Representatives for Tianqi and IGO did not immediately return requests for comment . On Monday afternoon , Perth-based IGO requested a trading halt for its shares until Dec. 9 , pending a material acquisition . Tianqi , which alongside Albemarle Corp operates the Greenbushes lithium mine in Western Australia , last week negotiated with its banking syndicate a repayment extension on $ 1.88 billion of loans that were used to acquire a 23.8 % stake in Chilean miner SQM in 2018 and were due Nov. 29 . Earlier this year , the Chinese company appointed Grant Samuel to find a buyer of the stake , while Standard Chartered is advising IGO , both sources said . IGO will fund its purchase , which according to the two sources is worth less than A$ 2 billion ( $ 1.5 billion ) , with existing cash and debt , while Macquarie Capital and Citigroup are advising on a potential capital raising that would partly fund the deal , the second source said . The acquisition includes a stake in Greenbushes - the world ’s largest hard-rock lithium mine - one of the sources said . The second source said it also included other assets , mostly in Australia . Both sources asked not to be identified because the details of the deal are private and have not been signed . ( $ 1 = 1.3461 Australian dollars ) ( Reporting by Paulina Duran in Sydney ; Editing by Stephen Coates )" .
-
-<https://sfu.ca/spel/aida/testc/47> a nif:Context,
-        nif:OffsetBasedString ;
-    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
-    nif:endIndex "3671"^^xsd:nonNegativeInteger ;
-    nif:isString "SEOUL ( Reuters ) - South Korean President Moon Jae-in called on Monday for expanded coronavirus testing and more thorough tracing as the country struggled to control its latest and largest wave of infections . FILE PHOTO : South Korean President Moon Jae-in speaks at the National Assembly in Seoul , South Korea , October 28 , 2020 . Jeon Heon-Kyun / Pool via REUTERS The Korea Disease Control and Prevention Agency reported 615 new coronavirus cases as of midnight Sunday , capping a month of triple-digit daily increases that have led to 8,311 confirmed patients in quarantine , the most ever . The surge in cases has deliverd a blow to South Korea ’s vaunted pandemic-fighting system , which successfully used invasive tracing , testing , and quarantines to avoid lockdowns , blunt previous waves , and keep infections below 50 per day for much of the summer . Moon ordered the government to mobilize every available resource to track infections , and to expand testing by deploying the military and more people from the public service , presidential Blue House spokesman Chung Man-ho told a briefing . Moon said testing sites should operate longer hours to allow people working to get tested at their convenience and more drive-through testing facilities should be set up , Chung said . The positive rate for the latest batch of tests was about 4.2 % , compared to the year ’s average of 1.2 % , according to the KDCA . Starting next week , testing centres will begin using a test kit designed to more easily gather samples from saliva , hopefully reducing some of the difficulty they had faced when trying to collect usable samples , KDCA deputy director Na Seong-woong told a briefing . While questions remain over their accuracy , the centres will also start using antigen tests - which are supposed to detect specific proteins from the virus - as a stopgap , Na said . Na predicted that daily cases would hover between 550-750 for this week , possibly spiking to as much as 900 per day the next week . “ This crisis is the most critical yet , ” he said , warning that the outbreak could lead to a “ medical collapse ” if the numbers are n’t contained . DEBATE OVER NEW MEASURES On Sunday , authorities said they will impose heightened social distancing rules for the capital Seoul and surrounding areas that will last until at least the end of the month . With this third wave , the government has faced increasing criticism as cases continue to rise despite measures such as mask mandates , curfews for restaurants and other businesses , and restricted public transportation . Among the facilities ordered to completely close are the private academies or cram schools , called “ hagwon ” , used by students for extra study . The Korea Association of Hagwons staged a rare public protest over the outright ban on hagwons opening in the greater Seoul area , saying it is discriminatory because other businesses including PC cafes and movie theatres frequented by students are still allowed to be open until 9 p.m . The ban has prompted concerns among many students and parents ahead of the final exam period , and would deepen inequality by boosting private tutoring that only well-off students can afford , it added . In comments to a meeting of his senior ministers , Moon called the wave of infections the most serious yet and apologised for failing to blunt the surge and for the burden caused by the social distancing restrictions . Monday ’s total was down slightly from Sunday , when the agency reported 631 new cases , the largest daily tally since a peak in February and early March . In total , South Korea has reported 38,161 cases , with 549 deaths ." .
 
 <https://sfu.ca/spel/aida/testc/62> a nif:Context,
         nif:OffsetBasedString ;
@@ -34358,11 +34598,11 @@
     nif:endIndex "4903"^^xsd:nonNegativeInteger ;
     nif:isString "WASHINGTON ( Reuters ) - Nine months after the U.S. government declared a state of emergency to fight the coronavirus pandemic , daily deaths and new infections are breaking records , hospital capacity is more stretched than ever , and debate over the economic response has devolved into a battle over who deserves help and who does n’t . FILE PHOTO : Back-up hospital beds are seen in the parking garage at the Renown Regional Medical Center in Reno , Nevada , U.S. November 11 , 2020 . Picture taken November 11 , 2020 . Jason Bean / Reno Gazette Journal / USA Today via REUTERS THIS IMAGE HAS BEEN SUPPLIED BY A THIRD PARTY . / File Photo How did it get to this point?Once-in-a-century public crises might seem a natural rallying point for a nation , but the current pandemic hit a trifecta : a politically polarized society , the uneven spread of the virus , and an economic impact that was disparately felt and quick to fade in some parts of the country even as it kept others fast in its grip . Today ’s rampant spread of the virus is bound with those facts : Local and state decisions to let the economy reopen as much as it did , as soon as it did , with public health rules spotty and unevenly enforced , set the stage for it to rotate through the country and eventually to spread unchecked . Graphic : A national crisis , unevenly shared While that spurred more job creation early on , the country is now facing the worst of both worlds . New COVID-19 cases are mounting at a rate of a million a week , and deaths have reached new peaks approaching 3,000 daily . Meanwhile , the economic recovery seems to be hitting stall speed . U.S. payrolls grew by only 245,000 jobs in November , scant progress given that net job losses since February still total around 10 million . New data released in early December on state and metro level employment and wages by industry show just how unevenly the economic pain of those first months was spread . Indeed , while workers in New York City , one of the early epicenters of the U.S. outbreak , struggled with economic conditions reminiscent of the Great Depression last spring , workers in Montana , on the whole , earned about as much in the three months from April to June as they did in the prior three months . For workers in six western states , in fact , the second quarter of 2020 looked about the same as the second quarter of 2019 in terms of total wages collected , while in Nevada , Hawaii and Michigan wages were down more than 10 % from a year earlier . Graphic : A national crisis , unevenly shared The jobs crash was painful everywhere , particularly in the industries where people would be most vulnerable to a communicable disease - the close-contact services like restaurants , grooming parlors and gyms . Even in places where the initial crash was less intense , more than 8 % of jobs were lost from February to April . At its worst , in the U.S. Northeast and Hawaii , more than 20 % of jobs disappeared . But the places that suffered the lightest initial blow also more quickly regained lost employment , and in some instances by June had nearly regained all the lost jobs in April ’s wave of layoffs and closing . At that point the spread of the pandemic was also mild in those states , perhaps providing a reason to maintain a business-as-usual approach . Graphic : A national crisis , unevenly shared In urban areas the difference in outcomes was even more pronounced . Seasonal factors influence the numbers of jobs in some cities more than others . Beach towns and summer resorts see a bump when the weather warms . But comparing the number of jobs this June to a year ago shows how some fared better - or worse . Atlantic City , New Jersey , an oceanside resort and casino hub , had only 66 % of the jobs this past June that it did the year before . Cleveland , Tennessee , part of the U.S. South ’s emerging auto industry , by contrast , had more jobs in June than it did a year before . Graphic : A national crisis , unevenly shared Industries also felt those first months of the pandemic very differently . At first blush , hiring in some seasonal industries proceeded apace , with drive-in theaters , for example , staffing up for the summer : Employment there more than doubled from February to June , possibly a sign of entertainment migrating outdoors . Still , even such an industry well-suited to the moment saw its employment drop compared with a year earlier . By contrast , nursery and garden center employment rocketed nearly 30 % from February to June - a typical summertime jump . Nonetheless , it was also 1.7 % above the level from June 2019 . Graphic : A national crisis , unevenly shared At the other end of the scale , industries in the food and entertainment sectors saw job losses that may amount to a permanent shift in the economy and where people work . Graphic : A national crisis , unevenly shared" .
 
-<https://sfu.ca/spel/aida/testc/49> a nif:Context,
+<https://sfu.ca/spel/aida/testc/47> a nif:Context,
         nif:OffsetBasedString ;
     nif:beginIndex "0"^^xsd:nonNegativeInteger ;
-    nif:endIndex "2193"^^xsd:nonNegativeInteger ;
-    nif:isString "BERLIN ( Reuters ) - German Chancellor Angela Merkel and state leaders should meet before Christmas to discuss tighter measures to curb the spread of the coronavirus , the premier of the southern state of Bavaria said on Monday . FILE PHOTO : German Chancellor Angela Merkel and Bavarian Federal State Premier Markus Soeder attend a news conference on the coronavirus disease ( COVID-19 ) following video consultations with the premiers of Germany 's 16 federal states , in Berlin , Germany , November 16 , 2020 . Odd Andersen / Pool via REUTERS Bavaria , which has so far recorded Germany ’s highest death toll from the virus , announced on Sunday that it would impose a tougher lockdown and Markus Soeder told ARD television the current national measures remained insufficient . “ I am sure we will meet again before Christmas , because one thing is still clear : the current system alone is not enough , ” Soeder said . “ We have to consider whether it makes sense to wait until 10 January . We need to act and I think better sooner than later . ” While daily infections are no longer rising as sharply as previously , they have stagnated at a high level and Germany reported its highest single-day coronavirus death toll on Wednesday . On Monday data from the Robert Koch Institute for infectious diseases showed the number of confirmed cases rose by 12,332 in the past 24 hours to 1,183,655 , with the reported death toll rising by 147 to 18,919 . Merkel ’s chief of staff also called for another summit of state leaders and the federal government before Christmas to discuss measures to bring infection numbers below 50 per 100,000 within seven days as quickly as possible . Helge Braun told newspaper Bild that people should try to reduce contacts and spoke out in favour of moving to distance learning for some older children in coronavirus hotspots . Merkel and state leaders agreed last week to extend national restrictions , which include limiting private gatherings to five people from two households , until Jan. 10 . From Wednesday , Bavaria will only allow people to leave home with good reason , while evening curfews are planned for hotspots with the highest infection rates ." .
+    nif:endIndex "3671"^^xsd:nonNegativeInteger ;
+    nif:isString "SEOUL ( Reuters ) - South Korean President Moon Jae-in called on Monday for expanded coronavirus testing and more thorough tracing as the country struggled to control its latest and largest wave of infections . FILE PHOTO : South Korean President Moon Jae-in speaks at the National Assembly in Seoul , South Korea , October 28 , 2020 . Jeon Heon-Kyun / Pool via REUTERS The Korea Disease Control and Prevention Agency reported 615 new coronavirus cases as of midnight Sunday , capping a month of triple-digit daily increases that have led to 8,311 confirmed patients in quarantine , the most ever . The surge in cases has deliverd a blow to South Korea ’s vaunted pandemic-fighting system , which successfully used invasive tracing , testing , and quarantines to avoid lockdowns , blunt previous waves , and keep infections below 50 per day for much of the summer . Moon ordered the government to mobilize every available resource to track infections , and to expand testing by deploying the military and more people from the public service , presidential Blue House spokesman Chung Man-ho told a briefing . Moon said testing sites should operate longer hours to allow people working to get tested at their convenience and more drive-through testing facilities should be set up , Chung said . The positive rate for the latest batch of tests was about 4.2 % , compared to the year ’s average of 1.2 % , according to the KDCA . Starting next week , testing centres will begin using a test kit designed to more easily gather samples from saliva , hopefully reducing some of the difficulty they had faced when trying to collect usable samples , KDCA deputy director Na Seong-woong told a briefing . While questions remain over their accuracy , the centres will also start using antigen tests - which are supposed to detect specific proteins from the virus - as a stopgap , Na said . Na predicted that daily cases would hover between 550-750 for this week , possibly spiking to as much as 900 per day the next week . “ This crisis is the most critical yet , ” he said , warning that the outbreak could lead to a “ medical collapse ” if the numbers are n’t contained . DEBATE OVER NEW MEASURES On Sunday , authorities said they will impose heightened social distancing rules for the capital Seoul and surrounding areas that will last until at least the end of the month . With this third wave , the government has faced increasing criticism as cases continue to rise despite measures such as mask mandates , curfews for restaurants and other businesses , and restricted public transportation . Among the facilities ordered to completely close are the private academies or cram schools , called “ hagwon ” , used by students for extra study . The Korea Association of Hagwons staged a rare public protest over the outright ban on hagwons opening in the greater Seoul area , saying it is discriminatory because other businesses including PC cafes and movie theatres frequented by students are still allowed to be open until 9 p.m . The ban has prompted concerns among many students and parents ahead of the final exam period , and would deepen inequality by boosting private tutoring that only well-off students can afford , it added . In comments to a meeting of his senior ministers , Moon called the wave of infections the most serious yet and apologised for failing to blunt the surge and for the burden caused by the social distancing restrictions . Monday ’s total was down slightly from Sunday , when the agency reported 631 new cases , the largest daily tally since a peak in February and early March . In total , South Korea has reported 38,161 cases , with 549 deaths ." .
 
 <https://sfu.ca/spel/aida/testc/67> a nif:Context,
         nif:OffsetBasedString ;
@@ -34388,6 +34628,12 @@
     nif:endIndex "1917"^^xsd:nonNegativeInteger ;
     nif:isString "SUN CITY , South Africa ( Reuters ) - Home favourite Christiaan Bezuidenhout picked up back-to-back wins on the European Tour after a final round 69 proved enough for him to claim the South African Open title at the Gary Player Country Club on Sunday . FILE PHOTO : Golf - The Masters - Augusta National Golf Club - Augusta , Georgia , U.S. - November 13 , 2020 South Africa 's Christiaan Bezuidenhout in action on the 7th during the first round REUTERS / Brian Snyder Bezuidenhout carded only three bogeys over the four days with some exceptional hitting off the tee and consistency with the putter as he finished with a tournament total of 18-under par . In the end he secured a five-shot victory over Welshman Jamie Donaldson ( 69 ) , whose consolation is a place at next week ’s World Tour Championship in Dubai . It is a third victory on tour for the 26-year-old Bezuidenhout and comes hot on the heels of his win in the Alfred Dunhill Championship at Leopard Creek last weekend . “ It ’s unbelievable to stand here with an SA Open win . It is every South African golfer ’s dream to win the national championship , ” he told reporters . “ I have fought hard today . The front nine things did not go my way . I am just happy to come out with a win . ” Bezuidenhout had promised he would not take on the course in his final round , and a conservative front nine saw him drop a shot on the par-four eighth . That seemed to spur him into action , and when he birdied three holes in a row between 10 and 12 , he knew the championship was his to lose . “ It was massive . I knew I just needed to make pars coming in after that . Today was tough , I had to be patient , ” he said . Donaldson kept attacking all round , but his six birdies were offset by three bogies , the last on 12 ending his realistic hopes . The South African Open is golf ’s second-oldest national championship , having first been played in 1893 ." .
 
+<https://sfu.ca/spel/aida/testc/49> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "2193"^^xsd:nonNegativeInteger ;
+    nif:isString "BERLIN ( Reuters ) - German Chancellor Angela Merkel and state leaders should meet before Christmas to discuss tighter measures to curb the spread of the coronavirus , the premier of the southern state of Bavaria said on Monday . FILE PHOTO : German Chancellor Angela Merkel and Bavarian Federal State Premier Markus Soeder attend a news conference on the coronavirus disease ( COVID-19 ) following video consultations with the premiers of Germany 's 16 federal states , in Berlin , Germany , November 16 , 2020 . Odd Andersen / Pool via REUTERS Bavaria , which has so far recorded Germany ’s highest death toll from the virus , announced on Sunday that it would impose a tougher lockdown and Markus Soeder told ARD television the current national measures remained insufficient . “ I am sure we will meet again before Christmas , because one thing is still clear : the current system alone is not enough , ” Soeder said . “ We have to consider whether it makes sense to wait until 10 January . We need to act and I think better sooner than later . ” While daily infections are no longer rising as sharply as previously , they have stagnated at a high level and Germany reported its highest single-day coronavirus death toll on Wednesday . On Monday data from the Robert Koch Institute for infectious diseases showed the number of confirmed cases rose by 12,332 in the past 24 hours to 1,183,655 , with the reported death toll rising by 147 to 18,919 . Merkel ’s chief of staff also called for another summit of state leaders and the federal government before Christmas to discuss measures to bring infection numbers below 50 per 100,000 within seven days as quickly as possible . Helge Braun told newspaper Bild that people should try to reduce contacts and spoke out in favour of moving to distance learning for some older children in coronavirus hotspots . Merkel and state leaders agreed last week to extend national restrictions , which include limiting private gatherings to five people from two households , until Jan. 10 . From Wednesday , Bavaria will only allow people to leave home with good reason , while evening curfews are planned for hotspots with the highest infection rates ." .
+
 <https://sfu.ca/spel/aida/testc/7> a nif:Context,
         nif:OffsetBasedString ;
     nif:beginIndex "0"^^xsd:nonNegativeInteger ;
@@ -34406,12 +34652,6 @@
     nif:endIndex "2163"^^xsd:nonNegativeInteger ;
     nif:isString "( For a Reuters live blog on U.S. , UK and European stock markets , click LIVE/ or type LIVE/ in a news window ) * Brexit negotiations enter final phase * Countrywide surges as Connells sweetens buyout bid * FTSE 100 up 0.3 % , FTSE 250 down 0.6 % ( Adds graphic ) Dec 7 ( Reuters ) - London-listed mid-caps fell on Monday on fears that Britain ’s transition period out of the European Union would expire without a free trade deal in place , while Countrywide surged to a near ten-month high following a sweetened buyout offer . The mid-cap FTSE 250 , considered a barometer of Brexit sentiment , lost 0.6 % as Britain and the EU made a last-ditch attempt to bridge significant differences and reach a deal to avoid a disorderly exit in just 24 days . The export-heavy FTSE 100 was up 0.3 % as no-deal Brexit worries pressured the pound . Autos , economically-sensitive banks and real estate firms were among the biggest decliners in morning trading . “ The market is getting a little bit anxious right now , ” said Stefan Koopman , senior market economist at Rabobank . “ There has been progress on a technical level behind the scenes , but there is no political agreement yet . ” British and EU negotiators have been haggling for weeks over fishing rights , ensuring fair competition for companies and ways to solve future disputes . Investment bank JPMorgan said odds of a no-trade deal exit had risen to more than 30 % from 20 % . Still , the FTSE 100 is on track to record its biggest quarterly gain since 2010 after being boosted by hopes that effective COVID-19 vaccines would soon be available and speed up an economic recovery next year . Data on Monday showed UK house prices last month posted their biggest annual increase since June 2016 , as people sought to move into bigger houses following COVID-19-driven lockdowns . In company news , Countrywide Plc surged 21.3 % after real estate management firm Connells Ltd said it had raised its buyout offer for the British firm to 164.5 million pounds ( $ 219.99 million ) . Fashion retailer Ted Baker tumbled 5.7 % as its half-year losses ballooned due to coronavirus-led lockdowns denting retail sales ." .
 
-<https://sfu.ca/spel/aida/testc/100> a nif:Context,
-        nif:OffsetBasedString ;
-    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
-    nif:endIndex "2063"^^xsd:nonNegativeInteger ;
-    nif:isString "NEW YORK ( Reuters ) - Tech company Blockstack PBC ’s digital currency “ Stacks ” can become tradable by U.S. investors with the launch of its new blockchain early next year , Muneeb Ali , the company ’s co-founder and chief executive told Reuters in an interview late last week . Under U.S. Securities and Exchange Commission regulations , some cryptocurrencies or digital tokens have been classed as securities as part of efforts to enforce rules against entities failing to register digital currencies or assets sold to investors . With the launch of Blockstack ’s Stacks Blockchain 2.0 on Jan. 14 , 2021 , the company ’s network will be no longer be controlled by any single entity and its Stacks token can no longer be considered a security under SEC regulations , Ali said . This means Blockstack will not be required to submit regular financial reports as a company and its Stacks token can be traded by U.S. investors on U.S. digital asset exchanges . The SEC did not immediately respond to a Reuters request for comment . The Stacks token , which currently trades on exchanges outside the United States , has a market capitalization of $ 220 million . Blockstack , which is building a decentralized network and app ecosystem for Web 3.0 , raised $ 23 million last year by issuing Stacks tokens in a public offering under the SEC ’s Regulation A+ exemption . Those tokens though could not be traded by U.S. investors on U.S. exchanges . “ Over the past year , we have been moving on an explicit path to decentralization , with several independent entities now in our ecosystem ... that there would not be dependence on our company for the success of the network , ” said Ali . “ It is a little bit like bitcoin where there are so many different companies , different miners , and different players . ” Following the launch of Stacks 2.0 , which will mean the token is no longer being treated as a security , Ali said Blockstack plans to file an exit report to the SEC that states it would no longer be filing the required reports with the U.S. regulator ." .
-
 <https://sfu.ca/spel/aida/testc/11> a nif:Context,
         nif:OffsetBasedString ;
     nif:beginIndex "0"^^xsd:nonNegativeInteger ;
@@ -34423,6 +34663,12 @@
     nif:beginIndex "0"^^xsd:nonNegativeInteger ;
     nif:endIndex "1482"^^xsd:nonNegativeInteger ;
     nif:isString "Five-time Grand Slams double champion and Hall of Famer Dennis Ralston died Sunday at age 78 . The death was announced by his alma mater , Southern California . The university said Ralston died in Austin , Texas , after a battle with cancer . Ralston was a four-time individual NCAA champion at USC , winning the NCAA singles and doubles crowns in both 1963 and 1964 . He also was part of three straight national championship teams from 1962-64 . He won U.S. Open doubles titles in 1961 , 1963 and 1964 . Ralston also won the Wimbledon doubles title in 1960 and the French Open doubles title in 1966 . Ralston did n’t win any Grand Slam singles titles but reached the 1966 Wimbledon final before losing to Manuel Santana . Ralston had a 576-251 record and won 41 singles titles . His highest singles ranking was No . 5 in 1966 . He also had a 125-87 record as a doubles player . Ralston was a member of the U.S. team that won the Davis Cup in 1963 and later served as captain of the squad from 1972-75 . He retired in 1977 and later moved into coaching , including six years as coach of legendary women ’s player Chris Evert . Evert paid tribute to Ralston on Twitter . “ It ’s a sad day as my former coach of six years , Dennis Ralston , has passed away . A deeply religious man , a devoted family man , and a superb player and coach .... he will be missed . RIP Dennis , ” Evert said . Ralston was inducted into the International Tennis Hall of Fame in 1987 . -- Field Level Media" .
+
+<https://sfu.ca/spel/aida/testc/100> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "2063"^^xsd:nonNegativeInteger ;
+    nif:isString "NEW YORK ( Reuters ) - Tech company Blockstack PBC ’s digital currency “ Stacks ” can become tradable by U.S. investors with the launch of its new blockchain early next year , Muneeb Ali , the company ’s co-founder and chief executive told Reuters in an interview late last week . Under U.S. Securities and Exchange Commission regulations , some cryptocurrencies or digital tokens have been classed as securities as part of efforts to enforce rules against entities failing to register digital currencies or assets sold to investors . With the launch of Blockstack ’s Stacks Blockchain 2.0 on Jan. 14 , 2021 , the company ’s network will be no longer be controlled by any single entity and its Stacks token can no longer be considered a security under SEC regulations , Ali said . This means Blockstack will not be required to submit regular financial reports as a company and its Stacks token can be traded by U.S. investors on U.S. digital asset exchanges . The SEC did not immediately respond to a Reuters request for comment . The Stacks token , which currently trades on exchanges outside the United States , has a market capitalization of $ 220 million . Blockstack , which is building a decentralized network and app ecosystem for Web 3.0 , raised $ 23 million last year by issuing Stacks tokens in a public offering under the SEC ’s Regulation A+ exemption . Those tokens though could not be traded by U.S. investors on U.S. exchanges . “ Over the past year , we have been moving on an explicit path to decentralization , with several independent entities now in our ecosystem ... that there would not be dependence on our company for the success of the network , ” said Ali . “ It is a little bit like bitcoin where there are so many different companies , different miners , and different players . ” Following the launch of Stacks 2.0 , which will mean the token is no longer being treated as a security , Ali said Blockstack plans to file an exit report to the SEC that states it would no longer be filing the required reports with the U.S. regulator ." .
 
 <https://sfu.ca/spel/aida/testc/82> a nif:Context,
         nif:OffsetBasedString ;
@@ -34454,11 +34700,11 @@
     nif:endIndex "2246"^^xsd:nonNegativeInteger ;
     nif:isString "Austin Reaves scored 20 of his 32 points in the second half to lead Oklahoma to an 82-78 win over TCU on Saturday in Fort Worth , Texas . Slideshow ( 42 images ) It was Reaves ’ second consecutive big game at Schollmaier Arena . In what wound up being the Sooners ’ final game of last season , Reaves scored a career-high 41 points , hitting the game-winning shot in the final second to finish off a comeback from an 18-point halftime deficit . Reaves added a career-high nine assists , as well as six rebounds with just one turnover in what might ’ ve been the most complete game of his career . While Reaves was known primarily as a 3-point shooter while he was at Wichita State , he ’s worked to transform his game after struggling from behind the 3-point line last season in his first with the Sooners . Reaves took just four 3-point shots Sunday , making two . Instead , he attacked the basket constantly , not only finishing at the rim and creating for his teammates but also getting to the free-throw line 18 times , making 16 . Reaves ’ 18 free-throw attempts were also a career high . The game was tight most of the way , with the Sooners ( 2-0 , 1-0 Big 12 ) not putting the Horned Frogs ( 4-1 , 0-1 ) away until the closing seconds . After Reaves missed a long 3-pointer with 14 seconds left and the shot clock running down , Alondes Williams grabbed the offensive rebound and found Brady Manek under the basket to make it a two-possession game with eight seconds left . Oklahoma grabbed control with a 13-2 run late in the second half to go up seven with less than five minutes remaining . Freshman Mike Miles had a breakout game for TCU , scoring 21 points on 8-of-15 shooting . RJ Nembhard added 18 points for the Horned Frogs , with PJ Fuller scoring 15 . In Oklahoma ’s season-opening win over Texas-San Antonio three days earlier , the Sooners relied heavily on the 3-point shot , with Manek hitting eight 3-pointers himself . Against the Horned Frogs , the Sooners ’ offense focused much more on the interior , scoring 36 points in the paint . Manek made just one 3-pointer , scoring 14 points while De’Vion Harmon added 13 on 6-of-9 shooting . The Sooners shot 51.9 percent from the floor . TCU shot 43.8 . -- Field Level Media" .
 
-<https://sfu.ca/spel/aida/testc/104> a nif:Context,
+<https://sfu.ca/spel/aida/testc/120> a nif:Context,
         nif:OffsetBasedString ;
     nif:beginIndex "0"^^xsd:nonNegativeInteger ;
-    nif:endIndex "3414"^^xsd:nonNegativeInteger ;
-    nif:isString "TOKYO ( Reuters ) - The dollar started the week on the back foot on Monday after soft U.S. jobs data only solidified expectations of a fresh economic package , while the British pound eyed last-ditch trade talks between the United Kingdom and European Union . FILE PHOTO : Pound and U.S. dollar banknotes are seen in this illustration taken January 6 , 2020 . REUTERS / Dado Ruvic / Illustration The dollar index stood little changed at 90.726 , having hit a 2 1 / 2-year low of 90.471 on Friday . The euro changed hands at $ 1.2133 , having climbed on Friday to as high as $ 1.2177 , a level last seen in April 2018 . Friday ’s U.S. jobs data showed non-farm payrolls increased by 245,000 last month , the smallest gain since May , in a sign the jobs recovery is losing momentum on the third wave of coronavirus infections . Yet traders perceived the data as putting pressure on Washington to pass a new round of stimulus to help the coronavirus-battered economy , keeping overall risk appetite intact and capping the U.S. dollar against riskier currencies . “ When risk appetite is in a good place , like it is now , demand for the U.S. dollar is going to be weaker , ” said Ray Attrill , head of foreign exchange strategy at National Australia Bank in Sydney . “ Further dollar depreciation is baked in the cake . ” Talks aimed at delivering a fresh infusion of coronavirus relief gathered momentum in the U.S. Congress on Friday , as a bipartisan group of lawmakers worked to put the finishing touches on a $ 908 billion bill they hope to get through this week . The spectre of fresh borrowing boosted the 10-year U.S. Treasuries yield to an 8 1 / 2-month high of 0.986 % on Friday , helping lift the dollar against the yen to 104.20 yen . The U.S. Federal Reserve is unlikely to rush to ramp up stimulus at its meeting next week , with Chicago Federal Reserve Bank President Charles Evans on Friday saying it would take until springtime to see the effects of a vaccine roll-out and gauge the economic trajectory . The European Central Bank sets policy on Thursday . The offshore yuan stood at 6.5184 per dollar , just shy of its 2 1 / 2-year high of 6.5070 set on Friday . Chinese policymakers are comfortable with the yuan ’s rise as the country ’s economic rebound accelerates and the central bank gives the market greater leeway in setting the currency ’s value , sources told Reuters . The yuan , also known as the renminbi , moved little after data showing China ’s exports rose at the fastest pace in nearly three years in November . Sterling traded little changed at $ 1.3422 , stepping back from 2 1 / 2-year high of $ 1.3540 touched on Friday as investors looked to talks between Britain and the EU this week to avert a chaotic parting of ways at the end of the year . Earlier it fell to as low as $ 1.3360 after weekend talks stalled on three thorny issues . British Prime Minister Boris Johnson and European Commission President Ursula von der Leyden are due to hold a call on Monday evening in the hope that , by then , differences over fishing rights waters around the United Kingdom , fair competition and ways to solve future disputes will have narrowed . “ While it is hard to predict how the negotiations will go , I suspect sterling will be well-supported unless we have a complete breakdown in the talks , ” said Shinichiro Kadota , senior currency strategist at Barclays Capital in Tokyo ." .
+    nif:endIndex "3839"^^xsd:nonNegativeInteger ;
+    nif:isString "( Reuters ) - Governments across Europe are trying to navigate between avoiding spreading the coronavirus over the Christmas holiday season and allowing people to celebrate with family and friends . FILE PHOTO : A woman wearing a protective mask is seen through a glass at a shopping centre on the day Italian Health Minister Roberto Speranza lays out in parliament the government 's plan for mass coronavirus disease ( COVID-19 ) vaccinations and restrictions over the Christmas period , in Rome , Italy December 2 , 2020 . REUTERS / Yara Nardi Here are some measures that will be adopted for year-end festivities by some European countries : PORTUGAL There will be no limit on how many people will be able to gather per household for Christmas , the government said on Dec 5 . The night-time curfew will be pushed back from 11 p.m. to 2 a.m. on Dec. 24 and Dec. 25 . For New Year ’s Eve , street parties will be banned and outdoor gatherings will be limited to a maximum of six people . GERMANY The federal government extended its lockdown measures until Jan. 10 in November , but eased rules over the Christmas holidays . Up to 10 people will be allowed to gather , not counting children . The region of Bavaria said on Dec. 6 that it would impose a tougher lockdown from Dec. 9 until Jan. 5 , with some relaxation for Christmas but not for New Year . CZECH REPUBLIC The Czech government allowed shops and restaurants shut since October to reopen on Dec. 3 ahead of the holiday season . SPAIN Up to 10 people per household will be allowed to gather for Christmas and New Year , relaxing the current rule that permits gatherings of up to six people . Curfews will be pushed back to 1:30 a.m. from 11 p.m. on Dec. 24 and Dec. 31 . Movement between regions will be banned between Dec. 23 and Jan. 6 , except for visits to family . The government of Catalonia said it would not relax its restrictions on Dec. 7 as planned but would allow free movement during the Christmas celebrations . ITALY Italians will not be able to attend a midnight mass on Christmas Eve and will be only allowed to move between regions in emergencies over the holiday period starting on Dec. 20 . The government also decided last month that ski resorts would be closed over the Christmas and New Year period . NORWAY Norwegians will be able to invite up to 10 guests in their homes on two separate occasions between Christmas and New Year . Outside those days the current limit of up to five guests in one home remains . AUSTRIA Skiing will be allowed from Dec. 24 , but there will be no Christmas markets this holiday season . FRANCE People will be allowed to travel from Dec. 15 , including over the end-of-year holidays , if coronavirus cases drop to around 5,000 new cases per day . France , which has decided to keep its ski slopes off limits until January , said it would make random border checks to stop people getting infected by crossing into countries where ski resorts remain open . BELGIUM Belgian households will only be able to be in close contact with one extra person over Christmas . People living on their own will be able to meet two others . Fireworks will be banned on New Year ’s Eve to limit gatherings and foreign travel is strongly discouraged . IRELAND Three households will be allowed to meet between Dec. 18 and Jan. 6 , and the countrywide travel ban will be lifted for that period . BRITAIN Up to three households will be allowed to meet at home from Dec. 23 until Dec. 27 . People will be able to meet in places of worship and in outdoor public places but not at indoor hospitality or entertainment venues . Shops will be allowed to stay open for longer over Christmas and in January . POLAND No more than five people will be allowed to be invited to one household according to the new set of rules which are to last until Dec. 27 ." .
 
 <https://sfu.ca/spel/aida/testc/38> a nif:Context,
         nif:OffsetBasedString ;
@@ -34466,17 +34712,23 @@
     nif:endIndex "2088"^^xsd:nonNegativeInteger ;
     nif:isString "Miles McBride scored a team-high 17 points to go with seven rebounds and seven assists as No . 11 West Virginia recorded an 80-71 win over host Georgetown on Sunday in Washington . Derek Culver shook off a slow start to finish with 14 points and nine rebounds for the Mountaineers ( 4-1 ) . West Virginia closed the Big 12 / Big East Challenge game on an 18-9 run , thriving behind aggressiveness on both sides of the floor . The Mountaineers forced 15 turnovers compared to five for the Hoyas ( 1-2 ) and held a substantial edge in points off turnovers at 21-4 . Emmitt Matthews Jr . added 13 points and Taz Sherman chipped in 12 for West Virginia . Oscar Tshiebwe had nine points and six rebounds . Georgetown ’s Jahvon Blair led all scorers with 19 points and made five of the Hoyas ’ 11 3-pointers . Jamorko Pickett had 11 points and eight rebounds and Chudier Bile scored 10 points . Qudus Wahab narrowly missed a double-double , finishing with nine points and nine rebounds . Jalen Harris chipped in eight points and eight assists . Tshiebwe scored five of West Virginia ’s 10 points during an early second-half run that put the Mountaineers on top 54-50 with 11:46 remaining . Aiming to seize control , the Mountaineers surrendered seven straight points and went scoreless over the next 2:51 . A Culver jumper in the paint and a layup from Tshiebwe gave the Mountaineers the lead at 58-57 with 8:17 to go , setting up a tight finish . Georgetown took a 34-32 lead at halftime , benefiting from six 3-pointers and an ability to keep the Mountaineers of the offensive glass . West Virginia managed just three second-chance points in the first 20 minutes and was outrebounded 26-21 during that span while having two shots blocked . Navigating first-half foul trouble , Culver scored three points in four minutes . Tshiebwe also sat for an extended stretch with two early fouls , going scoreless in nine minutes . Before Sunday , the former Big East rivals last met in the first round of the 2014 NIT at McDonough Arena . The Hoyas lead the all-time series 27-26 . -- Field Level Media" .
 
-<https://sfu.ca/spel/aida/testc/65> a nif:Context,
+<https://sfu.ca/spel/aida/testc/104> a nif:Context,
         nif:OffsetBasedString ;
     nif:beginIndex "0"^^xsd:nonNegativeInteger ;
-    nif:endIndex "2371"^^xsd:nonNegativeInteger ;
-    nif:isString "NEW YORK ( Reuters ) - Oil prices slipped on Monday as the positive impact from COVID-19 vaccine news and an OPEC+ deal on oil production cuts was undermined by surging coronavirus cases and heightened tensions between the United States and China . FILE PHOTO : Crude oil storage tanks are seen in an aerial photograph at the Cushing oil hub in Cushing , Oklahoma , U.S. April 21 , 2020 . REUTERS / Drone Base / File Photo Brent crude fell 16 cents to $ 49.09 a barrel by 11:17 a.m. EST ( 1617 GMT ) . U.S. crude fell 18 cents to $ 46.08 a barrel . Both oil contracts gained around 2 % last week after OPEC+ , comprising of the Organization of the Petroleum Exporting Countries ( OPEC ) and its allies , agreed to increase output slightly from January but continue the bulk of existing supply curbs . “ The beginning of this week is like the morning hangover following a good night out that went a bit too far , ” said Bjornar Tonhaugen , head of oil markets at Rystad Energy . “ With the OPEC deal in the bag , now traders looked back at fundamentals , demand and supply , and they were forced to come back to earth as things are not looking good in the short-term . ” Prices also were under pressure after Reuters exclusively reported that the United States was preparing to impose sanctions on at least a dozen Chinese officials over their alleged role in Beijing ’s disqualification of elected opposition legislators in Hong Kong . Rising tensions between the United States and China , the world ’s top oil consumers , have weighed repeatedly on the market in recent years . Meanwhile , a surge in coronavirus cases globally has forced a series of renewed lockdowns , including strict new measures in the U.S. state of California and in Germany and South Korea . U.S. gasoline consumption fell during the Thanksgiving holiday week to the lowest in more than 20 years , OPIS said , as lockdowns weighed on fuel consumption . Elsewhere , Iran has instructed its oil ministry to prepare installations for the production and sale of crude oil at full capacity within three months , state media said on Sunday . “ Adding to the pressure on oil prices is the potential Iranian increase to production in three months , ” said Edward Moya , senior market analyst at OANDA . “ Iran is optimistic the U.S. will ease restrictions if they return back to the 2015 nuclear deal . ”" .
+    nif:endIndex "3414"^^xsd:nonNegativeInteger ;
+    nif:isString "TOKYO ( Reuters ) - The dollar started the week on the back foot on Monday after soft U.S. jobs data only solidified expectations of a fresh economic package , while the British pound eyed last-ditch trade talks between the United Kingdom and European Union . FILE PHOTO : Pound and U.S. dollar banknotes are seen in this illustration taken January 6 , 2020 . REUTERS / Dado Ruvic / Illustration The dollar index stood little changed at 90.726 , having hit a 2 1 / 2-year low of 90.471 on Friday . The euro changed hands at $ 1.2133 , having climbed on Friday to as high as $ 1.2177 , a level last seen in April 2018 . Friday ’s U.S. jobs data showed non-farm payrolls increased by 245,000 last month , the smallest gain since May , in a sign the jobs recovery is losing momentum on the third wave of coronavirus infections . Yet traders perceived the data as putting pressure on Washington to pass a new round of stimulus to help the coronavirus-battered economy , keeping overall risk appetite intact and capping the U.S. dollar against riskier currencies . “ When risk appetite is in a good place , like it is now , demand for the U.S. dollar is going to be weaker , ” said Ray Attrill , head of foreign exchange strategy at National Australia Bank in Sydney . “ Further dollar depreciation is baked in the cake . ” Talks aimed at delivering a fresh infusion of coronavirus relief gathered momentum in the U.S. Congress on Friday , as a bipartisan group of lawmakers worked to put the finishing touches on a $ 908 billion bill they hope to get through this week . The spectre of fresh borrowing boosted the 10-year U.S. Treasuries yield to an 8 1 / 2-month high of 0.986 % on Friday , helping lift the dollar against the yen to 104.20 yen . The U.S. Federal Reserve is unlikely to rush to ramp up stimulus at its meeting next week , with Chicago Federal Reserve Bank President Charles Evans on Friday saying it would take until springtime to see the effects of a vaccine roll-out and gauge the economic trajectory . The European Central Bank sets policy on Thursday . The offshore yuan stood at 6.5184 per dollar , just shy of its 2 1 / 2-year high of 6.5070 set on Friday . Chinese policymakers are comfortable with the yuan ’s rise as the country ’s economic rebound accelerates and the central bank gives the market greater leeway in setting the currency ’s value , sources told Reuters . The yuan , also known as the renminbi , moved little after data showing China ’s exports rose at the fastest pace in nearly three years in November . Sterling traded little changed at $ 1.3422 , stepping back from 2 1 / 2-year high of $ 1.3540 touched on Friday as investors looked to talks between Britain and the EU this week to avert a chaotic parting of ways at the end of the year . Earlier it fell to as low as $ 1.3360 after weekend talks stalled on three thorny issues . British Prime Minister Boris Johnson and European Commission President Ursula von der Leyden are due to hold a call on Monday evening in the hope that , by then , differences over fishing rights waters around the United Kingdom , fair competition and ways to solve future disputes will have narrowed . “ While it is hard to predict how the negotiations will go , I suspect sterling will be well-supported unless we have a complete breakdown in the talks , ” said Shinichiro Kadota , senior currency strategist at Barclays Capital in Tokyo ." .
 
 <https://sfu.ca/spel/aida/testc/63> a nif:Context,
         nif:OffsetBasedString ;
     nif:beginIndex "0"^^xsd:nonNegativeInteger ;
     nif:endIndex "2283"^^xsd:nonNegativeInteger ;
     nif:isString "PARIS ( Reuters ) - Airbus delivered 64 aircraft in November , bringing the total so far this year to 477 , down 34 % from the first 11 months of 2019 as COVID-19 curbs demand , the planemaker said on Monday . FILE PHOTO : An Asiana Airlines Airbus A350-900 is seen at the Airbus delivery center in Colomiers near Toulouse , France , March 20 , 2019 . REUTERS / Regis Duvignau / File Photo Deliveries included seven wide-body A350 jets and 56 single-aisle jets including 54 of the main A320neo narrow-body family . Deliveries are being closely scrutinized by investors as they generate much-needed cash during the coronavirus crisis . The figures confirm an earlier Reuters report that Airbus was heading towards a total of 550 or more deliveries in 2020 after a November tally in the mid-60s , including as many as seven A350s and more than 50 narrow-body jets . November ’s deliveries retreated from 72 seen in October this year and fell 17 % from the 77 handovers posted in November 2019 . Boeing said on Friday it had delivered zero 787 jets in November , prompting it to lower their output to five aircraft a month . The 787 is one of two models competing with the Airbus A350 , which is being produced at a rate of 4.5 a month . Lower travel due to the pandemic is weighing heavily on new orders . Airbus sold no aircraft in November , marking the fourth time since European lockdowns began in March that it has gone a month without posting new business as it focuses on getting aircraft delivered . It has 7,302 orders yet to be fulfilled , equivalent to more than a decade of production at current depressed rates . Between January and November , it posted 381 orders , or a net total of 297 after cancellations , including 11 freshly reported . The net total includes 10 new cancellations for A220-100 aircraft originally ordered by Bahrain ’s Gulf Air . There has been doubt over the future of the order since 2018 when Airbus bought the regional jet programme from Canada ’s Bombardier . Airbus inherited the orders from the Canadian company which sold the 10 jets , then known as CSeries , to Gulf Air in 2012 . Airbus also took another cancellation from Macquarie Financial Holdings , a leasing unit of Australia ’s Macquarie Group , which has been trimming jet orders ." .
+
+<https://sfu.ca/spel/aida/testc/65> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "2371"^^xsd:nonNegativeInteger ;
+    nif:isString "NEW YORK ( Reuters ) - Oil prices slipped on Monday as the positive impact from COVID-19 vaccine news and an OPEC+ deal on oil production cuts was undermined by surging coronavirus cases and heightened tensions between the United States and China . FILE PHOTO : Crude oil storage tanks are seen in an aerial photograph at the Cushing oil hub in Cushing , Oklahoma , U.S. April 21 , 2020 . REUTERS / Drone Base / File Photo Brent crude fell 16 cents to $ 49.09 a barrel by 11:17 a.m. EST ( 1617 GMT ) . U.S. crude fell 18 cents to $ 46.08 a barrel . Both oil contracts gained around 2 % last week after OPEC+ , comprising of the Organization of the Petroleum Exporting Countries ( OPEC ) and its allies , agreed to increase output slightly from January but continue the bulk of existing supply curbs . “ The beginning of this week is like the morning hangover following a good night out that went a bit too far , ” said Bjornar Tonhaugen , head of oil markets at Rystad Energy . “ With the OPEC deal in the bag , now traders looked back at fundamentals , demand and supply , and they were forced to come back to earth as things are not looking good in the short-term . ” Prices also were under pressure after Reuters exclusively reported that the United States was preparing to impose sanctions on at least a dozen Chinese officials over their alleged role in Beijing ’s disqualification of elected opposition legislators in Hong Kong . Rising tensions between the United States and China , the world ’s top oil consumers , have weighed repeatedly on the market in recent years . Meanwhile , a surge in coronavirus cases globally has forced a series of renewed lockdowns , including strict new measures in the U.S. state of California and in Germany and South Korea . U.S. gasoline consumption fell during the Thanksgiving holiday week to the lowest in more than 20 years , OPIS said , as lockdowns weighed on fuel consumption . Elsewhere , Iran has instructed its oil ministry to prepare installations for the production and sale of crude oil at full capacity within three months , state media said on Sunday . “ Adding to the pressure on oil prices is the potential Iranian increase to production in three months , ” said Edward Moya , senior market analyst at OANDA . “ Iran is optimistic the U.S. will ease restrictions if they return back to the 2015 nuclear deal . ”" .
 
 <https://sfu.ca/spel/aida/testc/116> a nif:Context,
         nif:OffsetBasedString ;
@@ -34544,12 +34796,6 @@
     nif:endIndex "2208"^^xsd:nonNegativeInteger ;
     nif:isString "Bijan Robinson and Roschon Johnson each had three rushing touchdowns as Texas cruised past Kansas State 69-31 Saturday in Big 12 play at Manhattan , Kan . Slideshow ( 38 images ) The Longhorns ( 6-3 , 5-3 Big 12 ) , who had seven rushing touchdowns , still have an outside shot at playing in the Big 12 championship game . They need to win at Kansas next week , and hope that Oklahoma loses twice . Kansas State ( 4-6 , 4-5 ) completed its regular season with five straight losses . K-State allowed its most points since giving up 73 at Nebraska in 2007 . Sam Ehlinger was 20-of-27 passing for 274 yards and two touchdowns . The Longhorns averaged 10.1 yards per carry . Deuce Vaughn had 125 yards and two touchdowns rushing , to raise his total to 652 and pass Leon Patton ( 609 in 2006 ) as the all-time leading freshman rusher in K-State history . Will Howard was 16-of-27 passing for 174 yards , two touchdowns and two interceptions . The second half was a shootout , with seven touchdowns in the third quarter alone . The Longhorns got a 75-yard touchdown run by Robinson on the first series . Howard then hit Malik Knowles for a 7-yard touchdown . D’Shawn Jamison returned the kickoff 98 yards and Johnson punched it in from the 1 . K-State answered with a 29-yard touchdown pass from Howard to Knowles . Texas then got a 15-yard touchdown run by Jordan Whittington and TD receptions by Cade Brewer and Malcolm Epps . After forcing a three-and-out on K-State ’s first possession , the Longhorns marched 81 yards on seven plays , capped by Robinson ’s 12-yard touchdown run . Cameron Dicker then put Texas up 10-0 with a 28-yard field goal . On the subsequent drive , Howard threw an interception to Jerrin Thompson at the K-State 24 . Thompson returned it to the 3-yard line , where Johnson punched it in . K-State finally got on the board on a water bug-like 19-yard touchdown run by Vaughn . Robinson then scored on the first play of the second quarter on a 30-yard run . After Blake Lynch ’s 47-yard field goal , Johnson scored his second rushing touchdown to make it 31-10 . Vaughn eluded several tackles again on a 4-yard run to pull the Wildcats to within 31-17 at halftime . -- Field Level Media" .
 
-<https://sfu.ca/spel/aida/testc/86> a nif:Context,
-        nif:OffsetBasedString ;
-    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
-    nif:endIndex "3363"^^xsd:nonNegativeInteger ;
-    nif:isString "TOKYO / MELBOURNE ( Reuters ) - Japan has retrieved a capsule of asteroid dust from Australia ’s remote outback after a six-year mission that may help uncover more about the origins of the planets and water , the Asian nation ’s space agency said on Sunday . Japan Aerospace Exploration Agency ( JAXA ) Hayabusa2 's capsule carrying the first extensive samples of an asteroid lit up as it enters the earth 's atmosphere while it is observed at Coober Pedy , Australia , in this photo taken by Kyodo December 6 , 2020 . Mandatory credit Kyodo / via REUTERS The mission of the Japanese spacecraft , Hayabusa2 , spotlights Asia ’s growing role in space exploration , with a Chinese robotic vehicle collecting lunar samples last week for the first time since the 1970s . A helicopter flew the capsule from the unmanned craft , containing the first extensive samples of asteroid dust , from the landing site in Australia ’s desert to a domestic research facility of the Japan Aerospace Exploration Agency ( JAXA ) . “ The probe landed on the asteroid twice , and the second time it created an artificial crater and collected some debris , ” agency president Hiroshi Yamakawa told a news conference . “ I hope this will shed light on how the solar system was formed and how water was brought to Earth . ” The capsule may also contain some gas , which will be extracted in Australia , Yamakawa added . The spacecraft , launched in 2014 from Japan ’s Tanegashima space centre , journeyed for four years to the asteroid Ryugu , where it gathered a sample and headed home in November 2019 . Spectators gathered at a theatre near the Japanese capital of Tokyo to view the return clapped and waved banners in NHK footage , with one woman in tears . They wore masks and kept a distance from each other as precautions against the coronavirus . Asteroids are believed to have formed at the dawn of the solar system , and scientists say the sample may contain organic matter that could have contributed to life on Earth . “ What we are really doing here is trying to sample this pristine rock that has not been irradiated by the sun , ” astrophysicist Lisa Harvey-Smith told the Australian Broadcasting Corporation . Gases trapped in the rock samples could reveal more about conditions prevailing about 4.6 billion years ago , she added . The retrieval of the capsule also highlights close technical cooperation between Japan and Australia . “ Our job supporting JAXA will not be complete until we see the sample ... safely leaves Australia and returns to Japan , ” Megan Clark , head of the Australian Space Agency , told the news conference . “ And then the sample will start to tell its stories and reveal to us some wonderful signs about how water arrived on our Earth and how we even may have been formed , such as our organics , carbon-based animals , humans , and plants . ” Japan ’s craft , named for the peregrine falcon , a bird of prey , orbited above the asteroid for a few months to map its surface before landing . It used small explosives to blast a crater and collected the resulting debris . After Hayabusa2 dropped off the capsule , it changed course and headed back into space . The capsule lit up on re-entry into the atmosphere early on Sunday and landed in the Woomera restricted area , about 460 km ( 285 miles ) north of Adelaide , the space agency said ." .
-
 <https://sfu.ca/spel/aida/testc/88> a nif:Context,
         nif:OffsetBasedString ;
     nif:beginIndex "0"^^xsd:nonNegativeInteger ;
@@ -34561,6 +34807,12 @@
     nif:beginIndex "0"^^xsd:nonNegativeInteger ;
     nif:endIndex "2263"^^xsd:nonNegativeInteger ;
     nif:isString "FILE PHOTO : Turkish President Tayyip Erdogan arrives for a meeting with EU Council President Charles Michel in Brussels , Belgium March 9 , 2020 . REUTERS / Francois Lenoir / File Photo / File Photo ANKARA ( Reuters ) - Turkey will not bow to threats in its dispute with Greece and Cyprus over maritime claims in the eastern Mediterranean , President Tayyip Erdogan said on Monday as European Union foreign ministers met in Brussels to discuss the issue . But Erdogan also said Turkey wanted negotiations over the conflicting claims to continental shelves and rights to potential energy resources . The EU ministers were due to evaluate grounds for sanctions against Turkey . The bloc ’s leaders will then decide on Thursday whether to make good on their threat , after Turkey sent an exploration vessel into waters claimed by Greece . “ In the eastern Mediterranean issue , our country never sides with tension , but with peace , cooperation , fairness and implementing justice . The path to this goes through negotiations based on mutual respect , ” Erdogan said , repeating a call for a conference that involves all actors in the region . However , Turkey would not allow a “ pirate mentality ” shown by other countries to restrict it to a narrow strip of coastal water . “ We will not bow down to threats and blackmail ... We will not allow imperialist expansionism , ” he said . Tensions flared in August when Ankara sent a survey vessel to map out energy drilling prospects in waters also claimed by Greece . Ankara and Athens agreed to resume talks over their contested maritime claims in September , ending a 4-year hiatus . But Greece has since said it would not begin talks as long as Turkish vessels were in contested waters . The vessel , Oruc Reis , returned to port again last week . The EU ’s Parliament has called for sanctions against Turkey over Erdogan ’s visit to the breakaway Turkish Cypriot state of Northern Cyprus - which is recognised only by Ankara - and over the Turkish operations in the eastern Mediterranean , which it called illegal . France is leading the push in the EU to sanction Turkey at the summit on Dec. 10-11 . Diplomats say any measures would likely target areas of Turkey ’s economy linked to hydrocarbon exploration ." .
+
+<https://sfu.ca/spel/aida/testc/86> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "3363"^^xsd:nonNegativeInteger ;
+    nif:isString "TOKYO / MELBOURNE ( Reuters ) - Japan has retrieved a capsule of asteroid dust from Australia ’s remote outback after a six-year mission that may help uncover more about the origins of the planets and water , the Asian nation ’s space agency said on Sunday . Japan Aerospace Exploration Agency ( JAXA ) Hayabusa2 's capsule carrying the first extensive samples of an asteroid lit up as it enters the earth 's atmosphere while it is observed at Coober Pedy , Australia , in this photo taken by Kyodo December 6 , 2020 . Mandatory credit Kyodo / via REUTERS The mission of the Japanese spacecraft , Hayabusa2 , spotlights Asia ’s growing role in space exploration , with a Chinese robotic vehicle collecting lunar samples last week for the first time since the 1970s . A helicopter flew the capsule from the unmanned craft , containing the first extensive samples of asteroid dust , from the landing site in Australia ’s desert to a domestic research facility of the Japan Aerospace Exploration Agency ( JAXA ) . “ The probe landed on the asteroid twice , and the second time it created an artificial crater and collected some debris , ” agency president Hiroshi Yamakawa told a news conference . “ I hope this will shed light on how the solar system was formed and how water was brought to Earth . ” The capsule may also contain some gas , which will be extracted in Australia , Yamakawa added . The spacecraft , launched in 2014 from Japan ’s Tanegashima space centre , journeyed for four years to the asteroid Ryugu , where it gathered a sample and headed home in November 2019 . Spectators gathered at a theatre near the Japanese capital of Tokyo to view the return clapped and waved banners in NHK footage , with one woman in tears . They wore masks and kept a distance from each other as precautions against the coronavirus . Asteroids are believed to have formed at the dawn of the solar system , and scientists say the sample may contain organic matter that could have contributed to life on Earth . “ What we are really doing here is trying to sample this pristine rock that has not been irradiated by the sun , ” astrophysicist Lisa Harvey-Smith told the Australian Broadcasting Corporation . Gases trapped in the rock samples could reveal more about conditions prevailing about 4.6 billion years ago , she added . The retrieval of the capsule also highlights close technical cooperation between Japan and Australia . “ Our job supporting JAXA will not be complete until we see the sample ... safely leaves Australia and returns to Japan , ” Megan Clark , head of the Australian Space Agency , told the news conference . “ And then the sample will start to tell its stories and reveal to us some wonderful signs about how water arrived on our Earth and how we even may have been formed , such as our organics , carbon-based animals , humans , and plants . ” Japan ’s craft , named for the peregrine falcon , a bird of prey , orbited above the asteroid for a few months to map its surface before landing . It used small explosives to blast a crater and collected the resulting debris . After Hayabusa2 dropped off the capsule , it changed course and headed back into space . The capsule lit up on re-entry into the atmosphere early on Sunday and landed in the Woomera restricted area , about 460 km ( 285 miles ) north of Adelaide , the space agency said ." .
 
 <https://sfu.ca/spel/aida/testc/56> a nif:Context,
         nif:OffsetBasedString ;
@@ -34610,29 +34862,29 @@
     nif:endIndex "3292"^^xsd:nonNegativeInteger ;
     nif:isString "* Thailand markets closed for a holiday * Fitch downgrades Malaysia 's credit rating ; ringgit weaker * China Nov exports rise sharply By Anushka Trivedi Dec 7 ( Reuters ) - Indonesian shares hit a near 10-month high on Monday , while other Asian stock markets made modest gains as optimism over U.S. stimulus was overshadowed by a possible escalation in tensions between the United States and China . The Jakarta index jumped 1.7 % to lead gains after local media here reported over the weekend that the government would allow coronavirus vaccine usage , following which President Joko Widodo said that Indonesia had received its first shipment of vaccines from China . Indonesia has been among the hardest hit countries by the pandemic as its daily number of coronavirus infections has accelerated in recent weeks and its death toll remains the highest in Southeast Asia . However , other emerging Asian stock markets retreated from highs hit over vaccine optimism and the $ 908 billion aid bill in the United States after Reuters reported that President Donald Trump 's administration was preparing sanctions on some Chinese officials over the crackdown in Hong Kong . \" After an initial rise on U.S. stimulus hopes , early rallies quickly faded ... I expect the negativity in the major Asian markets to be short-lived , \" Jeffrey Halley , senior market analyst , Asia Pacific , at OANDA , wrote . In the long term , the news of stimulus should outweigh the negative headlines on geopolitical tensions , he added . Even upbeat trade data from China , the region 's economic engine , failed to spur a rally in Asian equities . Chinese exports rose at the fastest pace since February 2018 in November , jumping 21.1 % from a year earlier . Meanwhile , emerging Asian currencies were a shade higher against a flat dollar , with only the Taiwanese dollar a stand out at 0.9 % stronger . The ringgit was knocked 0.3 % lower after Fitch downgraded Malaysia 's credit rating on expectations of worsening fiscal pressure , increased debt and political uncertainty . However , analysts at Mizuho bank said the downgrade was \" not a cause for alarm \" as a wider fiscal deficit to entrench the recovery was necessary . \" Malaysia 's medium-term growth outlook remains positive and highly constructive , with near-term support possibly being expedited by the recovery in oil prices as well as vaccine boost to global demand and tourism . \" Financial markets in Thailand were shut due to a holiday . HIGHLIGHTS ** Indonesian 10-year benchmark yields are up 3.6 basis points at 6.234 % ** Top gainers on the Jakarta stock index : Island Concepts Indonesia Tbk PT up 34.7 % & Pool Advista Finance Tbk PT up 34.7 % ** Top losers on the Singapore STI include : UOL Group Ltd down 2 % and City Developments Ltd down 1.7 % Asia stock indexes and currencies at 0504 GMT COUNTRY FX RIC FX DAILY % FX YTD % INDEX STOCKS DAILY % STOCKS YTD % Japan +0.13 +4.43 - 0.60 12.41 China - 0.06 +6.57 - 0.66 12.19 India +0.07 - 3.21 0.26 9.24 Indonesia - 0.11 - 1.56 1.67 - 6.22 Malaysia - 0.27 +0.49 0.04 2.12 Philippines +0.08 +5.39 0.71 - 8.06 S. Korea - 0.02 +6.85 0.13 24.44 Singapore +0.06 +0.75 - 0.12 - 11.98 Taiwan +0.91 +6.51 0.66 18.58 ( Reporting by Anushka Trivedi in Bengaluru ; Editing by Jacqueline Wong )" .
 
-<https://sfu.ca/spel/aida/testc/30> a nif:Context,
-        nif:OffsetBasedString ;
-    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
-    nif:endIndex "4348"^^xsd:nonNegativeInteger ;
-    nif:isString "LOS ANGELES / NEW YORK ( Reuters ) - California compelled much of the state to close shop and stay home on Monday and New York ordered hospitals to increase bed capacity by 25 percent , as the United States braced for yet another coronavirus surge during the upcoming holidays . California Governor Gavin Newsom ’s order came into effect one day after the state set a record with more than 30,000 new COVID-19 cases , triggered in areas of Southern California where fewer than 15 % of intensive care hospital beds remain available . In addition , five counties in Northern California surrounding the San Francisco Bay Area have voluntarily imposed the restrictions even before reaching the intensive care unit threshold . Combined , the areas cover about three-quarters of the state ’s nearly 40 million people . Dr. Celine Gounder , a member of President-elect Joe Biden ’s coronavirus advisory board , said California had little choice . “ Given how out of control the virus is at this point , we are having to dial up some of those restrictions again , ” Gounder told CBS News . “ Ideally , we should be more proactive than this . ” In reporting more than 30,000 new cases on Sunday , the state exceeded its previous high of 21,986 set on Dec. 4 , and notched a record high for hospitalized COVID-19 patients as well . Nationwide , COVID-19 infections in United States are at their peak with an average of 193,863 new cases reported each day over the past week , according to a Reuters tally of official data . FILE PHOTO : A masked customer ascends a flight of stairs inside Japan Center in Japantown ahead of the new stay-at-home order in attempts to contain the spread of the coronavirus disease ( COVID-19 ) in San Francisco , California , U.S. , December 6 , 2020 . REUTERS / Stephen Lam There have been 14.7 million confirmed infections and 282,253 coronavirus-related deaths reported in the country since the pandemic began , the most in the world . California has been under a stay-at-home order for all but essential services since March . The new order , which will last at least three weeks , bans private gatherings of any size , shuts all but critical infrastructure and retail operations , and requires everyone to wear a mask and maintain physical distancing . But the sheriffs of Los Angeles , Orange and Riverside counties have said they will refuse to enforce the order . Riverside County Sheriff Chad Bianco said in a videotaped message that his office “ will not be blackmailed ” into enforcing the governor ’s orders , and Orange County Sheriff Don Barnes said in a statement his deputies would not respond to calls to enforce violations of the mask mandate , stay-at-home orders or the ban on social gatherings . FAUCI SEES ‘ BAD TIME ’ AHEAD To avoid a critical shortage of hospital beds , New York state health officials will order hospitals to increase their capacity by 25 % and ask retired doctors and nurses to come back to work , Governor Andrew Cuomo said on Monday . If the hospitalization rate fails to stabilize over the next five days , indoor dining in New York City will be halted , Cuomo said . Dr. Anthony Fauci , tapped by Biden to be his chief medical adviser on the coronavirus , warned the nationwide surge could get worse after the year-end holiday season . After millions ignored expert advice and traveled for the Thanksgiving holiday in November , Fauci anticipated Americans would once again behave recklessly during Christmas and New Year ’s Eve festivities . Spikes in the death toll typically appear about three weeks after surges in infections and hospitalizations . “ Mid-January is probably going to be a bad time , ” said Fauci , appearing with Cuomo in his video news conference . Biden , a Democrat , has said he will make the pandemic his top priority upon taking over for departing President Donald Trump , a Republican , on Jan. 20 . Anticipating U.S. Food and Drug Administration emergency authorization of the first vaccine within the coming days , the White House will host a vaccine distribution summit on Tuesday with governors , retail pharmacy chains and shipping companies , Health Secretary Alex Azar told Fox News . The aim of the meeting was “ to be very transparent and show the world how comprehensively we have planned out every aspect of this distribution , ” Azar said ." .
-
 <https://sfu.ca/spel/aida/testc/77> a nif:Context,
         nif:OffsetBasedString ;
     nif:beginIndex "0"^^xsd:nonNegativeInteger ;
     nif:endIndex "3921"^^xsd:nonNegativeInteger ;
     nif:isString "WASHINGTON ( Reuters ) - The chief adviser for U.S. efforts to develop a coronavirus vaccine said on Sunday he planned to meet with President-elect Joe Biden this week to discuss the program before the expected first round of vaccinations in the country later this month . FILE PHOTO : Former GlaxoSmithKline pharmaceutical executive Moncef Slaoui , who will serve as chief adviser on the effort to find a vaccine for the coronavirus disease ( COVID-19 ) pandemic , waits to speak as President Donald Trump holds a coronavirus disease response event in the Rose Garden at the White House in Washington , U.S. , May 15 , 2020 . REUTERS / Kevin Lamarque / File Photo Moncef Slaoui , chief adviser to the U.S. government ’s Operation Warp Speed initiative , said he has not yet met with Biden , who last week criticized the Trump administration ’s vaccine distribution plan . “ We really look forward to it because actually things have been really very appropriately planned , ” Slaoui said in an interview with CBS ’ “ Face the Nation . ” Biden said on Friday his team had not seen a detailed outline from the Trump administration to distribute a vaccine to various states , which he called an expensive and difficult process . “ There is no detailed plan that we ’ ve seen , anyway , as to how you get the vaccine out of a container , into an injection syringe , into somebody ’s arm , ” Biden said . Slaoui said part of the confusion may be that the government ’s plan relies on state health agencies to deliver the vaccine . “ I think the plans are there and I feel confident that once we will explain it , everything in detail . I hope the new transition team will understand that things are well planned , ” he told the CBS program . The United States is struggling with a resurgence of the virus , with record infections and a daily death toll that has exceeded 2,000 in recent days . More than 281,000 Americans have died from the COVID-19 disease , according to a Reuters tally . President Donald Trump ’s refusal to acknowledge his loss to Biden in the Nov. 3 presidential election caused a delay in the transition process that allowed White House health advisers to communicate with the new Biden health advisory team . Biden was due to announce members of his public health team this week . VACCINE NOT ENOUGH First-responders , health care workers and nursing home residents will be the first groups to receive the vaccine once the U.S. Food and Drug Administration approves it , which is expected in the next week or two . The FDA ’s outside advisers are scheduled to meet on Thursday to review Pfizer ’s emergency use application for its vaccine Slaoui has said the second tranche of people to get the vaccine will likely include essential employees such as postal workers , and then the general population will follow . Asked on Sunday when Americans would start seeing the impact of the vaccine , Slaoui told CBS that might happen for the most susceptible people in January or February . “ But on a population basis , for our life to start getting back to normal , we ’re talking about April or May , ” he said . With the winter holiday season approaching , U.S. health experts have been pleading with Americans to not let up on their coronavirus safety protocols - wearing masks , social distancing and avoiding large gatherings . “ That ’s what ’s gonna get us most through this , ” U.S. Health Secretary Alex Azar said on ABC ’s “ This Week ” program . Dr. Deborah Birx , who serves with Azar on the White House coronavirus task force , told NBC ’s “ Meet the Press ” that public health officials have had to battle incorrect messages from the Trump administration about masks and other mitigation measures . “ I want to be very frank to the American people . The vaccine is critical . But it ’s not going to save us from the current surge , ” she said . “ Only we can save us from this current surge . ”" .
 
-<https://sfu.ca/spel/aida/testc/85> a nif:Context,
-        nif:OffsetBasedString ;
-    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
-    nif:endIndex "4162"^^xsd:nonNegativeInteger ;
-    nif:isString "LOS ANGELES ( Reuters ) - California compelled much of the state to close shop and stay at home on Monday , when some of the harshest coronavirus restrictions in the United States came into effect one day after the state set a record with more than 30,000 new COVID-19 cases . FILE PHOTO : A masked customer ascends a flight of stairs inside Japan Center in Japantown ahead of the new stay-at-home order in attempts to contain the spread of the coronavirus disease ( COVID-19 ) in San Francisco , California , U.S. , December 6 , 2020 . REUTERS / Stephen Lam Governor Gavin Newsom ’s order was triggered in areas where fewer than 15 percent of intensive care hospital beds were available , affecting more than 23 million people in Southern California . In addition , five counties in Northern California surrounding the San Francisco Bay Area have voluntarily imposed the restrictions even before reaching the intensive care unit threshold . California has been under a stay-at-home order for all but essential services since March . The new order , which will last at least three weeks , bans private gatherings of any size , shuts all but critical infrastructure and retail operations , and requires everyone to wear a mask and maintain physical distancing . Newsom , a first-term Democrat , has threatened to withhold funds from local governments that refuse to comply . Even so , the sheriffs of Los Angeles , Orange and Riverside counties have said they will refuse to enforce the order , emboldening non-essential businesses to remain open . Riverside County Sheriff Chad Bianco said in a videotaped message his office “ will not be blackmailed ” into enforcing the governor ’s orders , and Orange County Sheriff Don Barnes said in a statement his deputies would not respond to calls to enforce violations of the mask mandate , stay-at-home orders or the ban on social gatherings . But the mayor of one Los Angeles County town said more enforcement was needed . “ People absolutely should be arrested for not wearing masks , ” Lancaster Mayor R. Rex Perris told the Orange County Register . “ Most of these people have never been arrested before . Spend one night incarcerated , and they wo n’t do it again . ” California reported more than 30,000 new cases on Sunday , exceeding the state ’s previous high of 21,986 set on Dec. 4 , and marked a new record for hospitalized COVID-19 patients . New Jersey , North Carolina , Virginia and West Virginia also announced record one-day rises in new infections . Nationwide , COVID-19 infections in United States are at their peak with an average of 193,863 new cases reported each day over the past week , according to a Reuters tally of official data . There have been 14.7 million infections and 282,253 coronavirus-related deaths reported in the country since the pandemic began . Dr. Anthony Fauci , who has been tapped by President-elect Joe Biden to be his chief medical adviser on coronavirus , on Monday warned the surge could get worse after the year-end holiday season . After millions ignored expert advice and traveled for the Thanksgiving holiday in November , Fauci anticipated Americans would once again behave recklessly during Christmas and New Year ’s Eve festivities . “ Nobody wants to modify , if not essentially shut down , their holiday season , but we live in a very critical time in this country right now , ” Fauci said in an interview with CNN . Biden , a Democrat , has said he will make the pandemic his top priority upon taking office on Jan. 20 . Departing President Donald Trump , a Republican , has downplayed public health measures such as mask-wearing , instead banking on the rapid development of vaccines , which could receive federal approval as soon as next week . Anticipating that approval from the U.S. Food and Drug Administration , the White House will host a vaccine distribution summit on Tuesday with governors , retail pharmacy chains and shipping companies , Health Secretary Alex Azar told Fox News . The aim of the meeting was “ to be very transparent and show the world how comprehensively we have planned out every aspect of this distribution , ” Azar said ." .
-
 <https://sfu.ca/spel/aida/testc/110> a nif:Context,
         nif:OffsetBasedString ;
     nif:beginIndex "0"^^xsd:nonNegativeInteger ;
     nif:endIndex "3158"^^xsd:nonNegativeInteger ;
     nif:isString "( Reuters ) - The sky ’s the limit for George Russell after the British youngster ’s stellar performance as Lewis Hamilton ’s stand-in at the Sakhir Grand Prix , according to Mercedes Formula One team boss Toto Wolff . Formula One F1 - Sakhir Grand Prix - Bahrain International Circuit , Sakhir , Bahrain - December 6 , 2020 Mercedes ' George Russell in action during the race Pool via REUTERS / Giuseppe Cacace The 22-year-old seized his opportunity to shine in Sunday ’s race in Bahrain and cemented his status as a full-time Mercedes driver in waiting , even if hopes of a stunning victory were cruelly dashed . “ It ’s not going to be his last attempt to win a race , it ’s just the beginning of a fairytale that did n’t work out today , ” Wolff told Sky Sports after congratulating and commiserating in equal measure . “ I would say that a new star is born . “ Lewis is the absolute benchmark , that is what his record says and nobody is anywhere near him . But today we have seen that there is a new generation coming up that can be really strong , ” added the Austrian . “ They are very young , in their early 20s . The sky is the limit . ” Esteban Ocon , the 24-year-old Frenchman who was a Mercedes young driver before moving to Renault , finished second in Sunday ’s race with 22-year-old Canadian Lance Stroll third for Racing Point . Racing Point ’s Sergio Perez was a first-time winner at 30 but the grid is full of young talent -- Red Bull ’s Max Verstappen and Ferrari ’s Charles Leclerc already multiple race winners and still only 23 . McLaren ’s Lando Norris is 21 -- the same age as Michael Schumacher ’s son Mick , crowned F2 champion on Sunday and debuting with Haas next year . AlphaTauri ’s Pierre Gasly , another first-time winner this season , is 24 . FASTEST LAP Russell may be back in a tail-end Williams for next Sunday ’s Abu Dhabi season-ender , depending on seven times world champion Hamilton ’s recovery from COVID-19 , but the stand-in made sure he stood out . Mercedes regular Valtteri Bottas , confirmed for next season , could be on borrowed time . Russell led both Friday practice sessions , qualified on the front row within milliseconds of polesitting Bottas , seized the lead at the start , comfortably had the measure of the Finn and set the fastest lap . Only a Mercedes tyre mix-up , an extra pitstop and then a late puncture after a charge back to second denied him a first victory . He ended up ninth . It was still , as Wolff recognised , a ‘ monumental ’ performance . “ I gave it everything I had . I was managing the race at the start , I felt confident and comfortable in the opening laps , just managing the gap to Valtteri , ” said Russell . Three points were scant reward , even if the first in Formula One for the 2018 Formula Two champion after nearly two barren years with Mercedes-powered Williams . When he stepped out of the car , the hurt was real -- not just because he was wearing shoes a size too small to fit into the cockpit more easily -- but so too was the sense of achievement . “ Hopefully I ’ ve given Toto some problems to sort out for the future . I ’m happy . I ’m proud , ” he said ." .
+
+<https://sfu.ca/spel/aida/testc/30> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "4348"^^xsd:nonNegativeInteger ;
+    nif:isString "LOS ANGELES / NEW YORK ( Reuters ) - California compelled much of the state to close shop and stay home on Monday and New York ordered hospitals to increase bed capacity by 25 percent , as the United States braced for yet another coronavirus surge during the upcoming holidays . California Governor Gavin Newsom ’s order came into effect one day after the state set a record with more than 30,000 new COVID-19 cases , triggered in areas of Southern California where fewer than 15 % of intensive care hospital beds remain available . In addition , five counties in Northern California surrounding the San Francisco Bay Area have voluntarily imposed the restrictions even before reaching the intensive care unit threshold . Combined , the areas cover about three-quarters of the state ’s nearly 40 million people . Dr. Celine Gounder , a member of President-elect Joe Biden ’s coronavirus advisory board , said California had little choice . “ Given how out of control the virus is at this point , we are having to dial up some of those restrictions again , ” Gounder told CBS News . “ Ideally , we should be more proactive than this . ” In reporting more than 30,000 new cases on Sunday , the state exceeded its previous high of 21,986 set on Dec. 4 , and notched a record high for hospitalized COVID-19 patients as well . Nationwide , COVID-19 infections in United States are at their peak with an average of 193,863 new cases reported each day over the past week , according to a Reuters tally of official data . FILE PHOTO : A masked customer ascends a flight of stairs inside Japan Center in Japantown ahead of the new stay-at-home order in attempts to contain the spread of the coronavirus disease ( COVID-19 ) in San Francisco , California , U.S. , December 6 , 2020 . REUTERS / Stephen Lam There have been 14.7 million confirmed infections and 282,253 coronavirus-related deaths reported in the country since the pandemic began , the most in the world . California has been under a stay-at-home order for all but essential services since March . The new order , which will last at least three weeks , bans private gatherings of any size , shuts all but critical infrastructure and retail operations , and requires everyone to wear a mask and maintain physical distancing . But the sheriffs of Los Angeles , Orange and Riverside counties have said they will refuse to enforce the order . Riverside County Sheriff Chad Bianco said in a videotaped message that his office “ will not be blackmailed ” into enforcing the governor ’s orders , and Orange County Sheriff Don Barnes said in a statement his deputies would not respond to calls to enforce violations of the mask mandate , stay-at-home orders or the ban on social gatherings . FAUCI SEES ‘ BAD TIME ’ AHEAD To avoid a critical shortage of hospital beds , New York state health officials will order hospitals to increase their capacity by 25 % and ask retired doctors and nurses to come back to work , Governor Andrew Cuomo said on Monday . If the hospitalization rate fails to stabilize over the next five days , indoor dining in New York City will be halted , Cuomo said . Dr. Anthony Fauci , tapped by Biden to be his chief medical adviser on the coronavirus , warned the nationwide surge could get worse after the year-end holiday season . After millions ignored expert advice and traveled for the Thanksgiving holiday in November , Fauci anticipated Americans would once again behave recklessly during Christmas and New Year ’s Eve festivities . Spikes in the death toll typically appear about three weeks after surges in infections and hospitalizations . “ Mid-January is probably going to be a bad time , ” said Fauci , appearing with Cuomo in his video news conference . Biden , a Democrat , has said he will make the pandemic his top priority upon taking over for departing President Donald Trump , a Republican , on Jan. 20 . Anticipating U.S. Food and Drug Administration emergency authorization of the first vaccine within the coming days , the White House will host a vaccine distribution summit on Tuesday with governors , retail pharmacy chains and shipping companies , Health Secretary Alex Azar told Fox News . The aim of the meeting was “ to be very transparent and show the world how comprehensively we have planned out every aspect of this distribution , ” Azar said ." .
+
+<https://sfu.ca/spel/aida/testc/85> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "4162"^^xsd:nonNegativeInteger ;
+    nif:isString "LOS ANGELES ( Reuters ) - California compelled much of the state to close shop and stay at home on Monday , when some of the harshest coronavirus restrictions in the United States came into effect one day after the state set a record with more than 30,000 new COVID-19 cases . FILE PHOTO : A masked customer ascends a flight of stairs inside Japan Center in Japantown ahead of the new stay-at-home order in attempts to contain the spread of the coronavirus disease ( COVID-19 ) in San Francisco , California , U.S. , December 6 , 2020 . REUTERS / Stephen Lam Governor Gavin Newsom ’s order was triggered in areas where fewer than 15 percent of intensive care hospital beds were available , affecting more than 23 million people in Southern California . In addition , five counties in Northern California surrounding the San Francisco Bay Area have voluntarily imposed the restrictions even before reaching the intensive care unit threshold . California has been under a stay-at-home order for all but essential services since March . The new order , which will last at least three weeks , bans private gatherings of any size , shuts all but critical infrastructure and retail operations , and requires everyone to wear a mask and maintain physical distancing . Newsom , a first-term Democrat , has threatened to withhold funds from local governments that refuse to comply . Even so , the sheriffs of Los Angeles , Orange and Riverside counties have said they will refuse to enforce the order , emboldening non-essential businesses to remain open . Riverside County Sheriff Chad Bianco said in a videotaped message his office “ will not be blackmailed ” into enforcing the governor ’s orders , and Orange County Sheriff Don Barnes said in a statement his deputies would not respond to calls to enforce violations of the mask mandate , stay-at-home orders or the ban on social gatherings . But the mayor of one Los Angeles County town said more enforcement was needed . “ People absolutely should be arrested for not wearing masks , ” Lancaster Mayor R. Rex Perris told the Orange County Register . “ Most of these people have never been arrested before . Spend one night incarcerated , and they wo n’t do it again . ” California reported more than 30,000 new cases on Sunday , exceeding the state ’s previous high of 21,986 set on Dec. 4 , and marked a new record for hospitalized COVID-19 patients . New Jersey , North Carolina , Virginia and West Virginia also announced record one-day rises in new infections . Nationwide , COVID-19 infections in United States are at their peak with an average of 193,863 new cases reported each day over the past week , according to a Reuters tally of official data . There have been 14.7 million infections and 282,253 coronavirus-related deaths reported in the country since the pandemic began . Dr. Anthony Fauci , who has been tapped by President-elect Joe Biden to be his chief medical adviser on coronavirus , on Monday warned the surge could get worse after the year-end holiday season . After millions ignored expert advice and traveled for the Thanksgiving holiday in November , Fauci anticipated Americans would once again behave recklessly during Christmas and New Year ’s Eve festivities . “ Nobody wants to modify , if not essentially shut down , their holiday season , but we live in a very critical time in this country right now , ” Fauci said in an interview with CNN . Biden , a Democrat , has said he will make the pandemic his top priority upon taking office on Jan. 20 . Departing President Donald Trump , a Republican , has downplayed public health measures such as mask-wearing , instead banking on the rapid development of vaccines , which could receive federal approval as soon as next week . Anticipating that approval from the U.S. Food and Drug Administration , the White House will host a vaccine distribution summit on Tuesday with governors , retail pharmacy chains and shipping companies , Health Secretary Alex Azar told Fox News . The aim of the meeting was “ to be very transparent and show the world how comprehensively we have planned out every aspect of this distribution , ” Azar said ." .
 
 <https://sfu.ca/spel/aida/testc/4> a nif:Context,
         nif:OffsetBasedString ;
