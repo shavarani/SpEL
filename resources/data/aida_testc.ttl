@@ -33102,7 +33102,7 @@
     nif:endIndex "198"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/94> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
-    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Baran> .
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Baran_district> .
 
 <https://sfu.ca/spel/aida/testc/94#offset_201_210> a nif:OffsetBasedString,
         nif:Phrase ;
