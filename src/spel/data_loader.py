@@ -10,21 +10,21 @@ Please note that the pre-processed fine-tuning data will be automatically downlo
 
 The expected sizes of the auto-downloaded datasets:
     - Step 1 (general knowledge fine-tuning):
-            enwiki-2023-el.broscheit-roberta-tokenized-may-26-2023.tar.gz: 18.9 GBs
+            enwiki-2023-spel-roberta-tokenized-aug-27-2023.tar.gz: 19.1 GBs
             * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
             * You can delete the file above once fine-tuning step 1 is done, and you are moving on to step 2.         *
             * in the cleaning up process, make sure you remove the cached validation set files under .checkpoints     *
             * directory as well                                                                                       *
             * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
     - Step 2 (general knowledge fine-tuning):
-            enwiki-2023-el.broscheit-roberta-tokenized-may-26-2023-retokenized.tar.gz: 17.3 GBs
+            enwiki-2023-spel-roberta-tokenized-aug-27-2023-retokenized.tar.gz: 17.5 GBs
             * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
             * You can delete the file above once fine-tuning step 2 is done, and you are moving on to step 3.         *
             * in the cleaning up process, make sure you remove the cached validation set files under .checkpoints     *
             * directory as well                                                                                       *
             * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
     - Step 3 (domain specific fine-tuning):
-            aida-conll-el.broscheit-roberta-tokenized-may-26-2023.tar.gz: 5.1 MBs
+            aida-conll-spel-roberta-tokenized-aug-23-2023.tar.gz: 5.1 MBs
 
 No extra preprocessing step will be required, as soon as you start the fine-tuning script for each step,
  the proper fine-tuning dataset will be downloaded and will be served **without** the need for unzipping.
@@ -46,10 +46,10 @@ from torchtext.utils import download_from_url
 
 from transformers import AutoTokenizer, BatchEncoding
 
-from spel.configuration import get_aida_plus_wikipedia_vocab, get_aida_train_canonical_redirects, get_aida_vocab, get_checkpoints_dir
+from spel.configuration import (get_aida_plus_wikipedia_plus_out_of_domain_vocab, get_aida_train_canonical_redirects,
+                                get_aida_vocab, get_checkpoints_dir, get_base_model_name)
 
-# You need to change the following variable to "roberta-large" to use the Large model as the initial model.
-BERT_MODEL_NAME = "roberta-base"
+BERT_MODEL_NAME = get_base_model_name()
 MAX_SPAN_ANNOTATION_SIZE = 4
 
 
@@ -60,7 +60,7 @@ class StaticAccess:
         self.aida_canonical_redirects = get_aida_train_canonical_redirects()
 
     def set_vocab_and_itos_to_all(self):
-        self.mentions_vocab = get_aida_plus_wikipedia_vocab()
+        self.mentions_vocab = get_aida_plus_wikipedia_plus_out_of_domain_vocab()
         self.mentions_itos = [w[0] for w in sorted(self.mentions_vocab.items(), key=lambda x: x[1])]
 
     @staticmethod
@@ -76,27 +76,27 @@ class StaticAccess:
 dl_sa = StaticAccess()
 
 
-class ENWIKI20230520Config:
-    URL = "https://1sfu-my.sharepoint.com/:u:/g/personal/sshavara_sfu_ca/EVOFBYPUyl9Jo3tKaxQ6ne4Bcj4_m_VIsX5pbwnB8PpCjQ?e=QkhcJQ&download=1"
-    MD5 = "8f01a1021bd5e538e1a88219aed8ea06"
-    PATH = "enwiki-2023-el.broscheit-roberta-tokenized-may-26-2023.tar.gz"
-    DATASET_NAME = "WIKIPEDIA20230520"
-    NUM_LINES = {'train': 3040008, 'valid': 1000, 'test': 1000}
+class ENWIKI20230827Config:
+    URL = "https://1sfu-my.sharepoint.com/:u:/g/personal/sshavara_sfu_ca/Ea3IVbOpkTJKpASNyL9aFGMBQpH0ABU2hQa-wYyakkZ9TQ?e=DJFF3v&download=1"
+    MD5 = "eb9a54a8f1f858cdcbf6c750942a896f"
+    PATH = "enwiki-2023-spel-roberta-tokenized-aug-27-2023.tar.gz"
+    DATASET_NAME = "WIKIPEDIA20230827"
+    NUM_LINES = {'train': 3055221, 'valid': 1000, 'test': 1000}
 
 
-class ENWIKI20230520V2Config:
-    URL = 'https://1sfu-my.sharepoint.com/:u:/g/personal/sshavara_sfu_ca/EY18Ng69xjxLqGybhsYFo4EBotyPzgPurlDqYIr1bTRGLA?e=Nf9CX6&download=1'
-    MD5 = "a3b11ffd0b0836ee3963adf6313f1a3d"
-    PATH = "enwiki-2023-el.broscheit-roberta-tokenized-may-26-2023-retokenized.tar.gz"
-    DATASET_NAME = "WIKIPEDIA20230520V2"
-    NUM_LINES = {'train': 3022813, 'valid': 994}
+class ENWIKI20230827V2Config:
+    URL = 'https://1sfu-my.sharepoint.com/:u:/g/personal/sshavara_sfu_ca/EeS_Tgl_CFJNiTh6YH5IDrsBocEZUsZV3lxPB6pleTxyxw?e=caH1cf&download=1'
+    MD5 = "83a37f528800a463cd1a376e80ffc744"
+    PATH = "enwiki-2023-spel-roberta-tokenized-aug-27-2023-retokenized.tar.gz"
+    DATASET_NAME = "WIKIPEDIA20230827V2"
+    NUM_LINES = {'train': 3038581, 'valid': 996}
 
 
-class AIDA20230520Config:
-    URL = "https://1sfu-my.sharepoint.com/:u:/g/personal/sshavara_sfu_ca/EfvMr6N4qQxMggkYetmPHbMB-0cFJQZaJ32J3e3Uavbv8A?e=aZBCjl&download=1"
-    MD5 = "5b08900130fd17c54b0736ae0809250f"
-    PATH = "aida-conll-el.broscheit-roberta-tokenized-may-26-2023.tar.gz"
-    DATASET_NAME = "AIDA20230520"
+class AIDA20230827Config:
+    URL = "https://1sfu-my.sharepoint.com/:u:/g/personal/sshavara_sfu_ca/EajEGYyf8LBOoxqDaiPBvbgBwFuEC08nssvZwGJWsG_HXg?e=wAwV6H&download=1"
+    MD5 = "8078529d5df96d0d1ecf6a505fdb767a"
+    PATH = "aida-conll-spel-roberta-tokenized-aug-23-2023.tar.gz"
+    DATASET_NAME = "AIDA20230827"
     NUM_LINES = {'train': 1585, 'valid': 391, 'test': 372}
 
 
@@ -131,34 +131,34 @@ def wiki_data_record_convert(line):
                                              for x in r['mention_entity_probs'][-1]]
     return r
 
-@_create_dataset_directory(dataset_name=ENWIKI20230520Config.DATASET_NAME)
+@_create_dataset_directory(dataset_name=ENWIKI20230827Config.DATASET_NAME)
 @_wrap_split_argument(("train", "valid", "test"))
-def ENWIKI20230520(root: str, split: Union[Tuple[str], str]):
+def ENWIKI20230827(root: str, split: Union[Tuple[str], str]):
     root = root if root else ".data"
-    path = root + "/" + ENWIKI20230520Config.PATH
+    path = root + "/" + ENWIKI20230827Config.PATH
     if not os.path.exists(path):
-        download_from_url(ENWIKI20230520Config.URL, root=root, path=path, hash_value=ENWIKI20230520Config.MD5,
+        download_from_url(ENWIKI20230827Config.URL, root=root, path=path, hash_value=ENWIKI20230827Config.MD5,
                           hash_type='md5')
-    online_reader_dp = FileLister(root, ENWIKI20230520Config.PATH)
+    online_reader_dp = FileLister(root, ENWIKI20230827Config.PATH)
     tar_file_dp = FileOpener(online_reader_dp, mode="b").load_from_tar().filter(
         partial(wiki_filter_fn, split)).readlines(return_path=False).map(wiki_data_record_convert)
     return tar_file_dp
 
-@_create_dataset_directory(dataset_name=ENWIKI20230520V2Config.DATASET_NAME)
+@_create_dataset_directory(dataset_name=ENWIKI20230827V2Config.DATASET_NAME)
 @_wrap_split_argument(("train", "valid"))
-def ENWIKI20230520V2(root: str, split: Union[Tuple[str], str]):
+def ENWIKI20230827V2(root: str, split: Union[Tuple[str], str]):
     root = root if root else ".data"
-    path = root + "/" + ENWIKI20230520V2Config.PATH
+    path = root + "/" + ENWIKI20230827V2Config.PATH
     if not os.path.exists(path):
-        download_from_url(ENWIKI20230520V2Config.URL, root=root, path=path, hash_value=ENWIKI20230520V2Config.MD5,
+        download_from_url(ENWIKI20230827V2Config.URL, root=root, path=path, hash_value=ENWIKI20230827V2Config.MD5,
                           hash_type='md5')
-    online_reader_dp = FileLister(root, ENWIKI20230520V2Config.PATH)
+    online_reader_dp = FileLister(root, ENWIKI20230827V2Config.PATH)
     tar_file_dp = FileOpener(online_reader_dp, mode="b").load_from_tar().filter(
         partial(wiki_filter_fn, split)).readlines(return_path=False).map(wiki_data_record_convert)
     return tar_file_dp
 
 def aida_path_fn(r, _=None):
-    return os.path.join(r, AIDA20230520Config.PATH)
+    return os.path.join(r, AIDA20230827Config.PATH)
 
 
 def aida_select_split(s, file_name_data):
@@ -173,12 +173,12 @@ def aida_data_record_convert(r):
                 "candidates": [x[7] if x[7] else [] for x in r] if len(x) == 8 else [[] for x in r]}
 
 
-@_create_dataset_directory(dataset_name=AIDA20230520Config.DATASET_NAME)
+@_create_dataset_directory(dataset_name=AIDA20230827Config.DATASET_NAME)
 @_wrap_split_argument(('train', 'valid', 'test'))
-def AIDA20230520(root, split):
-    online_reader_dp = HttpReader(IterableWrapper([AIDA20230520Config.URL])).on_disk_cache(
-        filepath_fn=partial(aida_path_fn, root), hash_dict={aida_path_fn(root): AIDA20230520Config.MD5}, hash_type="md5"
-    ).end_caching(mode="wb", same_filepath_fn=True)
+def AIDA20230827(root, split):
+    online_reader_dp = HttpReader(IterableWrapper([AIDA20230827Config.URL])).on_disk_cache(
+        filepath_fn=partial(aida_path_fn, root), hash_dict={aida_path_fn(root): AIDA20230827Config.MD5},
+        hash_type="md5").end_caching(mode="wb", same_filepath_fn=True)
     return FileOpener(online_reader_dp, mode="b").load_from_tar().parse_json_files().flatmap(
         partial(aida_select_split, split)).map(aida_data_record_convert)
 
@@ -232,7 +232,7 @@ def get_dataset(dataset_name: str, split: str, batch_size: int, get_labels_with_
     :param load_distributed: The flag hinting whether the data loader will be loaded in a multi-gpu setting.
     :param world_size: the number of machines that the dataloader is expected to serve.
     :param rank: the rank of the gpu on which the data is expected to be served.
-    :param use_retokenized_wikipedia_data: a flag indicating whether to use ENWIKI20230520 dataset or ENWIKI20230520V2
+    :param use_retokenized_wikipedia_data: a flag indicating whether to use ENWIKI20230827 dataset or ENWIKI20230827V2
     """
 
     assert dataset_name in ["enwiki", "aida"]
@@ -248,7 +248,7 @@ def get_dataset(dataset_name: str, split: str, batch_size: int, get_labels_with_
             data["mentions"].append([
                 [(dl_sa.mentions_vocab[x] if x not in dl_sa.aida_canonical_redirects else
                   dl_sa.mentions_vocab[dl_sa.aida_canonical_redirects[x]])
-                 if x is not None else dl_sa.mentions_vocab["|||O|||"] for x in el]
+                 if x is not None and x not in ['Gmina_Żabno'] else dl_sa.mentions_vocab["|||O|||"] for x in el]
                 for el in annotated_line_in_file["mentions"]
             ])
             data["mention_entity_probs"].append(annotated_line_in_file["mention_entity_probs"])
@@ -282,12 +282,12 @@ def get_dataset(dataset_name: str, split: str, batch_size: int, get_labels_with_
         return inputs, subword_mentions
     if not load_distributed or rank == 0:
         print(f"Done initializing the {dataset_name.upper()}/{split} dataset ...")
-    wikipedia_dataset = ENWIKI20230520
-    wikipedia_dataset_config = ENWIKI20230520Config
-    retokenized_wikipedia_dataset = ENWIKI20230520V2
-    retokenized_wikipedia_dataset_config = ENWIKI20230520V2Config
-    aida_dataset = AIDA20230520
-    aida_dataset_config = AIDA20230520Config
+    wikipedia_dataset = ENWIKI20230827
+    wikipedia_dataset_config = ENWIKI20230827Config
+    retokenized_wikipedia_dataset = ENWIKI20230827V2
+    retokenized_wikipedia_dataset_config = ENWIKI20230827V2Config
+    aida_dataset = AIDA20230827
+    aida_dataset_config = AIDA20230827Config
     dset_class = (retokenized_wikipedia_dataset if use_retokenized_wikipedia_data else wikipedia_dataset) \
         if dataset_name == "enwiki" else aida_dataset
     d_size = (retokenized_wikipedia_dataset_config.NUM_LINES[split] if use_retokenized_wikipedia_data else
@@ -359,9 +359,9 @@ def create_output_with_negative_examples(batch_entity_ids, batch_entity_probs, b
 
 def _make_vocab_file():
     wiki_vocab = set()
-    vocab_file = open("enwiki_20230520.txt", "w")
+    vocab_file = open("enwiki_20230827.txt", "w")
     for spl in ['train', 'valid', 'test']:
-        for el in tqdm(ENWIKI20230520(split=spl)):
+        for el in tqdm(ENWIKI20230827(split=spl, root=get_checkpoints_dir())):
             for x in el['mentions']:
                 for y in x:
                     if y not in wiki_vocab:
