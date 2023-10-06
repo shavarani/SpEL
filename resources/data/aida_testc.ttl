@@ -4601,10 +4601,19 @@
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
     itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Jeff_Zients> .
 
-<https://sfu.ca/spel/aida/testc/112#offset_14_40> a nif:OffsetBasedString,
+<https://sfu.ca/spel/aida/testc/112#offset_14_24> a nif:OffsetBasedString,
         nif:Phrase ;
-    nif:anchorOf "Democratic President-elect" ;
+    nif:anchorOf "Democratic" ;
     nif:beginIndex "14"^^xsd:nonNegativeInteger ;
+    nif:endIndex "24"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <https://sfu.ca/spel/aida/testc/112> ;
+    itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Democratic_Party_(United_States)> .
+
+<https://sfu.ca/spel/aida/testc/112#offset_25_40> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "President-elect" ;
+    nif:beginIndex "25"^^xsd:nonNegativeInteger ;
     nif:endIndex "40"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/112> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
@@ -8597,10 +8606,19 @@
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
     itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Italy> .
 
-<https://sfu.ca/spel/aida/testc/120#offset_2285_2302> a nif:OffsetBasedString,
+<https://sfu.ca/spel/aida/testc/120#offset_2285_2291> a nif:OffsetBasedString,
         nif:Phrase ;
-    nif:anchorOf "NORWAY Norwegians" ;
+    nif:anchorOf "NORWAY" ;
     nif:beginIndex "2285"^^xsd:nonNegativeInteger ;
+    nif:endIndex "2291"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <https://sfu.ca/spel/aida/testc/120> ;
+    itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Norway> .
+
+<https://sfu.ca/spel/aida/testc/120#offset_2292_2302> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Norwegians" ;
+    nif:beginIndex "2292"^^xsd:nonNegativeInteger ;
     nif:endIndex "2302"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/120> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
@@ -8651,10 +8669,19 @@
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
     itsrdf:taIdentRef <http://en.wikipedia.org/wiki/France> .
 
-<https://sfu.ca/spel/aida/testc/120#offset_2970_2985> a nif:OffsetBasedString,
+<https://sfu.ca/spel/aida/testc/120#offset_2970_2977> a nif:OffsetBasedString,
         nif:Phrase ;
-    nif:anchorOf "BELGIUM Belgian" ;
+    nif:anchorOf "BELGIUM" ;
     nif:beginIndex "2970"^^xsd:nonNegativeInteger ;
+    nif:endIndex "2977"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <https://sfu.ca/spel/aida/testc/120> ;
+    itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Belgium> .
+
+<https://sfu.ca/spel/aida/testc/120#offset_2978_2985> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Belgian" ;
+    nif:beginIndex "2978"^^xsd:nonNegativeInteger ;
     nif:endIndex "2985"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/120> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
@@ -30845,10 +30872,19 @@
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
     itsrdf:taIdentRef <http://en.wikipedia.org/wiki/Donald_Trump> .
 
-<https://sfu.ca/spel/aida/testc/87#offset_895_921> a nif:OffsetBasedString,
+<https://sfu.ca/spel/aida/testc/87#offset_895_905> a nif:OffsetBasedString,
         nif:Phrase ;
-    nif:anchorOf "Democratic President-elect" ;
+    nif:anchorOf "Democratic" ;
     nif:beginIndex "895"^^xsd:nonNegativeInteger ;
+    nif:endIndex "905"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <https://sfu.ca/spel/aida/testc/87> ;
+    itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
+    itsrdf:taIdentRef <http://en.wikipedia.org/wiki/President-elect_of_the_United_States> .
+
+<https://sfu.ca/spel/aida/testc/87#offset_906_921> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "President-elect" ;
+    nif:beginIndex "906"^^xsd:nonNegativeInteger ;
     nif:endIndex "921"^^xsd:nonNegativeInteger ;
     nif:referenceContext <https://sfu.ca/spel/aida/testc/87> ;
     itsrdf:taAnnotatorsRef <https://sfu.ca/spel/aida/testc/> ;
