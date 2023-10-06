@@ -92,7 +92,7 @@ def generic_annotate(nif_bytes, load_aida_finetuned, kb_prefix, load_full_vocabu
         gerbil_query_count += 1
         print("Received query number {} from gerbil!".format(gerbil_query_count))
         with lock:
-            annotator.annotate(parsed_collection, ignore_non_aida_vocab=load_aida_finetuned, kb_prefix=kb_prefix,
+            annotator.annotate(parsed_collection, ignore_non_aida_vocab=not load_full_vocabulary, kb_prefix=kb_prefix,
                                candidates_manager=candidates_manager_to_use)
     else:
         print(" * Handshake to Gerbil was successful!")
