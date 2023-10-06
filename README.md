@@ -113,6 +113,12 @@ python finetune_step_3.py
 
 The `finetune_step_3.py` script will be able to run on an Nvidia 1060 GPU with 6GBs of GPU and will finish within one hour.
 
+### Changing SpEL Default Size:
+
+You can find the configuration file that hints SpEL which model size to consider in `src/spel/base_model.cfg`.
+Currently, it is set to `roberta-base`, using which you will be able to replicate the `base` configuration experiments.
+You may change its content to `roberta-large` to be able to replicate the experiments with the `large` models.
+
 ### Local evaluation:
 
 ```shell
