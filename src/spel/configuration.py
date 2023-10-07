@@ -69,6 +69,16 @@ def get_aida_vocab():
         mentions_vocab[_ad_element] = len(mentions_vocab)
     return mentions_vocab
 
+def get_ood_vocab():
+    # This function might be used if one is interested in testing out the "masking all the candidates not in our
+    #   expected entity set" which is mentioned in the footnote of section 4.1 of the paper.
+    mentions_vocab = dict({'|||O|||': 0, '<pad>': 1})
+    dictionary_file = get_resources_dir() / "vocab" / "out_of_domain.txt"
+    dfile = dictionary_file.open("r")
+    for _ad_element in dfile.read().split("\n"):
+        mentions_vocab[_ad_element] = len(mentions_vocab)
+    return mentions_vocab
+
 
 def get_aida_plus_wikipedia_vocab():
     mentions_vocab = get_aida_vocab()

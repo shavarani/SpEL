@@ -65,6 +65,17 @@ class SpELEvaluator(SpELAnnotator):
                 annotator='http://sfu.ca/spel/annotator',
                 taIdentRef=kbp+l_ann[2][0].replace("\"", "%22"))
 
+    def get_model_raw_logits_inference(self, token_ids, return_hidden_states=False):
+        encs = self.lm_module(token_ids.to(self.current_device)).hidden_states
+        out = self.out_module.weight
+        logits = encs[-1].matmul(out.transpose(0, 1))
+        # The following line can provide the functionality to mask out any subset of undesired output entities from
+        #  the model predictions on each subword in inference time. You don't need to uncomment it if you are just
+        # interested in testing SpEL out.
+        # logits = dl_sa.get_all_vocab_mask_for_aida().unsqueeze(0).unsqueeze(0).repeat(
+        #       logits.size(0), logits.size(1), 1) + logits
+        return (logits, encs) if return_hidden_states else logits
+
     def aida_conll_evaluate(self, checkpoint_name, k_for_top_k_to_keep=5, ignore_over_generated=False,
                             ignore_predictions_outside_candidate_list=False):
         self.init_model_from_scratch(device=device)

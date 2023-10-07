@@ -47,7 +47,7 @@ from torchtext.utils import download_from_url
 from transformers import AutoTokenizer, BatchEncoding
 
 from spel.configuration import (get_aida_plus_wikipedia_plus_out_of_domain_vocab, get_aida_train_canonical_redirects,
-                                get_aida_vocab, get_checkpoints_dir, get_base_model_name)
+                                get_aida_vocab, get_ood_vocab, get_checkpoints_dir, get_base_model_name, device)
 
 BERT_MODEL_NAME = get_base_model_name()
 MAX_SPAN_ANNOTATION_SIZE = 4
@@ -58,6 +58,8 @@ class StaticAccess:
         self.mentions_vocab, self.mentions_itos = None, None
         self.set_vocab_and_itos_to_all()
         self.aida_canonical_redirects = get_aida_train_canonical_redirects()
+        self._all_vocab_mask_for_aida = None
+        self._all_vocab_mask_for_ood = None
 
     def set_vocab_and_itos_to_all(self):
         self.mentions_vocab = get_aida_plus_wikipedia_plus_out_of_domain_vocab()
@@ -71,6 +73,24 @@ class StaticAccess:
 
     def shrink_vocab_to_aida(self):
         self.mentions_vocab, self.mentions_itos = self.get_aida_vocab_and_itos()
+
+    def get_all_vocab_mask_for_aida(self):
+        if self._all_vocab_mask_for_aida is None:
+            mentions_vocab = get_aida_plus_wikipedia_plus_out_of_domain_vocab()
+            mask = torch.ones(len(mentions_vocab)).to(device)
+            mask = mask * -10000
+            mask[torch.Tensor([mentions_vocab[x] for x in get_aida_vocab()]).long()] = 0
+            self._all_vocab_mask_for_aida = mask
+        return self._all_vocab_mask_for_aida
+
+    def get_all_vocab_mask_for_ood(self):
+        if self._all_vocab_mask_for_ood is None:
+            mentions_vocab = get_aida_plus_wikipedia_plus_out_of_domain_vocab()
+            mask = torch.ones(len(mentions_vocab)).to(device)
+            mask = mask * -10000
+            mask[torch.Tensor([mentions_vocab[x] for x in get_ood_vocab()]).long()] = 0
+            self._all_vocab_mask_for_ood = mask
+        return self._all_vocab_mask_for_ood
 
 
 dl_sa = StaticAccess()
