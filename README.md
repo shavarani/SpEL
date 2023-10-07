@@ -223,10 +223,11 @@ Here is the simple modifications you need to do:
 If you use SpEL finetuned models or data, gerbil_connect, or AIDA/testc dataset, please cite our paper:
 
 ```
-@article{shavarani2023spel,
-  title={SpEL: Structured Prediction for Entity Linking},
+@inproceedings{shavarani2023spel,
+  title={Sp{EL}: Structured Prediction for Entity Linking},
   author={Shavarani, Hassan S.  and  Sarkar, Anoop},
-  journal={arXiv preprint arXiv:2306.00000},
-  year={2023}
+  booktitle={The 2023 Conference on Empirical Methods in Natural Language Processing},
+  year={2023},
+  url={https://openreview.net/forum?id=Jo9P7hrDdy}
 }
 ```
