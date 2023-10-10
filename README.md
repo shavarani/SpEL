@@ -11,7 +11,7 @@ It outperforms the state of the art on the commonly used
 dataset for entity linking to Wikipedia. Apart from being more accurate, it also is the most compute efficient in terms 
 of number of parameters and speed of inference.
 
-The following figure schematically depicts SpEL:
+The following figure schematically explains the SpEL framework using an example:
 
 <p align="center" width="100%"><img src="resources/SpEL.png" width="60%" alt="SpEL"></p>
 
