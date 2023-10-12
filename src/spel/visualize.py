@@ -14,6 +14,7 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 @st.cache_resource
 def load_model():
     load_aida_finetuned = True
+    load_full_vocabulary=True
     candidate_setting = "n"
     model = SpELAnnotator()
     model.init_model_from_scratch(device=device)
@@ -22,9 +23,11 @@ def load_model():
                                                  is_ppr_for_ned=candidate_setting.startswith("p"),
                                                  is_context_agnostic=candidate_setting == "pg",
                                                  is_indexed_for_spans=True) if candidate_setting != "n" else None
-    if load_aida_finetuned:
+    if load_aida_finetuned and not load_full_vocabulary:
         model.shrink_classification_head_to_aida(device=device)
         model.load_checkpoint(None, device=device, load_from_torch_hub=True, finetuned_after_step=3)
+    elif load_aida_finetuned:
+        model.load_checkpoint(None, device=device, load_from_torch_hub=True, finetuned_after_step=4)
     else:
         model.load_checkpoint(None, device=device, load_from_torch_hub=True, finetuned_after_step=2)
     return model, candidates_manager_to_use
@@ -36,7 +39,7 @@ process_button = st.button("Annotate")
 
 if process_button and mention:
     phrase_annotations = chunk_annotate_and_merge_to_phrase(
-        annotator, mention, k_for_top_k_to_keep=1, normalize_for_chinese_characters=True)
+        annotator, mention, k_for_top_k_to_keep=5, normalize_for_chinese_characters=True)
     last_step_annotations = [[p.words[0].token_offsets[0][1][0],
                               p.words[-1].token_offsets[-1][1][-1],
                               (dl_sa.mentions_itos[p.resolved_annotation], p.subword_annotations)]
