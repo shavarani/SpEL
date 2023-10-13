@@ -13,7 +13,7 @@ of number of parameters and speed of inference.
 
 The following figure schematically explains the SpEL framework using an example:
 
-<p align="center" width="100%"><img src="resources/SpEL.png" width="60%" alt="SpEL"></p>
+<p align="center" width="100%"><img src="resources/SpEL.png" width="90%" alt="SpEL"></p>
 
 This repository contains the source code to finetune RoBERTa models and evaluate them using [GERBIL](https://github.com/dice-group/gerbil).
 
@@ -184,6 +184,20 @@ aware version of PPRforNED candidate set.
 The provided `server.py` is an example implementation of `gerbil_connect` interface which is explained in more detail in
 its [README](src/gerbil_connect/README.md) file.
 
+####  Which API should I use to replicate the experiments?
+
+`server.py` implements several APIs which you can use to replicate our results.
+
+* To replicate the results from Table 1 over the original AIDA test sets (`testa` and `testb`) and SpEL results of Table 
+  3, you can connect GERBIL to `http://localhost:3002/annotate_aida`.
+* To replicate the results of Table 4, as well as any experiment on `MSNBC` and our `AIDA/testc` experiments, 
+  you can connect GERBIL to `http://localhost:3002/annotate_wiki`.
+* To replicate the results of Table 5 (out-of-domain) over `Derczynski`, `KORE`, and `OKE` experiments, you can connect 
+  GERBIL to `http://localhost:3002/annotate_dbpedia`.
+* To replicate the results of Table 5 (out-of-domain) over `N3 Reuters` and `N3 RSS` experiments, you can connect
+  GERBIL to `http://localhost:3002/annotate_n3`.
+   
+
 #### how can I use GERBIL for evaluation?
 
 1. Checkout [GERBIL repository](https://github.com/dice-group/gerbil) and run `cd gerbil/ && ./start.sh`
@@ -218,6 +232,28 @@ Here is the simple modifications you need to do:
    org.aksw.gerbil.datasets.definition.AIDATestC.constructorArgs=${org.aksw.gerbil.datasets.AIDATestC.file},${org.aksw.gerbil.datasets.definition.AIDATestC.name}
    ```
 5. Run GERBIL, the new dataset should show up.
+
+"Practicality of the Fixed Candidate Sets" Experimental  Results:
+-----------------------------------------------------------------
+In this part, we remove the constraint over the model entity vocabulary to the fixed candidate set of the in-domain data 
+entity vocabulary. We assume the entirety of the 500K most frequent Wikipedia identifiers as well as the in-domain and 
+out-of-domain data entity vocabularies to form the model output vocabulary. The following are the checkpoints used in 
+the experiments resulting in the following results.
+
+* [SpEL-base-step3-500K.pt](https://vault.sfu.ca/index.php/s/8nw5fFXdz2yBP5z/download)
+* [SpEL-large-step3-500K.pt](https://vault.sfu.ca/index.php/s/BCvputD1ByAvILC/download)
+
+| Approach                                                              | EL Micro-F1<br/>test-a | EL Micro-F1<br/>test-b | EL Micro-F1<br/>test-c |
+|-----------------------------------------------------------------------|:----------------------:|:----------------------:|:----------------------:|
+| **SpEL-base-500K** (no mention-specific candidate set)                |          89.6          |          82.3          |          73.7          |
+| **SpEL-base-500K** (KB+Yago candidate set)                            |          89.5          |          83.2          |          57.2          |
+| **SpEL-base-500K** (PPRforNED candidate set)<br/>(context-agnostic)   |          90.8          |          84.7          |          45.9          |
+| **SpEL-base-500K** (PPRforNED candidate set)<br/>(context-aware)      |          91.8          |          86.1          |           -            |
+| **SpEL-large-500K** (no mention-specific candidate set)               |          89.7          |          82.2          |          77.5          |
+| **SpEL-large-500K** (KB+Yago candidate set)                           |          89.8          |          82.8          |          59.4          |
+| **SpEL-large-500K** (PPRforNED candidate set)<br/>(context-agnostic)  |          91.5          |          85.2          |          46.9          |
+| **SpEL-large-500K** (PPRforNED candidate set)<br/>(context-aware)     |          92.0          |          86.3          |           -            |
+----
 
 ## Citation
 If you use SpEL finetuned models or data, gerbil_connect, or AIDA/testc dataset, please cite our paper:
