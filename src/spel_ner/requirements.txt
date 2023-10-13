@@ -1,0 +1,5 @@
+datasets==2.11.0
+transformers==4.13.0
+torch==1.13.1
+scikit-learn==1.0.2
+seqeval==1.2.2
