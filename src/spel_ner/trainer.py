@@ -49,8 +49,8 @@ def train_model(save_model_name="spel-ner-model"):
         args=training_args,
         data_collator=None,
         compute_metrics=compute_metrics,
-        train_dataset=dataset_object.dataset["train"],
-        eval_dataset=dataset_object.dataset["validation"],
+        train_dataset=dataset_object.preprocessed_dataset["train"],
+        eval_dataset=dataset_object.preprocessed_dataset["validation"],
     )
 
     trainer.train()
@@ -67,7 +67,7 @@ def evaluate(load_model_name="spel-ner-model"):
     model.load_state_dict(torch.load(f"{load_model_name}/pytorch_model.bin"))
     pred_list = []
     label_list = []
-    for elem in tqdm(dataset_object.dataset['validation']):
+    for elem in tqdm(dataset_object.original_dataset['validation']):
         tokens = elem['tokens']
         inputs = tokenizer(tokens, is_split_into_words=True, return_tensors="pt")
         outputs = model(**inputs)

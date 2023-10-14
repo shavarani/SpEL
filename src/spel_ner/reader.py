@@ -34,5 +34,6 @@ class CoNLL2003(Dataset):
                         self.id2label.index('O') if a is None else self.id2label.index(self.id2label[tags[a]]))
                 labels.append(label_ids)
             return {"input_ids": tokens["input_ids"], "attention_mask": tokens["attention_mask"], "labels": labels}
-        dataset = load_dataset(DATASET_NAME)
-        self.dataset = dataset.map(preprocess_function, batched=True, remove_columns=['tokens', 'tags'])
+        self.original_dataset = load_dataset(DATASET_NAME)
+        self.preprocessed_dataset = self.original_dataset.map(
+            preprocess_function, batched=True, remove_columns=['tokens', 'tags'])
