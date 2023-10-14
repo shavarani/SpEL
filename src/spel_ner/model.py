@@ -1,6 +1,9 @@
+import torch
 import torch.nn as nn
 from transformers import AutoModel, PreTrainedModel
 from transformers.modeling_outputs import TokenClassifierOutput
+
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 
 class NERModel(PreTrainedModel):
@@ -21,6 +24,7 @@ class NERModel(PreTrainedModel):
         super(NERModel, self).__init__(config)
         self.num_labels = num_labels
         self.model = AutoModel.from_config(config)
+        self.load_encoder_model()
         self.dropout = nn.Dropout(config.hidden_dropout_prob)
         self.classifier = nn.Linear(config.hidden_size, num_labels)
         self.loss_fn = nn.CrossEntropyLoss()
@@ -29,6 +33,10 @@ class NERModel(PreTrainedModel):
                 param.requires_grad = False
         trainable_params = sum(p.numel() for p in self.parameters() if p.requires_grad)
         print(f"Number of Trainable Parameters: {trainable_params}")
+
+    def load_encoder_model(self):
+        return
+
 
     def forward(self, input_ids=None, attention_mask=None, token_type_ids=None, position_ids=None, head_mask=None,
                 inputs_embeds=None, labels=None):
@@ -50,3 +58,13 @@ class NERModel(PreTrainedModel):
             loss=loss,
             logits=logits
         )
+
+class SpELNERModel(NERModel):
+    def load_encoder_model(self):
+        file_name = "spel-base-step-3.pt"
+        checkpoint = torch.hub.load_state_dict_from_url('https://vault.sfu.ca/index.php/s/HpQ3PMm6A3y1NBl/download',
+                                                        model_dir=".checkpoints", map_location="cpu",
+                                                        file_name=file_name)
+        self.model.load_state_dict(checkpoint["bert_lm"], strict=False)
+        self.model.to(device)
+        print(f"Loaded {file_name}")

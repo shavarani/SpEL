@@ -8,7 +8,7 @@ from sklearn.metrics import f1_score
 from tqdm import tqdm
 
 from spel_ner.reader import tokenizer, CoNLL2003, BERT_MODEL_NAME
-from spel_ner.model import NERModel
+from spel_ner.model import NERModel, SpELNERModel
 from spel_ner.evaluate import span_f1
 
 dataset_object = CoNLL2003()
@@ -25,8 +25,9 @@ def compute_metrics(p):
     avg_f1 = np.mean(f1_scores)
     return {"f1": avg_f1}
 
-def train_model(save_model_name="spel-ner-model"):
-    model = NERModel(AutoConfig.from_pretrained(BERT_MODEL_NAME), num_labels=dataset_object.size)
+def train_model(save_model_name="spel-ner-model", load_spel=True):
+    ner_model_name = SpELNERModel if load_spel else NERModel
+    model = ner_model_name(AutoConfig.from_pretrained(BERT_MODEL_NAME), num_labels=dataset_object.size)
 
     training_args = TrainingArguments(
         output_dir=f"./{save_model_name}",
