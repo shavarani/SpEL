@@ -67,6 +67,7 @@ def evaluate(load_model_name="spel-ner-model"):
     model.load_state_dict(torch.load(f"{load_model_name}/pytorch_model.bin"))
     pred_list = []
     label_list = []
+    model.eval()
     for elem in tqdm(dataset_object.original_dataset['validation']):
         tokens = elem['tokens']
         inputs = tokenizer(tokens, is_split_into_words=True, return_tensors="pt")

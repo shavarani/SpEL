@@ -4,6 +4,19 @@ from transformers.modeling_outputs import TokenClassifierOutput
 
 
 class NERModel(PreTrainedModel):
+    """
+    CoNLL2003 (t-ner version) scores considering RoBERTa-base as the encoder:
+        'parameter_size': 124,652,553
+        'micro/f1': 0.8024, 'micro/recall': 0.8125, 'micro/precision': 0.7926,
+        'macro/f1': 0.7983, 'macro/recall': 0.8049, 'macro/precision': 0.7926,
+        'per_entity_metric': {
+            'location':     {'f1': 0.8877, 'precision': 0.8882, 'recall': 0.8873},
+            'organization': {'f1': 0.7355, 'precision': 0.7161, 'recall': 0.7561},
+            'other':        {'f1': 0.8006, 'precision': 0.8202, 'recall': 0.7819},
+            'person':       {'f1': 0.7693, 'precision': 0.7460, 'recall': 0.7942}
+        }
+
+    """
     def __init__(self, config, num_labels, freeze_bert=False):
         super(NERModel, self).__init__(config)
         self.num_labels = num_labels
