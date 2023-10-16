@@ -1,7 +1,7 @@
 """
 The implementation for general knowledge fine-tuning, step two, which can use nn.DataParallel for multi-GPU processing.
 
-Running this script will automatically download enwiki-2023-spel-roberta-tokenized-aug-27-2023-retokenized.tar.gz (17.5 GBs)
+Running this script will automatically download enwiki-2023-el.broscheit-roberta-tokenized-may-26-2023-retokenized.tar.gz (17.3 GBs)
  into /home/<user_name>/.cache/torch/text/datasets/ (in linux systems). The validation set in this dataset will be cached
  the first time the evaluate function is called and the cached data will be stored into .checkpoints named with the
  format: validation_data_cache_b_<batch_size>_l_<label_size>_rt_wiki.

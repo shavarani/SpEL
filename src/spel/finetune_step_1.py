@@ -5,7 +5,7 @@ The implementation for general knowledge fine-tuning, step one, which uses Distr
 
 Note: this is the most time-consuming step of the project. Make sure you provide more than one GPU to the script.
 
-Running this script will automatically download enwiki-2023-spel-roberta-tokenized-aug-27-2023.tar.gz (19.1 GBs)
+Running this script will automatically download enwiki-2023-el.broscheit-roberta-tokenized-may-26-2023.tar.gz (18.9 GBs)
  into /home/<user_name>/.cache/torch/text/datasets/ (in linux systems) and will cache the validation set in this dataset
  into .checkpoints named with the format: validation_data_cache_b_<batch_size>_l_<label_size>_wiki.
  You do not need to worry about downloading or preprocessing the fine-tuning data.
