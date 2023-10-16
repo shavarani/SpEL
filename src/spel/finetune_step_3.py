@@ -2,7 +2,7 @@
 The implementation for domain specific fine-tuning, step three. This process is very light and can run on one Nvidia
 1060 with 6 GBs of GPU memory.
 
-Running this script will automatically download aida-conll-el.broscheit-roberta-tokenized-may-26-2023.tar.gz (5.1 MBs)
+Running this script will automatically download aida-conll-spel-roberta-tokenized-aug-23-2023.tar.gz (5.1 MBs)
  into /home/<user_name>/.cache/torch/text/datasets/ (in linux systems). The validation set in this dataset will be cached
  the first time the evaluate function is called and the cached data will be stored into .checkpoints named with the
  format: validation_data_cache_b_<batch_size>_l_<label_size>_conll. You do not need to worry about downloading or
