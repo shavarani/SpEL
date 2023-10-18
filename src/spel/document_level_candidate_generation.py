@@ -41,9 +41,10 @@ class CandidateGenerator():
     
     def load_wikipedia2vec(self):
         file_name = 'spel-wikipedia2vec-20230820.txt'
-        print(f'downloading/loading {file_name} ...')
-        torch.hub.download_url_to_file('https://vault.sfu.ca/index.php/s/cUDJU8DMwBag37u/download',
-                                       get_checkpoints_dir() / file_name)
+        if not (get_checkpoints_dir() / file_name).exists():
+            print(f'downloading {file_name} ...')
+            torch.hub.download_url_to_file('https://vault.sfu.ca/index.php/s/cUDJU8DMwBag37u/download',
+                                           get_checkpoints_dir() / file_name)
         self.wiki2vec = Wikipedia2Vec.load_text(get_checkpoints_dir() / file_name)
         self.wiki2vec_entities_list_for_negative_example_selection = [x.title for x in self.wiki2vec.dictionary.entities()]
         self.wiki2vec_entities = set(self.wiki2vec_entities_list_for_negative_example_selection)
