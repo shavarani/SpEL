@@ -1,11 +1,13 @@
 <p align="center" width="100%"><img src="resources/logo.png" width="30%" alt="SpEL"></p>
 
 ---
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/spel-structured-prediction-for-entity-linking/entity-linking-on-aida-conll)](https://paperswithcode.com/sota/entity-linking-on-aida-conll?p=spel-structured-prediction-for-entity-linking)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/spel-structured-prediction-for-entity-linking/entity-linking-on-aida-testc)](https://paperswithcode.com/sota/entity-linking-on-aida-testc?p=spel-structured-prediction-for-entity-linking)
 
 **SpEL** (**S**tructured **p**rediction for **E**ntity **L**inking)  is a structured prediction entity linking approach 
 that uses new training and inference ideas obtaining a new state of the art on Wikipedia entity linking, with better 
 compute efficiency and faster inference than previous methods. 
-It was proposed in our paper [SpEL: Structured Prediction for Entity Linking](https://arxiv.org/abs/2306.00000).
+It was proposed in our EMNLP 2023 paper [SpEL: Structured Prediction for Entity Linking](https://arxiv.org/abs/2310.14684).
 It outperforms the state of the art on the commonly used 
 [AIDA benchmark](https://www.mpi-inf.mpg.de/departments/databases-and-information-systems/research/ambiverse-nlu/aida/downloads) 
 dataset for entity linking to Wikipedia. Apart from being more accurate, it also is the most compute efficient in terms 
@@ -13,7 +15,7 @@ of number of parameters and speed of inference.
 
 The following figure schematically explains the SpEL framework using an example:
 
-<p align="center" width="100%"><img src="resources/SpEL.png" width="90%" alt="SpEL"></p>
+<p align="center" width="100%"><img src="resources/SpEL.png" width="92%" alt="SpEL"></p>
 
 This repository contains the source code to finetune RoBERTa models and evaluate them using [GERBIL](https://github.com/dice-group/gerbil).
 
