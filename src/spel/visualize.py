@@ -34,6 +34,7 @@ def load_model():
 
 annotator, candidates_manager = load_model()
 st.title("SpEL Prediction Visualization")
+st.caption('Running the \"[SpEL-base-step3-500K.pt](https://vault.sfu.ca/index.php/s/8nw5fFXdz2yBP5z/download)\" model without consideration of any hand-crafted candidate sets. For more information please checkout [SpEL\'s github repository](https://github.com/shavarani/SpEL).')
 mention = st.text_input("Enter the text:")
 process_button = st.button("Annotate")
 
