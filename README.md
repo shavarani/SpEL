@@ -19,6 +19,8 @@ The following figure schematically explains the SpEL framework using an example:
 
 This repository contains the source code to finetune RoBERTa models and evaluate them using [GERBIL](https://github.com/dice-group/gerbil).
 
+For a live demo checkout [here](https://huggingface.co/spaces/sshavara/SpEL) on huggingface spaces.
+
 ---
 
 Entity Linking evaluation results of *SpEL* compared to that of the literature over AIDA test sets:
