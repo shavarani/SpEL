@@ -160,9 +160,9 @@ following links:
    - [SpEL-base-step-1.pt](https://vault.sfu.ca/index.php/s/9OAoAG5eYeREE9V/download)
    - [SpEL-base-step-2.pt](https://vault.sfu.ca/index.php/s/Hf37vc1foluHPBh/download)
    - [SpEL-base-step-3.pt](https://vault.sfu.ca/index.php/s/HpQ3PMm6A3y1NBl/download)
-   - [SpEL-large-step-1.pt](https://vault.sfu.ca/index.php/s/kBBlYVM4Tr59P0q/download)
+   - [SpEL-large-step-1.pt](https://vault.sfu.ca/index.php/s/bTp6UN2xL7Yh52w/download)
    - [SpEL-large-step-2.pt](https://vault.sfu.ca/index.php/s/rnDiuKns7gzADyb/download)
-   - [SpEL-large-step-3.pt](https://vault.sfu.ca/index.php/s/bTp6UN2xL7Yh52w/download)
+   - [SpEL-large-step-3.pt](https://vault.sfu.ca/index.php/s/kBBlYVM4Tr59P0q/download)
 
 As well, you may access the created finetuning data through the following:
    
