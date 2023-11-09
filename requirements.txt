@@ -5,3 +5,4 @@ torchtext==0.14.1  # this will automatically install torch==1.13.1 as its depend
 torchdata==0.5.1
 mosestokenizer==1.2.1
 wandb==0.15.7
+st-annotated-text

@@ -160,15 +160,55 @@ following links:
    - [SpEL-base-step-1.pt](https://vault.sfu.ca/index.php/s/9OAoAG5eYeREE9V/download)
    - [SpEL-base-step-2.pt](https://vault.sfu.ca/index.php/s/Hf37vc1foluHPBh/download)
    - [SpEL-base-step-3.pt](https://vault.sfu.ca/index.php/s/HpQ3PMm6A3y1NBl/download)
-   - [SpEL-large-step-1.pt](https://vault.sfu.ca/index.php/s/kBBlYVM4Tr59P0q/download)
+   - [SpEL-large-step-1.pt](https://vault.sfu.ca/index.php/s/bTp6UN2xL7Yh52w/download)
    - [SpEL-large-step-2.pt](https://vault.sfu.ca/index.php/s/rnDiuKns7gzADyb/download)
-   - [SpEL-large-step-3.pt](https://vault.sfu.ca/index.php/s/bTp6UN2xL7Yh52w/download)
+   - [SpEL-large-step-3.pt](https://vault.sfu.ca/index.php/s/kBBlYVM4Tr59P0q/download)
 
 As well, you may access the created finetuning data through the following:
    
    - [FT-Step1-Data (20230827)](https://1sfu-my.sharepoint.com/:u:/g/personal/sshavara_sfu_ca/Ea3IVbOpkTJKpASNyL9aFGMBQpH0ABU2hQa-wYyakkZ9TQ?e=DJFF3v)
    - [FT-Step2-Data (20230827)](https://1sfu-my.sharepoint.com/:u:/g/personal/sshavara_sfu_ca/EeS_Tgl_CFJNiTh6YH5IDrsBocEZUsZV3lxPB6pleTxyxw?e=caH1cf)
    - [FT-Step3-Data (AIDA)](https://1sfu-my.sharepoint.com/:u:/g/personal/sshavara_sfu_ca/EajEGYyf8LBOoxqDaiPBvbgBwFuEC08nssvZwGJWsG_HXg?e=wAwV6H)
+
+### Usage:
+
+The following snippet demonstrates a quick way that SpEL can be used to generate subword-level, word-level, and phrase-level annotations for a sentence.
+
+```python
+from transformers import AutoTokenizer
+from spel.model import SpELAnnotator
+from spel.configuration import device
+from spel.utils import get_subword_to_word_mapping
+from spel.span_annotation import WordAnnotation, PhraseAnnotation
+finetuned_after_step = 4
+sentence = "Grace Kelly by Mika reached the top of the UK Singles Chart in 2007."
+tokenizer = AutoTokenizer.from_pretrained("roberta-base")
+# ############################################# LOAD SpEL #############################################################
+spel = SpELAnnotator()
+spel.init_model_from_scratch(device=device)
+if finetuned_after_step == 3:
+    spel.shrink_classification_head_to_aida(device)
+spel.load_checkpoint(None, device=device, load_from_torch_hub=True, finetuned_after_step=finetuned_after_step)
+# ############################################# RUN SpEL ##############################################################
+inputs = tokenizer(sentence, return_tensors="pt")
+token_offsets = list(zip(inputs.encodings[0].tokens,inputs.encodings[0].offsets))
+subword_annotations = spel.annotate_subword_ids(inputs.input_ids, k_for_top_k_to_keep=10, token_offsets=token_offsets)
+# #################################### CREATE WORD-LEVEL ANNOTATIONS ##################################################
+tokens_offsets = token_offsets[1:-1]
+subword_annotations = subword_annotations[1:]
+word_annotations = [WordAnnotation(subword_annotations[m[0]:m[1]], tokens_offsets[m[0]:m[1]])
+                    for m in get_subword_to_word_mapping(inputs.tokens(), sentence)]
+# ################################## CREATE PHRASE-LEVEL ANNOTATIONS ##################################################
+phrase_annotations = []
+for w in word_annotations:
+    if not w.annotations:
+        continue
+    if phrase_annotations and phrase_annotations[-1].resolved_annotation == w.resolved_annotation:
+        phrase_annotations[-1].add(w)
+    else:
+        phrase_annotations.append(PhraseAnnotation(w))
+```
+
 ### Entity linking evaluation using GERBIL:
 ```shell
 export PYTHONPATH=/path/to/SpEL/src
