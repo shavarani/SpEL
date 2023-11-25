@@ -1,8 +1,10 @@
 import torch
 import torch.nn as nn
 import torch.optim as optim
+from torch.nn.utils.rnn import pad_sequence
 from wikipedia2vec import Wikipedia2Vec
 import random
+import numpy as np
 from tqdm import tqdm
 
 from data_loader import tokenizer, ENWIKI20230827V2, AIDA20230827
@@ -89,8 +91,47 @@ class CandidateGenerator():
         cls_encoding = self.encode_sentence(sentence)
         similars = self.wiki2vec.most_similar_by_vector(cls_encoding.detach().cpu().numpy(), count=len(annotations))
         return cls_encoding, [x[0].title for x in similars]
-    
-    def train(self, num_epochs=10, spl = 'train', save_model_name='w.pt', train_on_aida=True):
+
+    def compute_training_loss(self, instances):
+        _example_pair_ps_ = []
+        _example_pair_ns_ = []
+        _cls_encodings_ = []
+        sentences = []
+        annotations = []
+        for el in instances:
+            s, anns = self.extract_data_loader_input_and_labels(el)
+            if not anns:
+                continue
+            sentences.append(s)
+            annotations.append(anns)
+        tokenized_mention = tokenizer(sentences)
+        input_ids = pad_sequence([torch.tensor(ids) for ids in tokenized_mention.input_ids],
+                                 batch_first=True, padding_value=tokenizer.pad_token_id)
+        encoded_representations = self.spel.lm_module(input_ids.to(device)).hidden_states
+        cls_encodings = encoded_representations[-1][:, 0, :].detach() # of size len(instances) \times 768
+        cls_encodings = self.w_transform(cls_encodings)
+        hard_negatives = [[x[0].title for x in self.wiki2vec.most_similar_by_vector(
+            cls_encodings[annotation_index].detach().cpu().numpy(), count=len(annotation_set)) if x[0].title not in annotation_set]
+                          for annotation_index, annotation_set in enumerate(annotations)]
+        hard_negatives = [h + [x for x in self.get_negative_examples(2 * len(a) - len(h)) if x not in a and x not in h]
+                          for h, a in zip(hard_negatives, annotations)]
+        positive_examples = [[self.wiki2vec.get_entity_vector(entity_name) for entity_name in a] for a in annotations]
+        negative_examples = [[self.wiki2vec.get_entity_vector(entity_name) for entity_name in h] for h in hard_negatives]
+        for batch_id in range(len(sentences)):
+            for p in positive_examples[batch_id]:
+                for n in negative_examples[batch_id]:
+                    _example_pair_ps_.append(p)
+                    _example_pair_ns_.append(n)
+                    _cls_encodings_.append(cls_encodings[batch_id].unsqueeze(0))
+        positive = torch.Tensor(np.array(_example_pair_ps_)).to(device)
+        negative = torch.Tensor(np.array(_example_pair_ns_)).to(device)
+        # anchor = cls_encoding_transformed.repeat(positive.size(0), 1).to(device)
+        anchor = torch.cat(_cls_encodings_, dim = 0).to(device)
+        loss = self.criterion(anchor, positive, negative)
+        return loss
+
+    def train(self, num_epochs=10, spl = 'train', save_model_name='w.pt', train_on_aida=True, batch_size=16,
+              checkpoint_every=10000):
         for _ in range(num_epochs):
             if train_on_aida:
                 print('training on AIDA20230827 ...')
@@ -100,35 +141,29 @@ class CandidateGenerator():
                 _iter_ = tqdm(ENWIKI20230827V2(split=spl, root=get_checkpoints_dir()))
             total_loss = 0
             cnt_loss = 0
-            for el in _iter_:
-                s, anns = self.extract_data_loader_input_and_labels(el)
-                if not anns: 
+            batch = []
+            for t_index, el in enumerate(_iter_):
+                if len(batch) < batch_size:
+                    batch.append(el)
                     continue
-                cls_encoding_transformed, hard_negatives = self.get_candidates(s, anns)
-                hard_negatives = [x for x in hard_negatives if x not in anns] + \
-                    [x for x in self.get_negative_examples(2 * len(anns) - len(hard_negatives)) if x not in anns and x not in hard_negatives]
-                positive_examples = [torch.Tensor(self.wiki2vec.get_entity_vector(entity_name)).to(device) for entity_name in anns]
-                negative_examples = [torch.Tensor(self.wiki2vec.get_entity_vector(entity_name)).to(device) for entity_name in hard_negatives]
-                loss = 0.0
-                cnt = 0.0
-                for p in positive_examples:
-                    for n in negative_examples:
-                        loss += self.criterion(cls_encoding_transformed, p, n)
-                        cnt += 1.0
-                loss = loss / cnt
+                loss = self.compute_training_loss(batch)
+                del batch[:]
                 total_loss += loss.detach().item()
                 cnt_loss += 1.0
                 self.optimizer.zero_grad()
                 loss.backward()
                 self.optimizer.step()
                 _iter_.set_description(f"Avg Loss: {total_loss/cnt_loss:.7f}")
+                if t_index > 0 and t_index % checkpoint_every == 0:
+                    print('checkpointing ...')
+                    torch.save(self.w_transform.state_dict(), save_model_name)
             torch.save(self.w_transform.state_dict(), save_model_name)
 
     def inference(self, sentence, anns, load_model_name='w.pt'):
         self.w_transform.load_state_dict(torch.load(load_model_name))
         self.w_transform.eval()
         cls_encoding = self.encode_sentence(sentence)
-        candidates = self.wiki2vec.most_similar_by_vector(cls_encoding.detach().cpu().numpy(), count=10)
+        candidates = self.wiki2vec.most_similar_by_vector(cls_encoding.detach().cpu().numpy(), count=len(anns))
         print(sentence)
         print("-" * 120)
         print(f"Reference candidates:\n>>{anns}")
