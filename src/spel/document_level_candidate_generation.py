@@ -143,6 +143,9 @@ class CandidateGenerator():
             cnt_loss = 0
             batch = []
             for t_index, el in enumerate(_iter_):
+                if t_index > 0 and t_index % checkpoint_every == 0:
+                    print('checkpointing ...')
+                    torch.save(self.w_transform.state_dict(), save_model_name)
                 if len(batch) < batch_size:
                     batch.append(el)
                     continue
@@ -154,9 +157,6 @@ class CandidateGenerator():
                 loss.backward()
                 self.optimizer.step()
                 _iter_.set_description(f"Avg Loss: {total_loss/cnt_loss:.7f}")
-                if t_index > 0 and t_index % checkpoint_every == 0:
-                    print('checkpointing ...')
-                    torch.save(self.w_transform.state_dict(), save_model_name)
             torch.save(self.w_transform.state_dict(), save_model_name)
 
     def inference(self, sentence, anns, load_model_name='w.pt'):
