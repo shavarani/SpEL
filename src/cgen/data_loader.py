@@ -50,10 +50,10 @@ wikipedia2vec_instance = W2V()
 
 def spel_annotate(sentence):
     collection = NIFCollection(uri="http://spel.sfu.ca")
-    context = collection.add_context(uri="http://spel.sfu.ca/doc1", mention=sentence)
-    SpEL_instance.annotate(context)
+    collection.add_context(uri="http://spel.sfu.ca/doc1", mention=sentence)
+    SpEL_instance.annotate(collection)
     annotations = [{"start": phrase.beginIndex, "end": phrase.endIndex, "tag": phrase.taIdentRef}
-                   for phrase in collection.contexts[0]._context.phrases]
+                   for phrase in collection.contexts[0].phrases]
     return annotations
 
 
