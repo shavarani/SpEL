@@ -158,9 +158,10 @@ class TripleVectorDataset(torch.utils.data.Dataset):
     def __init__(self, train_on_aida, batch_size, expected_negative_examples, default_key = 'start'):
         self.data_generator = TripleVectorDataProvider(
             train_on_aida, batch_size, expected_negative_examples, default_key).instances()
+        self.train_on_aida = train_on_aida
     
     def __len__(self):
-        return 300000000
+        return 200000 if self.train_on_aida else 300000000
 
     def __getitem__(self, idx):
         sample = next(self.data_generator)
