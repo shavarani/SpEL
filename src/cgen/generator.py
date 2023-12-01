@@ -14,15 +14,27 @@ class Transformation(nn.Module):
         nn.init.xavier_uniform_(self.w2v_map.weight)
         nn.init.xavier_uniform_(self.spel_map.weight)
 
+
+class SpELTransformation(nn.Module):
+    def __init__(self, spel_lm_size, w2v_size, hidden_size=256):
+        super(SpELTransformation, self).__init__()
+        self.fc1 = nn.Linear(spel_lm_size, hidden_size)
+        self.relu = nn.ReLU()
+        self.fc2 = nn.Linear(hidden_size, w2v_size)
+        nn.init.xavier_uniform_(self.fc1.weight)
+        nn.init.xavier_uniform_(self.fc2.weight)
+
+    def forward(self, x):
+        x = self.fc1(x)
+        x = self.relu(x)
+        x = self.fc2(x)
+        return x
+
 class Generator:
-    def __init__(self):
-        self.wiki2vec = None
-        self.wiki2vec_entities = None
-        self.wiki2vec_entities_list_for_negative_example_selection = None
-        self.spel_lm_size = 1024 if get_base_model_name() == 'roberta-large' else 768
-        self.w2v_size = 768
-        self.expected_negative_examples = 3
-        self.transformation = Transformation(self.spel_lm_size, self.w2v_size).to(device)
+    def __init__(self, only_transform_spel=True):
+        self.only_transform_spel = only_transform_spel
+        transform_class = SpELTransformation if only_transform_spel else Transformation
+        self.transformation = transform_class(1024 if get_base_model_name() == 'roberta-large' else 768, 768).to(device)
 
     def train(self, train_on_aida=True, lm_batch_size=1, triple_vector_batch_size=64, lr=5e-4, num_epochs=1, checkpoint_every=1000,
               save_model_name='generator_w.pt', expected_negative_examples=10, default_key = 'start'):
@@ -38,9 +50,12 @@ class Generator:
                     print('checkpointing ...')
                     torch.save(self.transformation.state_dict(), save_model_name)
                 anchor, positive, negative = batch
-                anchor = self.transformation.spel_map(anchor)
-                positive = self.transformation.w2v_map(positive)
-                negative = self.transformation.w2v_map(negative)
+                if self.only_transform_spel:
+                    anchor = self.transformation(anchor)
+                else:
+                    anchor = self.transformation.spel_map(anchor)
+                    positive = self.transformation.w2v_map(positive)
+                    negative = self.transformation.w2v_map(negative)
                 loss = criterion(anchor, positive, negative)
                 del batch[:]
                 total_loss += loss.detach().item()
