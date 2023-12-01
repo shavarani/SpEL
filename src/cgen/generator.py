@@ -69,5 +69,5 @@ class Generator:
 
 if __name__ == "__main__":
     cgen = Generator()
-    cgen.train(train_on_aida=True, lm_batch_size=10, triple_vector_batch_size=64, lr=5e-4, num_epochs=50, checkpoint_every=2000,
+    cgen.train(train_on_aida=True, lm_batch_size=64, triple_vector_batch_size=768, lr=5e-4, num_epochs=50, checkpoint_every=2000,
               save_model_name='generator_w.pt', expected_negative_examples=10, default_key = 'start')
