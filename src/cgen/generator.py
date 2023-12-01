@@ -3,8 +3,8 @@ import torch.nn as nn
 import torch.optim as optim
 from tqdm import tqdm
 
-from spel.configuration import get_checkpoints_dir, device, get_base_model_name
-from cgen.data_loader import get_dataset
+from spel.configuration import device, get_base_model_name
+from cgen.data_loader import get_dataset, spel_annotate, tokenizer, SpEL_instance, wikipedia2vec_instance
 
 class Transformation(nn.Module):
     def __init__(self, spel_lm_size, w2v_size=768, hidden_size=256):
