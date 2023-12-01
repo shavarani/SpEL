@@ -161,7 +161,7 @@ class TripleVectorDataset(torch.utils.data.Dataset):
         self.train_on_aida = train_on_aida
     
     def __len__(self):
-        return 200000 if self.train_on_aida else 300000000
+        return 168000 if self.train_on_aida else 300000000
 
     def __getitem__(self, idx):
         sample = next(self.data_generator)
