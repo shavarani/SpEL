@@ -7,7 +7,7 @@
 **SpEL** (**S**tructured **p**rediction for **E**ntity **L**inking)  is a structured prediction entity linking approach 
 that uses new training and inference ideas obtaining a new state of the art on Wikipedia entity linking, with better 
 compute efficiency and faster inference than previous methods. 
-It was proposed in our EMNLP 2023 paper [SpEL: Structured Prediction for Entity Linking](https://arxiv.org/abs/2310.14684).
+It was proposed in our EMNLP 2023 paper [SpEL: Structured Prediction for Entity Linking](https://aclanthology.org/2023.emnlp-main.686/).
 It outperforms the state of the art on the commonly used 
 [AIDA benchmark](https://www.mpi-inf.mpg.de/departments/databases-and-information-systems/research/ambiverse-nlu/aida/downloads) 
 dataset for entity linking to Wikipedia. Apart from being more accurate, it also is the most compute efficient in terms 
@@ -303,11 +303,15 @@ the experiments resulting in the following results.
 If you use SpEL finetuned models or data, gerbil_connect, or AIDA/testc dataset, please cite our paper:
 
 ```
-@inproceedings{shavarani2023spel,
-  title={Sp{EL}: Structured Prediction for Entity Linking},
-  author={Shavarani, Hassan S.  and  Sarkar, Anoop},
-  booktitle={The 2023 Conference on Empirical Methods in Natural Language Processing},
-  year={2023},
-  url={https://openreview.net/forum?id=Jo9P7hrDdy}
+@inproceedings{shavarani-sarkar-2023-spel,
+  title = "{S}p{EL}: Structured Prediction for Entity Linking",
+  author = "Shavarani, Hassan  and Sarkar, Anoop",
+  booktitle = "Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing",
+  month = dec,
+  year = "2023",
+  address = "Singapore",
+  publisher = "Association for Computational Linguistics",
+  url = "https://aclanthology.org/2023.emnlp-main.686",
+  pages = "11123--11137",
 }
 ```
