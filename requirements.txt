@@ -6,3 +6,6 @@ torchdata==0.5.1
 mosestokenizer==1.2.1
 wandb==0.15.7
 st-annotated-text
+flask
+flask-cors
+pynif

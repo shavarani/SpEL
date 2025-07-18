@@ -26,9 +26,11 @@ from gerbil_connect.nif_parser import NIFParser
 from spel.configuration import device, get_n3_entity_to_kb_mappings
 from spel.candidate_manager import CandidateManager
 
+PORT = int(os.environ.get("PORT", 3002))
+
 cli = sys.modules['flask.cli']
 cli.show_server_banner = lambda *x: click.echo(
-    " * You may perform entity linking through: http://localhost:3002/annotate_[aida,wiki,dbpedia,n3]")
+    f" * You may perform entity linking through: http://localhost:{PORT}/annotate_[aida,wiki,dbpedia,n3]")
 app = Flask(__name__, static_url_path='', static_folder='../../../frontend/build')
 cors = CORS(app, resources={r"/suggest": {"origins": "*"}})
 app.config['CORS_HEADERS'] = 'Content-Type'
@@ -144,7 +146,7 @@ def annotate_n3():
 
 if __name__ == '__main__':
     try:
-        app.run(host="localhost", port=int(os.environ.get("PORT", 3002)), debug=False)
+        app.run(host="0.0.0.0", port=PORT, debug=False)
     finally:
         if annotate_result:
             with open(f"annotate_{annotator_name}_result.json", "w", encoding="utf-8") as f:
